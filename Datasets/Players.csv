@@ -250,11 +250,11 @@
 248,Kevin O'Shea,188,79,University of Notre Dame,1925,San Francisco,California
 249,Don Rehfeldt,201,95,University of Wisconsin,1927,Chicago,Illinois
 250,Jim Riffey,193,90,Tulane University,1923,,
-"251,Alan Sawyer,196,88,""University of California, Los Angeles"",1928,Long Beach,California"
+251,Alan Sawyer,196,88,"University of California, Los Angeles",1928,Long Beach,California
 252,Herb Scherer,206,96,Long Island University,1928,,
 253,Dick Schnittker,196,90,Ohio State University,1928,Kelleys Island,Ohio
 254,Bill Sharman*,185,79,University of Southern California,1926,Abilene,Texas
-"255,Don Barksdale*,198,90,""University of California, Los Angeles"",1923,Oakland,California"
+255,Don Barksdale*,198,90,"University of California, Los Angeles",1923,Oakland,California
 256,Elmer Behnke,201,95,Bradley University,1929,Rockford,Illinois
 257,Stan Brown,190,90,,1929,,
 258,Ed Dahler,196,86,Duquesne University,1926,,
@@ -269,7 +269,7 @@
 267,George King,183,79,University of Charleston,1928,Charleston,West Virginia
 268,John McConathy,196,88,Northwestern State University,1930,Sailes,Louisiana
 269,Alfred McGuire*,188,81,St. John's University,1928,New York,New York
-"270,Dave Minor,188,83,""University of California, Los Angeles"",1922,Missouri,"
+270,Dave Minor,188,83,"University of California, Los Angeles",1922,Missouri,
 271,Ralph O'Brien,175,72,Butler University,1928,Henshaw,Kentucky
 272,Wally Osterkorn,196,97,University of Illinois at Urbana-Champaign,1928,,
 273,Mel Payton,193,83,Tulane University,1926,,
@@ -419,7 +419,7 @@
 417,Bob Williams,198,104,Florida Agricultural and Mechanical University,1931,,
 418,Forest Able,190,81,Western Kentucky University,1932,,
 419,Bob Armstrong,203,99,Michigan State University,1933,Detroit,Michigan
-"420,John Barber,198,95,""California State University, Los Angeles"",1927,,"
+420,John Barber,198,95,"California State University, Los Angeles",1927,,
 421,Gary Bergen,203,95,University of Utah,1932,Independence,Missouri
 422,Al Bianchi,190,83,Bowling Green State University,1932,Long Island City,New York
 423,Bob Burrow,201,103,University of Kentucky,1934,Malvern,Arkansas
@@ -433,7 +433,7 @@
 431,Hal Lear,183,73,Temple University,1935,Philadelphia,Pennsylvania
 432,Slick Leonard*,190,83,Indiana University,1932,Terre Haute,Indiana
 433,Johnny McCarthy,185,83,Canisius College,1934,,
-"434,Willie Naulls,198,102,""University of California, Los Angeles"",1934,Dallas,Texas"
+434,Willie Naulls,198,102,"University of California, Los Angeles",1934,Dallas,Texas
 435,Jim Paxson,198,90,University of Dayton,1932,Pennville,Indiana
 436,Dave Piontek,198,104,Xavier University,1934,,
 437,Jim Ray,185,81,University of Toledo,1934,,
@@ -489,7 +489,7 @@
 487,Phil Rollins,188,83,University of Louisville,1934,Wickliffe,Kentucky
 488,Larry Staverman,201,92,Thomas More College,1936,,
 489,Bennie Swain,203,99,Texas Southern University,1933,,
-"490,Gary Alcorn,206,102,""California State University, Fresno"",1936,,"
+490,Gary Alcorn,206,102,"California State University, Fresno",1936,,
 491,Bob Anderegg,190,90,Michigan State University,1937,Monroe,Wisconsin
 492,Dick Barnett,193,86,Tennessee State University,1936,Gary,Indiana
 493,Whitey Bell,183,81,North Carolina State University,1932,Monticello,Kentucky
@@ -652,10 +652,10 @@
 650,Bill Buntin,201,113,University of Michigan,1942,Detroit,Michigan
 651,Barry Clemens,198,95,Ohio Wesleyan University,1943,Dayton,Ohio
 652,Billy Cunningham*,198,95,University of North Carolina,1943,Brooklyn,New York
-"653,Keith Erickson,196,88,""University of California, Los Angeles"",1944,San Francisco,California"
+653,Keith Erickson,196,88,"University of California, Los Angeles",1944,San Francisco,California
 654,John Fairchild,203,92,Brigham Young University,1943,Encinitas,California
 655,Will Frazier,201,95,Grambling State University,1942,Minden,Louisiana
-"656,Gail Goodrich*,185,77,""University of California, Los Angeles"",1943,Los Angeles,California"
+656,Gail Goodrich*,185,77,"University of California, Los Angeles",1943,Los Angeles,California
 657,Fred Hetzel,203,99,Davidson College,1942,Washington,District of Columbia
 658,Jon McGlocklin,196,92,Indiana University,1943,Franklin,Indiana
 659,Thales McReynolds,190,83,Miles College,1943,Birmingham,Alabama
@@ -720,7 +720,7 @@
 718,Clem Haskins,190,88,Western Kentucky University,1943,Campbellsville,Kentucky
 719,Al Jackson,185,83,Wilberforce University,1943,Cleveland,Ohio
 720,Phil Jackson*,203,99,University of North Dakota,1945,Deer Lodge,Montana
-"721,Johnny Jones,201,92,""California State University, Los Angeles"",1943,Washington,District of Columbia"
+721,Johnny Jones,201,92,"California State University, Los Angeles",1943,Washington,District of Columbia
 722,Nick Jones,188,86,University of Oregon,1945,,
 723,Dave Lattin,198,102,University of Texas at El Paso,1943,Houston,Texas
 724,George Lehmann,183,81,Campbell University,1942,Riverside,New Jersey
@@ -743,7 +743,7 @@
 741,Roland West,193,80,University of Cincinnati,1944,,
 742,John Wetzel,196,86,Virginia Polytechnic Institute and State University,1944,Waynesboro,Virginia
 743,Ken Wilburn,198,88,Central State University,1944,River Rouge,Michigan
-"744,Art Williams,185,81,""California State Polytechnic University, Pomona"",1939,Bonham,Texas"
+744,Art Williams,185,81,"California State Polytechnic University, Pomona",1939,Bonham,Texas
 745,Tom Workman,201,98,Seattle University,1944,Seattle,Washington
 746,Zaid Abdul-Aziz,206,106,Iowa State University,1946,Brooklyn,New York
 747,Rick Adelman,185,79,Loyola Marymount University,1946,Lynwood,California
@@ -782,14 +782,14 @@
 780,Dale Schlueter,208,102,Colorado State University,1945,Tacoma,Washington
 781,Doug Sims,201,88,Kent State University,1943,Elba,Alabama
 782,Greg Smith,196,88,Western Kentucky University,1947,Princeton,Kentucky
-"783,John Trapp,201,95,""University of Nevada, Las Vegas"",1945,Detroit,Michigan"
+783,John Trapp,201,95,"University of Nevada, Las Vegas",1945,Detroit,Michigan
 784,Wes Unseld*,201,111,University of Louisville,1946,Louisville,Kentucky
 785,Dwight Waller,198,99,Tennessee State University,1945,Brownsville,Tennessee
 786,Cliff Williams,190,81,Bowling Green State University,1945,,
 787,Ron Williams,190,85,West Virginia University,1944,Weirton,West Virginia
 788,Sam Williams,190,81,University of Iowa,1945,,
-"789,Kareem Abdul-Jabbar*,218,102,""University of California, Los Angeles"",1947,New York,New York"
-"790,Lucius Allen,188,79,""University of California, Los Angeles"",1947,Kansas City,Kansas"
+789,Kareem Abdul-Jabbar*,218,102,"University of California, Los Angeles",1947,New York,New York
+790,Lucius Allen,188,79,"University of California, Los Angeles",1947,Kansas City,Kansas
 791,Wally Anderzunas,201,99,Creighton University,1946,,
 792,John Arthurs,193,83,Tulane University,1947,,
 793,Johnny Baum,196,90,Temple University,1946,Philadelphia,Pennsylvania
@@ -804,7 +804,7 @@
 802,Connie Hawkins*,203,95,University of Iowa,1942,Brooklyn,New York
 803,Brian Heaney,188,81,Acadia University,1946,,
 804,Steve Kuberski,203,97,Bradley University,1947,Moline,Illinois
-"805,Mike Lynn,201,97,""University of California, Los Angeles"",1945,Covina,California"
+805,Mike Lynn,201,97,"University of California, Los Angeles",1945,Covina,California
 806,Willie McCarter,190,79,Drake University,1946,Gary,Indiana
 807,Steve Mix,201,97,University of Toledo,1947,Toledo,Ohio
 808,Grady O'Malley,196,92,Manhattan College,1948,Boston,Massachusetts
@@ -849,7 +849,7 @@
 847,George Johnson,211,111,Stephen F. Austin State University,1947,Herleton,Texas
 848,John Johnson,201,90,University of Iowa,1947,Carthage,Mississippi
 849,Earnie Killum,190,81,Stetson University,1948,,
-"850,Ron Knight,201,97,""California State University, Los Angeles"",1947,,"
+850,Ron Knight,201,97,"California State University, Los Angeles",1947,,
 851,Sam Lacey,208,106,New Mexico State University,1948,Indianaola,Mississippi
 852,Bob Lanier*,211,113,St. Bonaventure University,1948,Buffalo,New York
 853,Pete Maravich*,196,89,Louisiana State University,1947,Aliquippa,Pennsylvania
@@ -874,7 +874,7 @@
 872,Fred Taylor,196,81,University of Texas-Pan American,1948,Houston,Texas
 873,Joe Thomas,198,92,Marquette University,1948,Canton,Georgia
 874,Rudy Tomjanovich,203,98,University of Michigan,1948,Hamtramck,Michigan
-"875,John Vallely,190,83,""University of California, Los Angeles"",1948,,"
+875,John Vallely,190,83,"University of California, Los Angeles",1948,,
 876,Cornell Warner,206,99,Jackson State University,1948,Jackson,Mississippi
 877,Bobby Washington,180,79,Eastern Kentucky University,1947,,
 878,Jeff Webb,193,77,Kansas State University,1948,,
@@ -884,7 +884,7 @@
 882,Marv Winkler,185,74,University of Louisiana at Lafayette,1948,,
 883,Gary Zeller,190,92,Drake University,1947,,
 884,Bill Zopf,185,77,Duquesne University,1948,,
-"885,Odis Allison,198,88,""University of Nevada, Las Vegas"",1949,,"
+885,Odis Allison,198,88,"University of Nevada, Las Vegas",1949,,
 886,Vic Bartolome,213,104,Oregon State University,1948,,
 887,Fred Brown,190,82,University of Iowa,1948,Milwaukee,Wisconsin
 888,Austin Carr,193,90,University of Notre Dame,1948,Washington,District of Columbia
@@ -912,26 +912,26 @@
 910,Barry Nelson,208,104,Duquesne University,1949,,
 911,Mike Newlin,193,90,University of Utah,1949,Portland,Oregon
 912,Willie Norwood,201,99,Alcorn State University,1947,Carrolton,Mississippi
-"913,Steve Patterson,206,102,""University of California, Los Angeles"",1948,Riverside,California"
+913,Steve Patterson,206,102,"University of California, Los Angeles",1948,Riverside,California
 914,Tom Payne,218,108,University of Kentucky,1950,,
 915,Howard Porter,203,99,Villanova University,1948,Stuart,Florida
 916,Clifford Ray,206,104,University of Oklahoma,1949,Union,South Carolina
 917,Jackie Ridgle,193,88,University of California,1948,Altheimer,Arkansas
 918,Rich Rinaldi,190,88,Saint Peter's College,1949,,
-"919,Curtis Rowe,201,102,""University of California, Los Angeles"",1949,Bessemer,Alabama"
+919,Curtis Rowe,201,102,"University of California, Los Angeles",1949,Bessemer,Alabama
 920,Charlie Scott,196,79,University of North Carolina,1948,New York,New York
 921,Elmore Smith,213,113,Kentucky State University,1949,Macon,Georgia
 922,Randy Smith,190,81,State University of New York College at Buffalo,1948,Bellport,New York
 923,William Smith,213,99,Syracuse University,1949,,
 924,Larry Steele,196,81,University of Kentucky,1949,Greencastle,Indiana
-"925,George Trapp,203,92,""California State University, Long Beach"",1948,Detroit,Michigan"
-"926,Sidney Wicks,203,102,""University of California, Los Angeles"",1949,Los Angeles,California"
+925,George Trapp,203,92,"California State University, Long Beach",1948,Detroit,Michigan
+926,Sidney Wicks,203,102,"University of California, Los Angeles",1949,Los Angeles,California
 927,Nate Williams,196,97,Utah State University,1950,Columbia,Louisiana
 928,Isaiah Wilson,188,79,University of Baltimore,1948,Philadelphia,Pennsylvania
 929,Dave Wohl,188,83,University of Pennsylvania,1949,Flushing,New York
 930,Barry Yates,201,97,University of Maryland,1946,,
 931,Charlie Yelverton,188,86,Fordham University,1948,,
-"932,Henry Bibby,185,83,""University of California, Los Angeles"",1949,Franklinton,North Carolina"
+932,Henry Bibby,185,83,"University of California, Los Angeles",1949,Franklinton,North Carolina
 933,Freddie Boyd,188,81,Oregon State University,1950,Bakersfield,California
 934,Steve Bracey,185,79,University of Tulsa,1950,Brooklyn,New York
 935,John Brisker,196,95,University of Toledo,1947,Detroit,Michigan
@@ -954,8 +954,8 @@
 952,Russ Lee,196,83,Marshall University,1950,Boston,Massachusetts
 953,LaRue Martin,211,94,Loyola University of Chicago,1950,Chicago,Illinois
 954,Bob McAdoo*,206,95,University of North Carolina,1951,Greensboro,North Carolina
-"955,Paul McCracken,193,81,""California State University, Northridge"",1950,New York,New York"
-"956,Eric McWilliams,203,90,""California State University, Long Beach"",1950,Denver,Colorado"
+955,Paul McCracken,193,81,"California State University, Northridge",1950,New York,New York
+956,Eric McWilliams,203,90,"California State University, Long Beach",1950,Denver,Colorado
 957,Mark Minor,198,97,Ohio State University,1950,,
 958,Bob Nash,203,88,University of Hawaii,1950,Hartford,Connecticut
 959,Lloyd Neal,201,102,Tennessee State University,1950,Talbottom,Georgia
@@ -970,9 +970,9 @@
 968,Sam Sibert,201,97,Kentucky State University,1949,,
 969,Bud Stallworth,196,86,University of Kansas,1950,Hartselle,Alabama
 970,Paul Stovall,193,97,Arizona State University,1948,,
-"971,Chuck Terry,198,97,""California State University, Long Beach"",1950,Long Beach,California"
+971,Chuck Terry,198,97,"California State University, Long Beach",1950,Long Beach,California
 972,Justus Thigpen,185,72,Weber State University,1947,,
-"973,John Tschogl,198,93,""University of California, Santa Barbara"",1950,Chula Vista,California"
+973,John Tschogl,198,93,"University of California, Santa Barbara",1950,Chula Vista,California
 974,Paul Westphal,193,88,University of Southern California,1950,Torrance,California
 975,Harthorne Wingo,198,95,Friendship Junior College,1947,Tryon,North Carolina
 976,Joby Wright,203,99,Indiana University,1950,,
@@ -1010,7 +1010,7 @@
 1008,Gary Melchionni,188,83,Duke University,1951,Camden,New Jersey
 1009,Louie Nelson,190,86,University of Washington,1951,Los Angeles,California
 1010,Jim Owens,196,90,Arizona State University,1950,Los Angeles,California
-"1011,Ed Ratleff,198,88,""California State University, Long Beach"",1950,Bellefontaine,Ohio"
+1011,Ed Ratleff,198,88,"California State University, Long Beach",1950,Bellefontaine,Ohio
 1012,Joe Reaves,196,95,Bethel College,1950,,
 1013,Mark Sibley,188,79,Northwestern University,1950,,
 1014,Bob Verga,185,86,Duke University,1945,Neptune,New Jersey
@@ -1033,7 +1033,7 @@
 1031,John Drew,198,92,Gardner-Webb University,1954,Vredenburgh,Alabama
 1032,Dennis DuVal,190,79,Syracuse University,1952,Westbury,New York
 1033,Al Eberhard,198,102,University of Missouri,1952,Cedar Rapids,Iowa
-"1034,Leonard Gray,203,108,""California State University, Long Beach"",1951,Kansas City,Kansas"
+1034,Leonard Gray,203,108,"California State University, Long Beach",1951,Kansas City,Kansas
 1035,Bernie Harris,208,90,Virginia Commonwealth University,1950,Roanoke,Virginia
 1036,Steve Hawes,206,99,University of Washington,1950,Seattle,Washington
 1037,Tom Henderson,190,86,University of Hawaii,1952,Newberry,South Carolina
@@ -1046,7 +1046,7 @@
 1044,Len Kosmalski,213,111,University of Tennessee,1951,Cleveland,Ohio
 1045,Bill Ligon,193,81,Vanderbilt University,1952,Nashville,Tennessee
 1046,Phil Lumpkin,183,74,Miami University,1951,Dayton,Ohio
-"1047,Glenn McDonald,198,86,""California State University, Long Beach"",1952,Kewanee,Illinois"
+1047,Glenn McDonald,198,86,"California State University, Long Beach",1952,Kewanee,Illinois
 1048,Eric Money,183,77,University of Arizona,1955,Detroit,Michigan
 1049,Connie Norman,190,79,University of Arizona,1953,Detroit,Michigan
 1050,Kevin Restani,206,102,University of San Francisco,1951,San Francisco,California
@@ -1061,12 +1061,12 @@
 1059,George Thompson,188,90,Marquette University,1947,Brooklyn,New York
 1060,Dean Tolson,203,86,University of Arkansas,1951,Kansas City,Missouri
 1061,Foots Walker,183,83,State University of West Georgia,1951,Southampton,New York
-"1062,Bill Walton*,211,95,""University of California, Los Angeles"",1952,La Mesa,California"
+1062,Bill Walton*,211,95,"University of California, Los Angeles",1952,La Mesa,California
 1063,Perry Warbington,188,74,Georgia Southern University,1952,Atlabta,Georgia
 1064,Stan Washington,193,86,University of San Diego,1952,Washington,District of Columbia
 1065,Scott Wedman,201,97,University of Colorado,1952,Harper,Kansas
 1066,Owen Wells,201,90,University of Detroit Mercy,1950,Providence,Rhode Island
-"1067,Jamaal Wilkes*,198,86,""University of California, Los Angeles"",1953,Berkeley,California"
+1067,Jamaal Wilkes*,198,86,"University of California, Los Angeles",1953,Berkeley,California
 1068,Earl Williams,201,104,Winston-Salem State University,1951,Levittown,Pennsylvania
 1069,Bobby Wilson,193,83,West Virginia State University,1926,,
 1070,Brian Winters,193,83,University of South Carolina,1952,Rockaway,New York
@@ -1083,11 +1083,11 @@
 1081,Henry Dickerson,193,86,University of Charleston,1951,Berkley,West Virginia
 1082,Eric Fernsten,208,92,University of San Francisco,1953,Oakland,California
 1083,Larry Fogle,196,92,Canisius College,1953,Brooklyn,New York
-"1084,Don Ford,206,97,""University of California, Santa Barbara"",1952,Santa Barbara,California"
+1084,Don Ford,206,97,"University of California, Santa Barbara",1952,Santa Barbara,California
 1085,World B.,206,97,,1952,,
 1086,Donnie Freeman,190,83,University of Illinois at Urbana-Champaign,1944,Madison,Illinois
 1087,Kevin Grevey,196,95,University of Kentucky,1953,Hamilton,Ohio
-"1088,Bob Gross,198,90,""California State University, Long Beach"",1953,San Pedro,California"
+1088,Bob Gross,198,90,"California State University, Long Beach",1953,San Pedro,California
 1089,Lindsay Hairston,201,81,Michigan State University,1951,Detroit,Michigan
 1090,Glenn Hansen,193,92,Louisiana State University,1952,Devils Lake,North Dakota
 1091,Robert Hawkins,193,86,Illinois State University,1954,Detroit,Michigan
@@ -1099,23 +1099,23 @@
 1097,C.J. Kupec,190,92,,1953,,
 1098,John Lambert,208,102,University of Southern California,1953,Berkeley,California
 1099,John Laskowski,198,83,Indiana University,1953,South Bend,Indiana
-"1100,Greg Lee,190,86,""University of California, Los Angeles"",1951,Reseda,California"
+1100,Greg Lee,190,86,"University of California, Los Angeles",1951,Reseda,California
 1101,Clyde Mayes,203,102,Furman University,1953,Greenville,South Carolina
 1102,Ken Mayfield,188,83,Tuskegee University,1948,Chicago,Illinois
 1103,Jim McElroy,190,86,Central Michigan University,1953,Cotton Plant,Arkansas
 1104,George McGinnis,203,106,Indiana University,1950,Indianapolis,Indiana
 1105,Tom McMillen,211,97,University of Maryland,1952,Elmira,New York
 1106,Joe Meriweather,208,97,Southern Illinois University,1953,Phenix City,Alabama
-"1107,Dave Meyers,203,97,""University of California, Los Angeles"",1953,San Diego,California"
+1107,Dave Meyers,203,97,"University of California, Los Angeles",1953,San Diego,California
 1108,Frank Oleynick,188,83,Seattle University,1955,Bridgeport,Connecticut
-"1109,Cliff Pondexter,206,105,""California State University, Long Beach"",1954,Fresno,California"
+1109,Cliff Pondexter,206,105,"California State University, Long Beach",1954,Fresno,California
 1110,Bill Robinzine,201,104,DePaul University,1953,Chicago,Illinois
 1111,John Roche,190,77,University of South Carolina,1949,New York,New York
 1112,Bruce Seals,203,95,Xavier University of Louisiana,1953,New Orleans,Louisiana
 1113,Ed Searcy,198,95,St. John's University,1952,New York,New York
 1114,Gene Short,198,90,Jackson State University,1953,Macon,Mississippi
 1115,John Shumate,206,106,University of Notre Dame,1952,Greenville,South Carolina
-"1116,Ricky Sobers,190,89,""University of Nevada, Las Vegas"",1953,Bronx,New York"
+1116,Ricky Sobers,190,89,"University of Nevada, Las Vegas",1953,Bronx,New York
 1117,Terry Thomas,203,99,University of Detroit Mercy,1953,Detroit,Michigan
 1118,Rudy White,188,88,Arizona State University,1953,Silver City,New Mexico
 1119,Gus Williams,188,79,University of Southern California,1953,Mount Vernon,New York
@@ -1186,10 +1186,10 @@
 1184,Maurice Lucas,206,97,Marquette University,1952,Pittsburgh,Pennsylvania
 1185,Moses Malone*,208,97,,1955,Petersburg,Virginia
 1186,Scott May,201,97,Indiana University,1954,Sandusky,Ohio
-"1187,Andre McCarter,190,86,""University of California, Los Angeles"",1953,Philadelphia,Pennsylvania"
+1187,Andre McCarter,190,86,"University of California, Los Angeles",1953,Philadelphia,Pennsylvania
 1188,Ted McClain,185,81,Tennessee State University,1946,Nashville,Tennessee
 1189,Allen Murphy,196,86,University of Louisville,1952,Birmingham,Alabama
-"1190,Swen Nater,211,108,""University of California, Los Angeles"",1950,Denhelder,Netherlands"
+1190,Swen Nater,211,108,"University of California, Los Angeles",1950,Denhelder,Netherlands
 1191,Johnny Neumann,198,90,University of Mississippi,1951,Memphis,Tennessee
 1192,Mark Olberding,203,102,University of Minnesota,1956,Melrose,Minnesota
 1193,Tom Owens,208,97,University of South Carolina,1949,Bronx,New York
@@ -1221,7 +1221,7 @@
 1219,Wally Walker,201,86,University of Virginia,1954,Millersville,Pennsylvania
 1220,Lloyd Walton,183,72,Marquette University,1953,Chicago,Illinois
 1221,Henry Ward,193,88,Jackson State University,1952,Jackson,Mississippi
-"1222,Richard Washington,211,99,""University of California, Los Angeles"",1955,Portland,Oregon"
+1222,Richard Washington,211,99,"University of California, Los Angeles",1955,Portland,Oregon
 1223,Marvin Webster,216,102,Morgan State University,1952,Baltimore,Maryland
 1224,Bob Wilkerson,198,88,Indiana University,1954,Anderson,Indiana
 1225,Chuck Williams,183,74,Seattle University,1943,Colorado Springs,Colorado
@@ -1252,14 +1252,14 @@
 1250,Al Fleming,201,97,University of Arizona,1954,Chicago,Illinois
 1251,Bayard Forrest,208,106,Grand Canyon University,1954,San Jose,California
 1252,Mike Glenn,188,79,Southern Illinois University,1955,Rome,Georgia
-"1253,Glen Gondrezick,198,98,""University of Nevada, Las Vegas"",1955,Boulder,Colorado"
+1253,Glen Gondrezick,198,98,"University of Nevada, Las Vegas",1955,Boulder,Colorado
 1254,Rickey Green,183,77,University of Michigan,1954,Chicago,Illinois
 1255,Greg Griffin,201,86,Idaho State University,1952,Cleveland,Ohio
 1256,Ernie Grunfeld,198,95,University of Tennessee,1955,Satu-Mare,Romania
 1257,Joe Hassett,196,81,Providence College,1955,Providence,Rhode Island
 1258,Eddie Johnson,203,92,Tennessee State University,1944,Atlanta,Georgia
 1259,Larry Johnson,190,92,University of Kentucky,1954,Morganfield,Kentucky
-"1260,Marques Johnson,201,98,""University of California, Los Angeles"",1956,Nachitoches,Louisiana"
+1260,Marques Johnson,201,98,"University of California, Los Angeles",1956,Nachitoches,Louisiana
 1261,Eddie Jordan,185,77,Rutgers University,1955,Washington,District of Columbia
 1262,Bernard King*,201,92,University of Tennessee,1956,Brooklyn,New York
 1263,Toby Knight,206,95,University of Notre Dame,1955,Bronx,New York
@@ -1269,10 +1269,10 @@
 1267,Rich Laurel,198,86,Hofstra University,1954,Philadelphia,Pennsylvania
 1268,Ricky Marsh,190,90,Manhattan College,1954,New York,New York
 1269,Cedric Maxwell,203,92,University of North Carolina at Charlotte,1955,Kinston,North Carolina
-"1270,Larry Moffett,203,95,""University of Nevada, Las Vegas"",1954,Mobile,Alabama"
+1270,Larry Moffett,203,95,"University of Nevada, Las Vegas",1954,Mobile,Alabama
 1271,Glenn Mosley,203,88,Seton Hall University,1955,Newark,New Jersey
 1272,Norm Nixon,188,77,Duquesne University,1955,Macon,Georgia
-"1273,Eddie Owens,201,95,""University of Nevada, Las Vegas"",1953,,"
+1273,Eddie Owens,201,95,"University of Nevada, Las Vegas",1953,,
 1274,Ben Poquette,206,106,Central Michigan University,1955,Ann Arbor,Michigan
 1275,Robert Reid,203,92,St. Mary's University,1955,Atlanta,Georgia
 1276,Anthony Roberts,196,83,Oral Roberts University,1955,Chattanooga,Tennessee
@@ -1282,7 +1282,7 @@
 1280,Steve Sheppard,198,97,University of Maryland,1954,New York,New York
 1281,Jack Sikma,211,104,Illinois Wesleyan University,1955,Kankakee,Illinois
 1282,Scott Sims,185,77,University of Missouri,1955,Kirksville,Missouri
-"1283,Robert Smith,180,74,""University of Nevada, Las Vegas"",1955,Los Angeles,California"
+1283,Robert Smith,180,74,"University of Nevada, Las Vegas",1955,Los Angeles,California
 1284,Phil Walker,190,81,Millersville University of Pennsylvania,1956,Philadelphia,Pennsylvania
 1285,Wilson Washington,206,102,Old Dominion University,1955,Norfolk,Virginia
 1286,Ray Williams,190,85,University of Minnesota,1954,Mount Vernon,New York
@@ -1291,7 +1291,7 @@
 1289,Dennis Boyd,185,79,University of Detroit Mercy,1954,Portsmouth,Virginia
 1290,Winford Boynes,198,83,University of San Francisco,1957,Greenville,South Carolina
 1291,Ron Brewer,193,81,University of Arkansas,1955,Fort Smith,Arkansas
-"1292,Greg Bunch,198,86,""California State University, Fullerton"",1956,San Bernardino,California"
+1292,Greg Bunch,198,86,"California State University, Fullerton",1956,San Bernardino,California
 1293,Marty Byrnes,201,97,Syracuse University,1956,Syracuse,New York
 1294,Ron Carter,196,86,Virginia Military Institute,1956,Pittsburgh,Pennsylvania
 1295,Maurice Cheeks,185,81,West Texas A&M University,1956,Chicago,Illinois
@@ -1325,14 +1325,14 @@
 1323,Marlon Redmond,198,85,University of San Francisco,1955,San Francisco,California
 1324,Micheal Ray,198,85,,1955,,
 1325,Rick Robey,211,104,University of Kentucky,1956,Coral Gables,Florida
-"1326,Jackie Robinson,198,95,""University of Nevada, Las Vegas"",1955,Los Angeles,California"
+1326,Jackie Robinson,198,95,"University of Nevada, Las Vegas",1955,Los Angeles,California
 1327,John Rudd,201,104,McNeese State University,1955,DeRidder,Louisiana
 1328,Frankie Sanders,198,90,Southern University and A&M College,1957,Dayton,Ohio
 1329,Purvis Short,201,95,Jackson State University,1957,Hattiesburg,Mississippi
 1330,Sam Smith,201,104,Kentucky Wesleyan College,1944,Hazard,Kentucky
-"1331,Reggie Theus,201,86,""University of Nevada, Las Vegas"",1957,Inglewood,California"
+1331,Reggie Theus,201,86,"University of Nevada, Las Vegas",1957,Inglewood,California
 1332,Mychal Thompson,208,102,University of Minnesota,1955,Nassau,Bahamas
-"1333,Raymond Townsend,190,79,""University of California, Los Angeles"",1955,San Jose,California"
+1333,Raymond Townsend,190,79,"University of California, Los Angeles",1955,San Jose,California
 1334,Terry Tyler,201,97,University of Detroit Mercy,1956,Detroit,Michigan
 1335,Andre Wakefield,190,79,Loyola University of Chicago,1955,Chicago,Illinois
 1336,Jerome Whitehead,208,99,Marquette University,1956,Waukegan,Illinois
@@ -1353,19 +1353,19 @@
 1351,Greg Deane,193,86,University of Utah,1957,Tulare,California
 1352,Larry Demic,206,102,University of Arizona,1957,Gary,Indiana
 1353,Terry Duerod,188,81,University of Detroit Mercy,1956,Royal Oak,Michigan
-"1354,Earl Evans,203,91,""University of Nevada, Las Vegas"",1955,Port Arthur,Texas"
+1354,Earl Evans,203,91,"University of Nevada, Las Vegas",1955,Port Arthur,Texas
 1355,Mike Evans,185,77,Kansas State University,1955,Goldsboro,North Carolina
 1356,Gary Garland,193,81,DePaul University,1957,East Orange,New Jersey
-"1357,Dave Greenwood,206,100,""University of California, Los Angeles"",1957,Lynwood,California"
-"1358,Roy Hamilton,188,81,""University of California, Los Angeles"",1957,Los Angeles,California"
+1357,Dave Greenwood,206,100,"University of California, Los Angeles",1957,Lynwood,California
+1358,Roy Hamilton,188,81,"University of California, Los Angeles",1957,Los Angeles,California
 1359,Gerald Henderson,188,79,Virginia Commonwealth University,1956,Richmond,Virginia
-"1360,Johnny High,190,83,""University of Nevada, Reno"",1957,Birmingham,Alabama"
-"1361,Brad Holland,190,81,""University of California, Los Angeles"",1956,Billings,Montana"
+1360,Johnny High,190,83,"University of Nevada, Reno",1957,Birmingham,Alabama
+1361,Brad Holland,190,81,"University of California, Los Angeles",1956,Billings,Montana
 1362,Phil Hubbard,203,97,University of Michigan,1956,Canton,Ohio
 1363,Geoff Huston,188,79,Texas Tech University,1957,Brooklyn,New York
 1364,Abdul Jeelani,203,95,University of Wisconsin-Parkside,1954,Bells,Tennessee
 1365,Cheese Johnson,183,77,University of California,1949,Corpus Christi,Texas
-"1366,Magic Johnson*,201,98,""University of California, Los Angeles"",1956,Nachitoches,Louisiana"
+1366,Magic Johnson*,201,98,"University of California, Los Angeles",1956,Nachitoches,Louisiana
 1367,Vinnie Johnson,188,90,Baylor University,1956,Brooklyn,New York
 1368,Major Jones,206,102,Albany State University,1953,McGhee,Arkansas
 1369,Greg Kelser,201,86,Michigan State University,1957,Panama City,Florida
@@ -1381,7 +1381,7 @@
 1379,Calvin Natt,198,99,University of Louisiana at Monroe,1957,Monroe,Louisiana
 1380,Sylvester Norris,211,99,Jackson State University,1957,Jackson,Mississippi
 1381,Wiley Peck,201,99,Mississippi State University,1957,Montgomery,Alabama
-"1382,Sam Pellom,206,102,""University at Buffalo, State University of New York"",1951,Wilmington,North Carolina"
+1382,Sam Pellom,206,102,"University at Buffalo, State University of New York",1951,Wilmington,North Carolina
 1383,Clint Richardson,190,88,Seattle University,1956,Seattle,Washington
 1384,Cliff Robinson,206,99,University of Southern California,1960,Oakland,California
 1385,Jim Spanarkel,196,86,Duke University,1957,Jersey City,New Jersey
@@ -1390,7 +1390,7 @@
 1388,Sly Williams,201,95,University of Rhode Island,1958,New Haven,Connecticut
 1389,Bubba Wilson,190,79,Western Carolina University,1955,Gastonia,North Carolina
 1390,Tony Zeno,203,95,Arizona State University,1957,New Orleans,Louisiana
-"1391,Darrell Allums,206,99,""University of California, Los Angeles"",1958,Los Angeles,California"
+1391,Darrell Allums,206,99,"University of California, Los Angeles",1958,Los Angeles,California
 1392,Norman Black,196,83,Saint Joseph's University,1957,Baltimore,Maryland
 1393,Dave Britton,193,81,Texas A&M University,1958,New York,New York
 1394,Michael Brooks,201,99,La Salle University,1958,Philadelphia,Pennsylvania
@@ -1406,7 +1406,7 @@
 1404,Monti Davis,201,92,Tennessee State University,1958,Warren,Ohio
 1405,James Donaldson,218,124,Washington State University,1957,Heacham,United Kingdom
 1406,Larry Drew,185,77,University of Missouri,1958,Kansas City,Kansas
-"1407,Ralph Drollinger,218,113,""University of California, Los Angeles"",1954,La Mesa,California"
+1407,Ralph Drollinger,218,113,"University of California, Los Angeles",1954,La Mesa,California
 1408,John Duren,190,88,Georgetown University,1958,Washington,District of Columbia
 1409,Tony Fuller,193,81,Pepperdine University,1958,Detroit,Michigan
 1410,Calvin Garrett,201,86,Oral Roberts University,1956,Parsons,Tennessee
@@ -1419,7 +1419,7 @@
 1417,Tony Jackson,193,90,St. John's University,1942,Brooklyn,New York
 1418,Lee Johnson,211,92,East Texas State University,1957,Plummerville,Arkansas
 1419,Reggie Johnson,206,92,University of Tennessee,1957,Atlanta,Georgia
-"1420,Edgar Jones,208,102,""University of Nevada, Reno"",1956,Fort Rucker,Alabama"
+1420,Edgar Jones,208,102,"University of Nevada, Reno",1956,Fort Rucker,Alabama
 1421,Walter Jordan,201,89,Purdue University,1956,Perry,Alabama
 1422,Clarence Kea,198,98,Lamar University,1959,Wilmington,North Carolina
 1423,Chad Kinch,193,86,University of North Carolina at Charlotte,1958,Perth Amboy,New Jersey
@@ -1438,7 +1438,7 @@
 1436,Lowes Moore,185,77,West Virginia University,1957,Plymouth,South Carolina
 1437,Kenny Natt,190,83,University of Louisiana at Monroe,1958,Monroe,Louisiana
 1438,Carl Nicks,185,79,Indiana State University,1958,Chicago,Illinois
-"1439,Mike Niles,198,102,""California State University, Fullerton"",1955,Los Angeles,California"
+1439,Mike Niles,198,102,"California State University, Fullerton",1955,Los Angeles,California
 1440,Mike O'Koren,201,93,University of North Carolina,1958,Jersey City,New Jersey
 1441,Jawann Oldham,213,97,Seattle University,1957,Chicago,Illinois
 1442,Louis Orr,203,79,Syracuse University,1958,Cincinnati,Ohio
@@ -1459,11 +1459,11 @@
 1457,Carlos Terry,196,95,Winston-Salem State University,1956,Lexington,North Carolina
 1458,Andrew Toney,190,80,University of Louisiana at Lafayette,1957,Birmingham,Alabama
 1459,Ronnie Valentine,201,95,Old Dominion University,1957,Norfolk,Virginia
-"1460,Kiki Vandeweghe,203,99,""University of California, Los Angeles"",1958,Wiesbaden,Germany"
-"1461,Brett Vroman,213,99,""University of Nevada, Las Vegas"",1955,Hollywood,California"
+1460,Kiki Vandeweghe,203,99,"University of California, Los Angeles",1958,Wiesbaden,Germany
+1461,Brett Vroman,213,99,"University of Nevada, Las Vegas",1955,Hollywood,California
 1462,Hawkeye Whitney,201,104,Iowa State University,1939,Brooklyn,New York
-"1463,Michael Wiley,206,90,""California State University, Long Beach"",1957,Long Beach,California"
-"1464,James Wilkes,198,86,""University of California, Los Angeles"",1953,Berkeley,California"
+1463,Michael Wiley,206,90,"California State University, Long Beach",1957,Long Beach,California
+1464,James Wilkes,198,86,"University of California, Los Angeles",1953,Berkeley,California
 1465,Jeff Wilkins,211,104,Illinois State University,1955,Chicago,Illinois
 1466,Mike Woodson,196,88,Indiana University,1958,Indianapolis,Indiana
 1467,Sam Worthen,196,88,Marquette University,1958,Brooklyn,New York
@@ -1486,7 +1486,7 @@
 1484,Kenny Dennard,203,99,Duke University,1958,King,North Carolina
 1485,Mickey Dillard,190,77,Florida State University,1958,Hollywood,Florida
 1486,John Douglas,188,77,University of Kansas,1956,Town Creek,Alabama
-"1487,Craig Dykema,203,86,""California State University, Long Beach"",1959,Lakewood,California"
+1487,Craig Dykema,203,86,"California State University, Long Beach",1959,Lakewood,California
 1488,Franklin Edwards,185,77,Cleveland State University,1959,New York,New York
 1489,Petur Gudmundsson,218,117,University of Washington,1958,Reykjavik,Iceland
 1490,Glenn Hagan,183,77,St. Bonaventure University,1955,Sanford,Florida
@@ -1520,7 +1520,7 @@
 1518,Kelly Tripucka,198,99,University of Notre Dame,1959,Glen Ridge,New Jersey
 1519,Elston Turner,196,86,University of Mississippi,1959,Knoxville,Tennessee
 1520,Darnell Valentine,185,83,University of Kansas,1959,Chicago,Illinois
-"1521,Pete Verhoeven,206,97,""California State University, Fresno"",1959,Hanford,California"
+1521,Pete Verhoeven,206,97,"California State University, Fresno",1959,Hanford,California
 1522,Jay Vincent,201,99,Michigan State University,1959,Kalamazoo,Michigan
 1523,Danny Vranes,201,95,University of Utah,1958,Salt Lake City,Utah
 1524,Buck Williams,203,97,University of Maryland,1960,Rocky Mount,North Carolina
@@ -1532,14 +1532,14 @@
 1530,Rich Yonakor,206,99,University of North Carolina,1958,Euclid,Ohio
 1531,Dwight Anderson,190,83,University of Southern California,1960,Dayton,Ohio
 1532,J.J. Anderson,190,83,,1960,,
-"1533,Richard Anderson,208,108,""University of California, Santa Barbara"",1960,San Pedro,California"
+1533,Richard Anderson,208,108,"University of California, Santa Barbara",1960,San Pedro,California
 1534,John Bagley,183,83,Boston College,1960,Bridgeport,Connecticut
 1535,Dave Batton,208,108,University of Notre Dame,1956,Baltimore,Maryland
 1536,Lester Conner,193,81,Oregon State University,1959,Memphis,Tennessee
 1537,Chubby Cox,188,81,University of San Francisco,1955,Philadelphia,Pennsylvania
 1538,Terry Cummings,206,99,DePaul University,1961,Chicago,Illinois
 1539,Quintin Dailey,190,81,University of San Francisco,1961,Baltimore,Maryland
-"1540,Mark Eaton,224,124,""University of California, Los Angeles"",1957,Westminster,California"
+1540,Mark Eaton,224,124,"University of California, Los Angeles",1957,Westminster,California
 1541,Jerry Eaves,193,81,University of Louisville,1959,Louisville,Kentucky
 1542,Keith Edmonson,196,88,Purdue University,1960,Gulfport,Mississippi
 1543,Chris Engler,211,111,University of Wyoming,1959,Stillwater,Minnesota
@@ -1548,8 +1548,8 @@
 1546,Bill Garnett,208,99,University of Portland,1940,East St. Louis,Illinois
 1547,John Greig,201,97,University of Oregon,1961,Sacramento,California
 1548,Scott Hastings,208,106,University of Arkansas,1960,Independence,Kansas
-"1549,Rod Higgins,201,90,""California State University, Fresno"",1960,Monroe,Louisiana"
-"1550,Craig Hodges,188,86,""California State University, Long Beach"",1960,Park Forest,Illinois"
+1549,Rod Higgins,201,90,"California State University, Fresno",1960,Monroe,Louisiana
+1550,Craig Hodges,188,86,"California State University, Long Beach",1960,Park Forest,Illinois
 1551,Marc Iavaroni,203,95,University of Virginia,1956,Jamaica,New York
 1552,Jim Johnstone,211,111,Wake Forest University,1960,New Canaan,Connecticut
 1553,Hutch Jones,203,86,Vanderbilt University,1959,Buffalo,New York
@@ -1570,7 +1570,7 @@
 1568,Paul Pressey,196,83,University of Tulsa,1958,Richmond,Virginia
 1569,Oliver Robinson,193,81,University of Alabama at Birmingham,1960,Birmingham,Alabama
 1570,Walker Russell,196,88,Western Michigan University,1960,Pontiac,Michigan
-"1571,Mike Sanders,198,95,""University of California, Los Angeles"",1960,Vidalia,Louisiana"
+1571,Mike Sanders,198,95,"University of California, Los Angeles",1960,Vidalia,Louisiana
 1572,Russ Schoene,208,95,University of Tennessee at Chattanooga,1960,Trenton,Illinois
 1573,Ed Sherod,188,77,Virginia Commonwealth University,1959,Richmond,Virginia
 1574,Jose Slaughter,196,92,University of Portland,1960,Los Angeles,California
@@ -1588,7 +1588,7 @@
 1586,Bryan Warrick,196,88,Saint Joseph's University,1959,Moses Lake,Washington
 1587,Rory White,203,95,University of South Alabama,1959,Tuskegee,Alabama
 1588,Dominique Wilkins*,201,90,University of Georgia,1960,Paris,France
-"1589,Rickey Williams,185,79,""California State University, Long Beach"",1957,Buffalo,New York"
+1589,Rickey Williams,185,79,"California State University, Long Beach",1957,Buffalo,New York
 1590,Rob Williams,190,85,West Virginia University,1944,Weirton,West Virginia
 1591,James Worthy*,206,102,University of North Carolina,1961,Gastonia,North Carolina
 1592,Jim Zoet,216,108,Kent State University,1953,Uxbridge,Canada
@@ -1600,11 +1600,11 @@
 1598,Carlos Clark,193,95,University of Mississippi,1960,Somerville,Tennessee
 1599,Leroy Combs,203,95,Oklahoma State University,1961,Oklahoma City,Oklahoma
 1600,Russell Cross,208,97,Purdue University,1961,Chicago,Illinois
-"1601,Darren Daye,203,99,""University of California, Los Angeles"",1960,Des Moines,Iowa"
+1601,Darren Daye,203,99,"University of California, Los Angeles",1960,Des Moines,Iowa
 1602,Clyde Drexler*,201,95,University of Houston,1962,New Orleans,Louisiana
 1603,Craig Ehlo,198,81,Washington State University,1961,Lubbock,Texas
 1604,Dale Ellis,201,92,University of Tennessee,1960,Marietta,Georgia
-"1605,Rod Foster,185,72,""University of California, Los Angeles"",1960,Birmingham,Alabama"
+1605,Rod Foster,185,72,"University of California, Los Angeles",1960,Birmingham,Alabama
 1606,John Garris,203,92,Boston College,1959,Bridgeport,Connecticut
 1607,Mike Gibson,208,92,University of South Carolina Upstate,1960,Williamsburg County,South Carolina
 1608,Stewart Granger,190,86,Villanova University,1961,Montreal,Canada
@@ -1648,7 +1648,7 @@
 1646,Michael Wilson,193,79,Marquette University,1959,Memphis,Tennessee
 1647,Randy Wittman,198,95,Indiana University,1959,Indianapolis,Indiana
 1648,Chuck Aleksinas,211,117,University of Connecticut,1959,Litchfield,Connecticut
-"1649,Ron Anderson,201,97,""California State University, Fresno"",1958,Chicago,Illinois"
+1649,Ron Anderson,201,97,"California State University, Fresno",1958,Chicago,Illinois
 1650,Ken Bannister,206,106,Saint Augustine's College,1960,Baltimore,Maryland
 1651,Charles Barkley*,198,114,Auburn University,1963,Leeds,Alabama
 1652,Cory Blackwell,198,95,University of Wisconsin,1963,Chicago,Illinois
@@ -1664,16 +1664,16 @@
 1662,Steve Colter,190,74,New Mexico State University,1962,Phoenix,Arizona
 1663,Devin Durrant,201,90,Brigham Young University,1960,Provo,Utah
 1664,Kenton Edelin,203,92,University of Virginia,1962,Heidelburg,Germany
-"1665,Kenny Fields,196,99,""University of California, Los Angeles"",1962,Iowa City,Iowa"
+1665,Kenny Fields,196,99,"University of California, Los Angeles",1962,Iowa City,Iowa
 1666,Vern Fleming,196,83,University of Georgia,1962,New York,New York
 1667,Lancaster Gordon,190,83,University of Louisville,1962,Jackson,Mississippi
 1668,Butch Graves,190,90,Yale University,1962,Scarsdale,New York
-"1669,Stuart Gray,213,106,""University of California, Los Angeles"",1963,Panama Canal Zone,Panama"
-"1670,Mike Holton,193,83,""University of California, Los Angeles"",1961,Seattle,Washington"
+1669,Stuart Gray,213,106,"University of California, Los Angeles",1963,Panama Canal Zone,Panama
+1670,Mike Holton,193,83,"University of California, Los Angeles",1961,Seattle,Washington
 1671,Jay Humphries,190,83,University of Colorado,1962,Los Angeles,California
-"1672,Ralph Jackson,188,86,""University of California, Los Angeles"",1962,Los Angeles,California"
+1672,Ralph Jackson,188,86,"University of California, Los Angeles",1962,Los Angeles,California
 1673,Earl Jones,213,95,University of the District of Columbia,1961,Oak Hill,West Virginia
-"1674,Ozell Jones,211,106,""California State University, Fullerton"",1960,Long Beach,California"
+1674,Ozell Jones,211,106,"California State University, Fullerton",1960,Long Beach,California
 1675,Michael Jordan*,198,88,University of North Carolina,1963,Brooklyn,New York
 1676,Jerome Kersey,201,97,Longwood University,1962,Clarksville,Virginia
 1677,Tim McCormick,211,108,University of Michigan,1962,Detroit,Michigan
@@ -1693,7 +1693,7 @@
 1691,Terence Stansbury,196,77,Temple University,1961,Wilmington,Delaware
 1692,John Stockton*,185,77,Gonzaga University,1962,Spokane,Washington
 1693,Peter Thibeaux,201,95,Saint Mary's College of California,1961,Los Angeles,California
-"1694,Bernard Thompson,198,95,""California State University, Fresno"",1962,Phoenix,Arizona"
+1694,Bernard Thompson,198,95,"California State University, Fresno",1962,Phoenix,Arizona
 1695,Otis Thorpe,206,102,Providence College,1962,Boynton Beach,Florida
 1696,Jeff Turner,206,104,Vanderbilt University,1962,Bangor,Maine
 1697,Melvin Turpin,211,108,University of Kentucky,1960,Lexington,Kentucky
@@ -1703,7 +1703,7 @@
 1701,Guy Williams,188,79,University of Southern California,1953,Mount Vernon,New York
 1702,Kevin Willis,188,79,St. John's University,1961,New York,New York
 1703,Othell Wilson,183,86,University of Virginia,1961,Alexandria,Virginia
-"1704,Leon Wood,190,83,""California State University, Fullerton"",1962,Columbia,South Carolina"
+1704,Leon Wood,190,83,"California State University, Fullerton",1962,Columbia,South Carolina
 1705,Danny Young,190,79,Wake Forest University,1962,Raleigh,North Carolina
 1706,Michael Young,201,99,University of Houston,1961,Houston,Texas
 1707,Michael Adams,178,73,Boston College,1963,Hartford,Connecticut
@@ -1741,7 +1741,7 @@
 1739,Brian Martin,206,96,University of Kansas,1962,Fort Smith,Arkansas
 1740,Dwayne McClain,198,83,Villanova University,1963,Worcester,Massachusetts
 1741,Xavier McDaniel,201,92,Wichita State University,1963,Columbia,South Carolina
-"1742,Ben McDonald,203,95,""University of California, Irvine"",1962,Torrance,California"
+1742,Ben McDonald,203,95,"University of California, Irvine",1962,Torrance,California
 1743,Chris McNealy,201,95,San Jose State University,1961,Fresno,California
 1744,Dirk Minniefield,190,81,University of Kentucky,1961,Lexington,Kentucky
 1745,Perry Moss,188,83,Northeastern University,1958,Tucson,Arizona
@@ -1758,7 +1758,7 @@
 1756,Mike Smrek,213,113,Canisius College,1962,Welland,Canada
 1757,Alex Stivrins,203,99,University of Colorado,1962,Lincoln,Nebraska
 1758,Greg Stokes,208,99,University of Iowa,1963,New Haven,Connecticut
-"1759,Bob Thornton,208,102,""University of California, Irvine"",1962,Los Angeles,California"
+1759,Bob Thornton,208,102,"University of California, Irvine",1962,Los Angeles,California
 1760,Wayman Tisdale,206,108,University of Oklahoma,1964,Tulsa,Oklahoma
 1761,Sedric Toney,188,80,University of Dayton,1962,Columbus,Mississippi
 1762,Nick Vanos,216,115,Santa Clara University,1963,San Mateo,California
@@ -1787,13 +1787,13 @@
 1785,Grant Gondrezick,196,92,Pepperdine University,1963,Boulder,Colorado
 1786,Ron Harper,198,83,Miami University,1964,Dayton,Ohio
 1787,Cedric Henderson,203,95,University of Georgia,1965,Marietta,Georgia
-"1788,Kevin Henderson,193,88,""California State University, Fullerton"",1964,Baltimore,Maryland"
-"1789,Conner Henry,201,88,""University of California, Santa Barbara"",1963,Claremont,California"
+1788,Kevin Henderson,193,88,"California State University, Fullerton",1964,Baltimore,Maryland
+1789,Conner Henry,201,88,"University of California, Santa Barbara",1963,Claremont,California
 1790,Jeff Hornacek,190,86,Iowa State University,1963,Elmhurst,Illinois
 1791,Myron Jackson,190,83,University of Arkansas at Little Rock,1964,Hamburg,Arkansas
 1792,Buck Johnson,201,86,University of Alabama,1964,Birmingham,Alabama
 1793,Steffond Johnson,203,99,Murray State University,1944,Clairton,Pennsylvania
-"1794,Anthony Jones,198,88,""University of Nevada, Las Vegas"",1962,Washington,District of Columbia"
+1794,Anthony Jones,198,88,"University of Nevada, Las Vegas",1962,Washington,District of Columbia
 1795,Tim Kempton,208,111,University of Notre Dame,1964,Jamaica,New York
 1796,Curtis Kitchen,206,106,University of South Florida,1964,Cape Coral,Florida
 1797,Larry Krystkowiak,206,99,University of Montana,1964,Missoula,Montana
@@ -1811,7 +1811,7 @@
 1809,Harold Pressley,201,95,Villanova University,1963,Bronx,New York
 1810,Mark Price,183,77,Georgia Institute of Technology,1964,Bartlesville,Oklahoma
 1811,Dennis Rodman*,201,95,Southeastern Oklahoma State University,1961,Trenton,New Jersey
-"1812,Johnny Rogers,208,102,""University of California, Irvine"",1963,Fullerton,California"
+1812,Johnny Rogers,208,102,"University of California, Irvine",1963,Fullerton,California
 1813,Ron Rowan,196,90,St. John's University,1962,New Brighton,Pennsylvania
 1814,John Salley,211,104,Georgia Institute of Technology,1964,Brooklyn,New York
 1815,Brad Sellers,213,95,Ohio State University,1962,Warrensville Heights,Ohio
@@ -1828,7 +1828,7 @@
 1826,Pearl Washington,188,86,Syracuse University,1964,Brooklyn,New York
 1827,John Williams,188,83,New Mexico State University,1951,New Haven,Connecticut
 1828,David Wingate,196,83,Georgetown University,1963,Baltimore,Maryland
-"1829,Brad Wright,211,102,""University of California, Los Angeles"",1962,Hollywood,California"
+1829,Brad Wright,211,102,"University of California, Los Angeles",1962,Hollywood,California
 1830,Perry Young,196,95,Virginia Polytechnic Institute and State University,1963,Baltimore,Maryland
 1831,Mark Acres,211,99,Oral Roberts University,1962,Inglewood,California
 1832,Steve Alford,188,83,Indiana University,1964,Franklin,Indiana
@@ -1846,14 +1846,14 @@
 1844,Tellis Frank,208,102,Western Kentucky University,1965,Gary,Indiana
 1845,Kevin Gamble,196,95,University of Iowa,1965,Springfield,Illinois
 1846,Winston Garland,188,77,Missouri State University,1964,Gary,Indiana
-"1847,Armen Gilliam,206,104,""University of Nevada, Las Vegas"",1964,Pittsburgh,Pennsylvania"
+1847,Armen Gilliam,206,104,"University of Nevada, Las Vegas",1964,Pittsburgh,Pennsylvania
 1848,Horace Grant,208,97,Clemson University,1965,Augusta,Georgia
 1849,Dave Henderson,196,88,Duke University,1964,Henderson,North Carolina
 1850,Dave Hoppen,211,106,University of Nebraska,1964,Omaha,Nebraska
 1851,Dennis Hopson,196,90,Ohio State University,1965,Toledo,Ohio
 1852,Eddie Hughes,178,74,Colorado State University,1960,Greenville,Mississippi
 1853,Mark Jackson,185,81,St. John's University,1965,Brooklyn,New York
-"1854,Michael Jackson,201,97,""California State University, Los Angeles"",1949,Washington,District of Columbia"
+1854,Michael Jackson,201,97,"California State University, Los Angeles",1949,Washington,District of Columbia
 1855,Kannard Johnson,206,99,Western Kentucky University,1965,Cincinnati,Ohio
 1856,Kevin Johnson,203,108,Michigan State University,1962,Tuskegee,Alabama
 1857,Bart Kofoed,193,95,University of Nebraska at Kearney,1964,Omaha,Nebraska
@@ -1861,11 +1861,11 @@
 1859,Reggie Lewis,201,88,Northeastern University,1965,Baltimore,Maryland
 1860,Brad Lohaus,211,104,University of Iowa,1964,New Ulm,Minnesota
 1861,Derrick McKey,206,92,University of Alabama,1966,Meridian,Mississippi
-"1862,Reggie Miller*,201,83,""University of California, Los Angeles"",1965,Riverside,California"
+1862,Reggie Miller*,201,83,"University of California, Los Angeles",1965,Riverside,California
 1863,Andre Moore,206,97,Loyola University of Chicago,1964,Chicago,Illinois
 1864,Ron Moore,213,117,West Virginia State University,1962,New York,New York
 1865,Ronnie Murphy,196,102,Jacksonville University,1964,Dover,Delaware
-"1866,Tod Murphy,206,99,""University of California, Irvine"",1963,Long Beach,California"
+1866,Tod Murphy,206,99,"University of California, Irvine",1963,Long Beach,California
 1867,Martin Nessley,218,117,Duke University,1965,Columbus,Ohio
 1868,Ken Norman,203,97,University of Illinois at Urbana-Champaign,1964,Chicago,Illinois
 1869,Scottie Pippen*,203,95,University of Central Arkansas,1965,Hamburg,Arkansas
@@ -1875,7 +1875,7 @@
 1873,Brian Rowsom,206,99,University of North Carolina at Wilmington,1965,Newark,New Jersey
 1874,Kenny Smith,190,77,University of North Carolina,1965,Queens,New York
 1875,John Stroeder,208,117,University of Montana,1958,Bremerton,Washington
-"1876,Mark Wade,180,72,""University of Nevada, Las Vegas"",1965,Torrance,California"
+1876,Mark Wade,180,72,"University of Nevada, Las Vegas",1965,Torrance,California
 1877,Milt Wagner,196,83,University of Louisville,1963,Camden,New Jersey
 1878,Jamie Waller,193,97,Virginia Union University,1964,South Boston,Virginia
 1879,Duane Washington,193,88,Middle Tennessee State University,1964,Eschwege,Germany
@@ -1894,7 +1894,7 @@
 1892,Willie Anderson,201,86,University of Georgia,1967,Greenville,South Carolina
 1893,Ricky Berry,203,92,San Jose State University,1964,Lansing,Michigan
 1894,Anthony Bowie,198,86,University of Oklahoma,1963,Tulsa,Oklahoma
-"1895,Scott Brooks,180,74,""University of California, Irvine"",1965,French Camp,California"
+1895,Scott Brooks,180,74,"University of California, Irvine",1965,French Camp,California
 1896,Mark Bryant,206,111,Seton Hall University,1965,Glen Ridge,New Jersey
 1897,Greg Butler,211,108,Stanford University,1966,Inglewood,California
 1898,Mike Champion,208,104,Gonzaga University,1964,Everett,Washington
@@ -1905,7 +1905,7 @@
 1903,Fennis Dembo,196,97,University of Wyoming,1966,Mobile,Alabama
 1904,Ledell Eackles,196,99,University of New Orleans,1966,Baton Rouge,Louisiana
 1905,Kevin Edwards,190,86,DePaul University,1965,Cleveland Heights,Ohio
-"1906,Wayne Englestad,203,111,""University of California, Irvine"",1966,Rosemead,California"
+1906,Wayne Englestad,203,111,"University of California, Irvine",1966,Rosemead,California
 1907,Rolando Ferreira,216,108,University of Houston,1964,Curtiba,Brazil
 1908,Duane Ferrell,201,94,Georgia Institute of Technology,1965,Baltimore,Maryland
 1909,Anthony Frederick,201,92,Pepperdine University,1964,Los Angeles,California
@@ -1918,7 +1918,7 @@
 1916,Harvey Grant,203,88,University of Oklahoma,1965,Augusta,Georgia
 1917,Sylvester Gray,198,104,University of Memphis,1967,Millington,Tennessee
 1918,Jeff Grayer,196,90,Iowa State University,1965,Flint,Michigan
-"1919,Jack Haley,208,108,""University of California, Los Angeles"",1964,Long Beach,California"
+1919,Jack Haley,208,108,"University of California, Los Angeles",1964,Long Beach,California
 1920,Hersey Hawkins,190,86,Bradley University,1966,Chicago,Illinois
 1921,Tito Horford,216,111,University of Miami,1966,LaRomana,Dominican Republic
 1922,Avery Johnson,178,79,Southern University and A&M College,1965,New Orleans,Louisiana
@@ -1937,7 +1937,7 @@
 1935,Vernon Maxwell,193,81,University of Florida,1965,Gainesville,Florida
 1936,Todd Mitchell,201,92,Purdue University,1966,Toledo,Ohio
 1937,Chris Morris,203,95,Auburn University,1966,Atlanta,Georgia
-"1938,Richard Morton,190,86,""California State University, Fullerton"",1966,San Francisco,California"
+1938,Richard Morton,190,86,"California State University, Fullerton",1966,San Francisco,California
 1939,Craig Neal,196,74,Georgia Institute of Technology,1964,Muncie,Indiana
 1940,Jose Ortiz,208,102,Oregon State University,1963,Albonito,Puerto Rico
 1941,Will Perdue,213,108,Vanderbilt University,1965,Melbourne,Florida
@@ -1952,7 +1952,7 @@
 1950,Rony Seikaly,211,104,Syracuse University,1965,Beirut,Lebanon
 1951,Charles Shackleford,208,102,North Carolina State University,1966,Kinston,North Carolina
 1952,John Shasky,211,106,University of Minnesota,1964,Birmingham,Michigan
-"1953,Brian Shaw,198,86,""University of California, Santa Barbara"",1966,Oakland,California"
+1953,Brian Shaw,198,86,"University of California, Santa Barbara",1966,Oakland,California
 1954,Keith Smart,185,79,Indiana University,1964,Baton Rouge,Louisiana
 1955,Charles Smith,208,104,University of Pittsburgh,1965,Bridgeport,Connecticut
 1956,Rik Smits,224,113,Marist College,1966,Eindhoven,Netherlands
@@ -1963,9 +1963,9 @@
 1961,Anthony Taylor,193,79,University of Oregon,1965,Los Angeles,California
 1962,Tom Tolbert,201,106,University of Arizona,1965,Long Beach,California
 1963,Kelvin Upshaw,188,81,University of Utah,1963,Chicago,Illinois
-"1964,Morlon Wiley,193,83,""California State University, Long Beach"",1966,New Orleans,Louisiana"
+1964,Morlon Wiley,193,83,"California State University, Long Beach",1966,New Orleans,Louisiana
 1965,Micheal Williams,188,82,Lincoln University of Missouri,1945,Seattle,Washington
-"1966,David Wood,206,102,""University of Nevada, Reno"",1964,Spokane,Washington"
+1966,David Wood,206,102,"University of Nevada, Reno",1964,Spokane,Washington
 1967,Nick Anderson,198,92,University of Illinois at Urbana-Champaign,1968,Chicago,Illinois
 1968,Michael Ansley,201,102,University of Alabama,1967,Birmingham,Alabama
 1969,B.J. Armstrong,201,102,,1967,,
@@ -2028,7 +2028,7 @@
 2026,Brian Quinnett,203,106,Washington State University,1966,Pullman,Washington
 2027,J.R. Reid,203,106,,1966,,
 2028,Glen Rice,201,97,University of Michigan,1967,Jacksonville,Arkansas
-"2029,Pooh Richardson,185,81,""University of California, Los Angeles"",1966,Philadelphia,Pennsylvania"
+2029,Pooh Richardson,185,81,"University of California, Los Angeles",1966,Philadelphia,Pennsylvania
 2030,Clifford Robinson,206,99,University of Southern California,1960,Oakland,California
 2031,David Robinson*,216,106,United States Naval Academy,1965,Key West,Florida
 2032,Doug Roth,211,115,University of Tennessee,1967,Knoxville,Tennessee
@@ -2047,7 +2047,7 @@
 2045,Mike Williams,188,82,Lincoln University of Missouri,1945,Seattle,Washington
 2046,Haywoode Workman,188,81,Oral Roberts University,1966,Charlotte,North Carolina
 2047,Alaa Abdelnaby,208,108,Duke University,1968,Cairo,Egypt
-"2048,Mahmoud Abdul-Rauf,188,83,""University of California, Los Angeles"",1942,Wilmington,Delaware"
+2048,Mahmoud Abdul-Rauf,188,83,"University of California, Los Angeles",1942,Wilmington,Delaware
 2049,Keith Askins,201,89,University of Alabama,1967,Athens,Alabama
 2050,Milos Babic,213,108,Tennessee Technological University,1968,Kraljevo,Serbia
 2051,Cedric Ball,203,95,University of North Carolina at Charlotte,1968,Worcester,Massachusetts
@@ -2060,7 +2060,7 @@
 2058,Rick Calloway,198,81,University of Kansas,1966,Cincinnati,Ohio
 2059,Elden Campbell,211,97,Clemson University,1968,Los Angeles,California
 2060,Duane Causwell,213,108,Temple University,1968,Queens Village,New York
-"2061,Cedric Ceballos,198,86,""California State University, Fullerton"",1969,Maui,Hawaii"
+2061,Cedric Ceballos,198,86,"California State University, Fullerton",1969,Maui,Hawaii
 2062,Richard Coffey,198,96,University of Minnesota,1965,Aurora,North Carolina
 2063,Derrick Coleman,208,104,Syracuse University,1967,Mobile,Alabama
 2064,Bimbo Coles,185,81,Virginia Polytechnic Institute and State University,1968,Covington,Virginia
@@ -2096,7 +2096,7 @@
 2094,Dan O'Sullivan,208,113,Fordham University,1968,Bronx,New York
 2095,Alan Ogg,218,108,University of Alabama at Birmingham,1967,Lancaster,Ohio
 2096,Brian Oliver,193,95,Georgia Institute of Technology,1968,Chicago,Illinois
-"2097,Gerald Paddio,201,92,""University of Nevada, Las Vegas"",1965,Lafayette,Louisiana"
+2097,Gerald Paddio,201,92,"University of Nevada, Las Vegas",1965,Lafayette,Louisiana
 2098,Walter Palmer,216,97,Dartmouth College,1968,Ithaca,New York
 2099,Gary Payton*,193,81,Oregon State University,1968,Oakland,California
 2100,Kevin Pritchard,190,81,University of Kansas,1967,Bloomington,Indiana
@@ -2115,14 +2115,14 @@
 2113,Jayson Williams,206,108,St. John's University,1968,Ritter,South Carolina
 2114,Kenny Williams,188,79,St. John's University,1961,New York,New York
 2115,Scott Williams,208,104,University of North Carolina,1968,Hacienda Heights,California
-"2116,Trevor Wilson,201,95,""University of California, Los Angeles"",1968,Los Angeles,California"
+2116,Trevor Wilson,201,95,"University of California, Los Angeles",1968,Los Angeles,California
 2117,Kennard Winchester,196,95,Averett University,1966,Chestertown,Maryland
 2118,Howard Wright,190,83,Austin Peay State University,1947,Louisville,Kentucky
 2119,A.J. Wynder,190,83,,1947,,
 2120,Victor Alexander,206,120,Iowa State University,1969,Detroit,Michigan
 2121,Kenny Anderson,183,76,Georgia Institute of Technology,1970,Queens,New York
-"2122,Greg Anthony,183,79,""University of Nevada, Las Vegas"",1967,Las Vegas,Nevada"
-"2123,Stacey Augmon,203,92,""University of Nevada, Las Vegas"",1968,Pasadena,California"
+2122,Greg Anthony,183,79,"University of Nevada, Las Vegas",1967,Las Vegas,Nevada
+2123,Stacey Augmon,203,92,"University of Nevada, Las Vegas",1968,Pasadena,California
 2124,Isaac Austin,208,115,Arizona State University,1969,Gridley,California
 2125,Steve Bardo,196,86,University of Illinois at Urbana-Champaign,1968,Henderson,Kentucky
 2126,David Benoit,203,99,University of Alabama,1968,Lafayette,Louisiana
@@ -2161,7 +2161,7 @@
 2159,Dikembe Mutombo*,218,111,Georgetown University,1966,Kinshasa,Democratic Republic of the Congo
 2160,Jimmy Oliver,196,92,Purdue University,1969,Menifee,Arkansas
 2161,Billy Owens,203,99,Syracuse University,1969,Carlisle,Pennsylvania
-"2162,Keith Owens,201,102,""University of California, Los Angeles"",1969,San Francisco,California"
+2162,Keith Owens,201,102,"University of California, Los Angeles",1969,San Francisco,California
 2163,Robert Pack,188,81,University of Southern California,1969,New Orleans,Louisiana
 2164,Elliot Perry,183,68,University of Memphis,1969,Memphis,Tennessee
 2165,Bobby Phills,196,95,Southern University and A&M College,1969,Baton Rouge,Louisiana
@@ -2212,14 +2212,14 @@
 2210,Adam Keefe,206,104,Stanford University,1970,Irvine,California
 2211,Christian Laettner,211,106,Duke University,1969,Angola,New York
 2212,Sam Mack,201,99,University of Houston,1970,Chicago,Illinois
-"2213,Don MacLean,208,106,""University of California, Los Angeles"",1970,Palo Alto,California"
+2213,Don MacLean,208,106,"University of California, Los Angeles",1970,Palo Alto,California
 2214,Marlon Maxey,203,113,University of Texas at El Paso,1969,Chicago,Illinois
 2215,Lee Mayberry,185,78,University of Arkansas,1970,Tulsa,Oklahoma
 2216,Oliver Miller,206,127,University of Arkansas,1970,Fort Worth,Texas
 2217,Harold Miner,196,95,University of Southern California,1971,Inglewood,California
 2218,Isaiah Morris,203,103,University of Arkansas,1969,Richmond,Virginia
 2219,Alonzo Mourning*,208,108,Georgetown University,1970,Chesapeake,Virginia
-"2220,Tracy Murray,201,102,""University of California, Los Angeles"",1971,Los Angeles,California"
+2220,Tracy Murray,201,102,"University of California, Los Angeles",1971,Los Angeles,California
 2221,Melvin Newbern,193,90,University of Minnesota,1967,Toledo,Ohio
 2222,Shaquille O'Neal*,216,147,Louisiana State University,1972,Newark,New Jersey
 2223,Matt Othick,188,74,University of Arizona,1969,Clovis,New Mexico
@@ -2232,7 +2232,7 @@
 2230,Chris Smith,208,104,University of Pittsburgh,1965,Bridgeport,Connecticut
 2231,Reggie Smith,208,108,Texas Christian University,1970,San Jose,California
 2232,Andre Spencer,198,95,Northern Arizona University,1964,Stockton,California
-"2233,Elmore Spencer,213,122,""University of Nevada, Las Vegas"",1969,Atlanta,Georgia"
+2233,Elmore Spencer,213,122,"University of Nevada, Las Vegas",1969,Atlanta,Georgia
 2234,Latrell Sprewell,196,86,University of Alabama,1970,Milwaukee,Wisconsin
 2235,Barry Stevens,196,88,Iowa State University,1963,Flint,Michigan
 2236,Bryant Stith,196,94,University of Virginia,1970,Emporia,Virginia
@@ -2272,7 +2272,7 @@
 2270,Andres Guibert,208,102,,1968,Havana,Cuba
 2271,Geert Hammink,213,118,Louisiana State University,1969,Didam,Netherlands
 2272,Anfernee Hardaway,201,88,University of Memphis,1971,Memphis,Tennessee
-"2273,Lucious Harris,196,86,""California State University, Long Beach"",1970,Los Angeles,California"
+2273,Lucious Harris,196,86,"California State University, Long Beach",1970,Los Angeles,California
 2274,Antonio Harvey,211,102,Pfeiffer University,1970,Pascagoula,Mississippi
 2275,Scott Haskin,211,113,Oregon State University,1970,Riverside,California
 2276,Skeeter Henry,201,86,University of Oklahoma,1967,Dallas,Texas
@@ -2290,7 +2290,7 @@
 2288,Toni Kukoc,208,87,,1968,Split,Croatia
 2289,George Lynch,203,98,University of North Carolina,1970,Roanoke,Virginia
 2290,Malcolm Mackey,206,112,Georgia Institute of Technology,1970,Chattanooga,Tennessee
-"2291,Gerald Madkins,193,90,""University of California, Los Angeles"",1969,Merced,California"
+2291,Gerald Madkins,193,90,"University of California, Los Angeles",1969,Merced,California
 2292,Bob Martin,213,113,University of Minnesota,1969,Minneapolis,Minnesota
 2293,Jamal Mashburn,203,108,University of Kentucky,1972,New York,New York
 2294,Darnell Mee,196,79,Western Kentucky University,1971,Cleveland,Tennessee
@@ -2299,13 +2299,13 @@
 2297,Gheorghe Muresan,231,137,,1971,Triteni,Romania
 2298,Bo Outlaw,203,95,University of Houston,1971,San Antonio,Texas
 2299,Mike Peplowski,208,122,Michigan State University,1970,Detroit,Michigan
-"2300,Richard Petruska,208,117,""University of California, Los Angeles"",1969,Levice,Slovakia"
+2300,Richard Petruska,208,117,"University of California, Los Angeles",1969,Levice,Slovakia
 2301,Dino Radja,211,102,,1967,Split,Croatia
-"2302,Isaiah Rider,196,97,""University of Nevada, Las Vegas"",1971,Oakland,California"
+2302,Isaiah Rider,196,97,"University of Nevada, Las Vegas",1971,Oakland,California
 2303,Eric Riley,213,111,University of Michigan,1970,Cleveland,Ohio
-"2304,James Robinson,198,95,""University of Nevada, Las Vegas"",1955,Los Angeles,California"
+2304,James Robinson,198,95,"University of Nevada, Las Vegas",1955,Los Angeles,California
 2305,Rodney Rogers,201,106,Wake Forest University,1971,Durham,North Carolina
-"2306,Bryon Russell,201,102,""California State University, Long Beach"",1970,San Bernardino,California"
+2306,Bryon Russell,201,102,"California State University, Long Beach",1970,San Bernardino,California
 2307,Kevin Thompson,211,117,North Carolina State University,1971,Winston-Salem,North Carolina
 2308,Keith Tower,211,113,University of Notre Dame,1970,Libby,Montana
 2309,Nick Van,211,113,,1970,,
@@ -2335,12 +2335,12 @@
 2333,Tom Hovasse,203,92,Pennsylvania State University,1967,Durango,Colorado
 2334,Juwan Howard,206,108,University of Michigan,1973,Chicago,Illinois
 2335,Askia Jones,196,90,Kansas State University,1971,Philadelphia,Pennsylvania
-"2336,Eddie Jones,208,102,""University of Nevada, Reno"",1956,Fort Rucker,Alabama"
+2336,Eddie Jones,208,102,"University of Nevada, Reno",1956,Fort Rucker,Alabama
 2337,Jason Kidd,193,92,University of California,1973,San Francisco,California
 2338,Antonio Lang,211,111,University of Arkansas,1966,Pine Bluff,Arkansas
 2339,Ryan Lorthridge,193,86,Jackson State University,1972,Nashville,Tennessee
 2340,Donyell Marshall,206,98,University of Connecticut,1973,Reading,Pennsylvania
-"2341,Darrick Martin,180,77,""University of California, Los Angeles"",1971,Denver,Colorado"
+2341,Darrick Martin,180,77,"University of California, Los Angeles",1971,Denver,Colorado
 2342,Jim McIlvaine,216,108,Marquette University,1972,Racine,Wisconsin
 2343,Aaron McKie,196,94,Temple University,1972,Philadelphia,Pennsylvania
 2344,Anthony Miller,206,102,Michigan State University,1971,Benton Harbor,Michigan
@@ -2396,7 +2396,7 @@
 2394,Rastko Cvetkovic,216,117,,1970,Belgrade,Serbia
 2395,Sasha Danilovic,196,90,,1970,Sarajevo,Bosnia and Herzegovina
 2396,Andrew DeClercq,208,104,University of Florida,1973,Detroit,Michigan
-"2397,Tyus Edney,178,68,""University of California, Los Angeles"",1973,Gardena,California"
+2397,Tyus Edney,178,68,"University of California, Los Angeles",1973,Gardena,California
 2398,Vincenzo Esposito,190,89,,1969,Caserta,Italy
 2399,Michael Finley,201,97,University of Wisconsin,1973,Melrose Park,Illinois
 2400,Sherell Ford,201,95,University of Illinois at Chicago,1972,Baton Rouge,Louisiana
@@ -2421,7 +2421,7 @@
 2419,Lawrence Moten,196,83,Syracuse University,1972,Washington,District of Columbia
 2420,Todd Mundt,213,113,Delta State University,1970,Iowa City,Iowa
 2421,Howard Nathan,180,79,University of Louisiana at Monroe,1972,Peoria,Illinois
-"2422,Ed O'Bannon,203,100,""University of California, Los Angeles"",1972,Los Angeles,California"
+2422,Ed O'Bannon,203,100,"University of California, Los Angeles",1972,Los Angeles,California
 2423,Greg Ostertag,218,127,University of Kansas,1973,Dallas,Texas
 2424,Cherokee Parks,196,95,Idaho State University,1973,,
 2425,Theo Ratliff,208,102,University of Wyoming,1973,Demopolis,Alabama
@@ -2447,12 +2447,12 @@
 2445,Dwayne Whitfield,206,108,Jackson State University,1972,Aberdeen,Mississippi
 2446,Eric Williams,203,99,Providence College,1972,Newark,New Jersey
 2447,Corliss Williamson,188,86,Oklahoma State University,1970,Twiggs,Georgia
-"2448,George Zidek,213,113,""University of California, Los Angeles"",1973,Zlin,Czech Republic"
+2448,George Zidek,213,113,"University of California, Los Angeles",1973,Zlin,Czech Republic
 2449,Shareef Abdur-Rahim,206,102,University of California,1976,Marietta,Georgia
 2450,Ray Allen,203,99,Florida State University,1965,Milton,Florida
 2451,Shandon Anderson,198,94,University of Georgia,1973,Atlanta,Georgia
-"2452,Dexter Boney,193,83,""University of Nevada, Las Vegas"",1970,Wilmington,Delaware"
-"2453,Bruce Bowen,201,83,""California State University, Fullerton"",1971,Merced,California"
+2452,Dexter Boney,193,83,"University of Nevada, Las Vegas",1970,Wilmington,Delaware
+2453,Bruce Bowen,201,83,"California State University, Fullerton",1971,Merced,California
 2454,Mark Bradtke,208,120,,1968,Adelaide,Australia
 2455,Marcus Brown,190,83,Murray State University,1974,West Memphis,Arkansas
 2456,Kobe Bryant,198,96,,1978,Philadelphia,Pennsylvania
@@ -2471,7 +2471,7 @@
 2469,Dean Garrett,208,102,Indiana University,1966,Los Angeles,California
 2470,Reggie Geary,188,84,University of Arizona,1973,Trenton,New Jersey
 2471,Devin Gray,201,108,Clemson University,1972,Baltimore,Maryland
-"2472,Evric Gray,201,106,""University of Nevada, Las Vegas"",1969,Bloomington,California"
+2472,Evric Gray,201,106,"University of Nevada, Las Vegas",1969,Bloomington,California
 2473,Darvin Ham,201,99,Texas Tech University,1973,Saginaw,Michigan
 2474,Steve Hamer,213,111,University of Tennessee,1973,Memphis,Tennessee
 2475,Othella Harrington,206,106,Georgetown University,1974,Jackson,Mississippi
@@ -2558,7 +2558,7 @@
 2556,Ron Mercer,201,95,University of Kentucky,1976,Nashville,Tennessee
 2557,Marko Milic,198,106,,1977,Kranj,Slovenia
 2558,Jeff Nordgaard,201,102,University of Wisconsin-Green Bay,1973,Dawson,Minnesota
-"2559,Charles O'Bannon,196,94,""University of California, Los Angeles"",1975,Bellflower,California"
+2559,Charles O'Bannon,196,94,"University of California, Los Angeles",1975,Bellflower,California
 2560,Kevin Ollie,193,88,University of Connecticut,1972,Dallas,Texas
 2561,Anthony Parker,198,97,Bradley University,1975,Naperville,Illinois
 2562,Scot Pollard,211,120,University of Kansas,1975,Murray,Utah
@@ -2566,7 +2566,7 @@
 2564,Rodrick Rhodes,198,102,University of Southern California,1973,Jersey City,New Jersey
 2565,Shea Seals,196,95,University of Tulsa,1975,Tulsa,Oklahoma
 2566,God Shammgod,183,76,Providence College,1976,New York,New York
-"2567,Kebu Stewart,203,108,""California State University, Bakersfield"",1973,Brooklyn,New York"
+2567,Kebu Stewart,203,108,"California State University, Bakersfield",1973,Brooklyn,New York
 2568,Michael Stewart,208,104,University of California,1975,Cucq-Trepied-Stella-Plage,France
 2569,Ed Stokes,213,119,University of Arizona,1971,Syracuse,New York
 2570,Johnny Taylor,206,99,University of Tennessee at Chattanooga,1974,Chattanooga,Tennessee
@@ -2582,7 +2582,7 @@
 2580,Brandon Williams,198,97,Davidson College,1975,Collinston,Louisiana
 2581,Travis Williams,198,97,South Carolina State University,1969,Columbia,South Carolina
 2582,Peter Aluma,208,117,Liberty University,1973,Lagos,Nigeria
-"2583,Toby Bailey,198,96,""University of California, Los Angeles"",1975,Los Angeles,California"
+2583,Toby Bailey,198,96,"University of California, Los Angeles",1975,Los Angeles,California
 2584,LaMark Baker,185,79,Ohio State University,1969,Dayton,Ohio
 2585,Corey Benjamin,198,90,Oregon State University,1978,Compton,California
 2586,Mike Bibby,185,86,University of Arizona,1978,Cherry Hill,New Jersey
@@ -2590,7 +2590,7 @@
 2588,Gerald Brown,198,86,Wayne State University,1935,,
 2589,Cory Carr,190,95,Texas Tech University,1975,Fordyce,Arkansas
 2590,Vince Carter,198,99,University of North Carolina,1977,Daytona Beach,Florida
-"2591,Keon Clark,211,99,""University of Nevada, Las Vegas"",1975,Danville,Illinois"
+2591,Keon Clark,211,99,"University of Nevada, Las Vegas",1975,Danville,Illinois
 2592,Kornel David,206,106,,1971,Hungary,
 2593,Ricky Davis,198,88,University of Iowa,1979,Las Vegas,Nevada
 2594,Michael Dickerson,196,86,University of Arizona,1975,Greenville,South Carolina
@@ -2603,7 +2603,7 @@
 2601,Al Harrington,206,104,,1980,Orange,New Jersey
 2602,J.R. Henderson,206,104,,1980,,
 2603,Larry Hughes,196,83,Saint Louis University,1979,St. Louis,Missouri
-"2604,Randell Jackson,188,86,""University of California, Los Angeles"",1962,Los Angeles,California"
+2604,Randell Jackson,188,86,"University of California, Los Angeles",1962,Los Angeles,California
 2605,Sam Jacobson,193,97,University of Minnesota,1975,Cottage Grove,Minnesota
 2606,Jerome James,213,136,Florida Agricultural and Mechanical University,1975,Tampa,Florida
 2607,Antawn Jamison,203,101,University of North Carolina,1976,Shreveport,Louisiana
@@ -2616,14 +2616,14 @@
 2614,Tyronn Lue,183,79,University of Nebraska,1977,Mexico,Missouri
 2615,Sean Marks,208,113,University of California,1975,Auckland,New Zealand
 2616,Kelly McCarty,201,90,University of Southern Mississippi,1975,Chicago,Illinois
-"2617,Jelani McCoy,208,111,""University of California, Los Angeles"",1977,Oakland,California"
+2617,Jelani McCoy,208,111,"University of California, Los Angeles",1977,Oakland,California
 2618,Roshown McLeod,203,100,Duke University,1975,Jersey City,New Jersey
 2619,Brad Miller,211,110,Purdue University,1976,Fort Wayne,Indiana
 2620,Cuttino Mobley,193,86,University of Rhode Island,1975,Philadelphia,Pennsylvania
 2621,Nazr Mohammed,208,100,University of Kentucky,1977,Chicago,Illinois
 2622,Mikki Moore,211,102,University of Nebraska,1975,Orangeburg,South Carolina
 2623,Makhtar N'Diaye,203,111,University of North Carolina,1973,Dakar,Senegal
-"2624,Tyrone Nesby,198,102,""University of Nevada, Las Vegas"",1976,Cairo,Illinois"
+2624,Tyrone Nesby,198,102,"University of Nevada, Las Vegas",1976,Cairo,Illinois
 2625,Rasho Nesterovic,213,112,,1976,Ljubljana,Slovenia
 2626,Dirk Nowitzki,213,111,,1978,Wurzburg,Germany
 2627,Michael Olowokandi,213,122,University of the Pacific,1975,Lagos,Nigeria
@@ -2647,7 +2647,7 @@
 2645,Shammond Williams,185,91,University of North Carolina,1975,Bronx,New York
 2646,Trevor Winter,213,124,University of Minnesota,1974,Slayton,Minnesota
 2647,Korleone Young,201,96,,1978,Wichita,Kansas
-"2648,Rafer Alston,188,77,""California State University, Fresno"",1976,New York,New York"
+2648,Rafer Alston,188,77,"California State University, Fresno",1976,New York,New York
 2649,Chucky Atkins,180,72,University of South Florida,1974,Orlando,Florida
 2650,William Avery,188,89,Duke University,1979,Augusta,Georgia
 2651,Jonathan Bender,211,91,,1981,Picayune,Mississippi
@@ -2663,7 +2663,7 @@
 2661,Anthony Carter,185,86,University of Hawaii,1975,Milwaukee,Wisconsin
 2662,John Celestand,193,80,Villanova University,1977,Houston,Texas
 2663,Vonteego Cummings,190,83,University of Pittsburgh,1976,Thomson,Georgia
-"2664,Baron Davis,190,94,""University of California, Los Angeles"",1979,Los Angeles,California"
+2664,Baron Davis,190,94,"University of California, Los Angeles",1979,Los Angeles,California
 2665,Derrick Dial,193,83,Eastern Michigan University,1975,Detroit,Michigan
 2666,Obinna Ekezie,206,122,University of Maryland,1975,Port Harcourt,Nigeria
 2667,Evan Eschmeyer,211,115,Northwestern University,1975,New Knoxville,Ohio
@@ -2673,7 +2673,7 @@
 2671,Dion Glover,196,103,Georgia Institute of Technology,1978,Marietta,Georgia
 2672,Adrian Griffin,196,98,Seton Hall University,1974,Wichita,Kansas
 2673,Richard Hamilton,198,83,University of Connecticut,1978,Coatesville,Pennsylvania
-"2674,Chris Herren,188,89,""California State University, Fresno"",1975,Fall River,Massachusetts"
+2674,Chris Herren,188,89,"California State University, Fresno",1975,Fall River,Massachusetts
 2675,Derek Hood,203,100,University of Arkansas,1976,Kansas City,Missouri
 2676,Rick Hughes,196,97,Loyola University of Chicago,1962,Chicago,Illinois
 2677,Jermaine Jackson,193,92,University of Detroit Mercy,1976,Detroit,Michigan
@@ -2686,7 +2686,7 @@
 2684,Quincy Lewis,201,97,University of Minnesota,1977,Little Rock,Arkansas
 2685,Todd MacCulloch,213,127,University of Washington,1976,Winnipeg,Canada
 2686,Corey Maggette,198,98,Duke University,1979,Melrose Park,Illinois
-"2687,Shawn Marion,201,99,""University of Nevada, Las Vegas"",1978,Waukegan,Illinois"
+2687,Shawn Marion,201,99,"University of Nevada, Las Vegas",1978,Waukegan,Illinois
 2688,Andre Miller,206,102,Michigan State University,1971,Benton Harbor,Michigan
 2689,Jason Miskiri,188,79,George Mason University,1975,Georgetown,Guyana
 2690,Lamar Odom,208,99,University of Rhode Island,1979,Jamaica,New York
@@ -2744,7 +2744,7 @@
 2742,Chris Mihm,213,120,University of Texas at Austin,1979,Milwaukee,Wisconsin
 2743,Darius Miles,206,95,,1981,Belleville,Illinois
 2744,Mike Miller,203,98,University of Florida,1980,Mitchell,South Dakota
-"2745,Jerome Moiso,208,106,""University of California, Los Angeles"",1978,Paris,France"
+2745,Jerome Moiso,208,106,"University of California, Los Angeles",1978,Paris,France
 2746,Hanno Mottola,211,112,University of Utah,1976,Helsinki,Finland
 2747,Mamadou N'Diaye,203,111,University of North Carolina,1973,Dakar,Senegal
 2748,Lee Nailon,206,107,Texas Christian University,1975,South Bend,Indiana
@@ -2759,8 +2759,8 @@
 2757,Joel Przybilla,216,115,University of Minnesota,1979,Monticello,Minnesota
 2758,Michael Redd,198,99,Ohio State University,1979,Columbus,Ohio
 2759,Quentin Richardson,198,101,DePaul University,1980,Chicago,Illinois
-"2760,Terrance Roberson,201,97,""California State University, Fresno"",1976,Saginaw,Michigan"
-"2761,Jamal Robinson,198,95,""University of Nevada, Las Vegas"",1955,Los Angeles,California"
+2760,Terrance Roberson,201,97,"California State University, Fresno",1976,Saginaw,Michigan
+2761,Jamal Robinson,198,95,"University of Nevada, Las Vegas",1955,Los Angeles,California
 2762,Soumaila Samake,213,104,,1978,Bougouni,Mali
 2763,Pepe Sanchez,193,88,Temple University,1977,Bahia Blanca,Argentina
 2764,Daniel Santiago,216,116,Saint Vincent College,1976,Lubbock,Texas
@@ -2806,7 +2806,7 @@
 2804,Alton Ford,185,86,Mississippi Valley State University,1971,Greenwood,Mississippi
 2805,Joseph Forte,193,87,University of North Carolina,1981,Atlanta,Georgia
 2806,Antonis Fotsis,208,99,,1981,Athens,Greece
-"2807,Tremaine Fowlkes,203,99,""California State University, Fresno"",1976,Los Angeles,California"
+2807,Tremaine Fowlkes,203,99,"California State University, Fresno",1976,Los Angeles,California
 2808,Pau Gasol,213,113,,1980,Barcelona,Spain
 2809,Eddie Griffin,208,99,Seton Hall University,1982,Philadelphia,Pennsylvania
 2810,Tang Hamilton,203,99,Mississippi State University,1978,Jackson,Mississippi
@@ -2841,7 +2841,7 @@
 2839,Jeff Trepagnier,193,90,University of Southern California,1979,Los Angeles,California
 2840,Ratko Varda,216,117,,1979,Bosanska Gradiska,Bosnia and Herzegovina
 2841,Gerald Wallace,201,97,University of Alabama,1982,Sylacauga,Alabama
-"2842,Earl Watson,185,88,""University of California, Los Angeles"",1979,Kansas City,Kansas"
+2842,Earl Watson,185,88,"University of California, Los Angeles",1979,Kansas City,Kansas
 2843,Rodney White,203,95,University of South Alabama,1959,Tuskegee,Alabama
 2844,Loren Woods,216,111,University of Arizona,1978,St. Louis,Missouri
 2845,Robert Archibald,211,113,University of Illinois at Urbana-Champaign,1980,Paisley,United Kingdom
@@ -2856,26 +2856,26 @@
 2854,Rasual Butler,201,97,La Salle University,1979,Philadelphia,Pennsylvania
 2855,Dan Dickau,183,86,Gonzaga University,1978,Portland,Oregon
 2856,Juan Dixon,190,74,University of Maryland,1978,Baltimore,Maryland
-"2857,Melvin Ely,208,117,""California State University, Fresno"",1978,Harvey,Illinois"
+2857,Melvin Ely,208,117,"California State University, Fresno",1978,Harvey,Illinois
 2858,Reggie Evans,203,111,University of Iowa,1980,Pensacola,Florida
-"2859,Dan Gadzuric,211,108,""University of California, Los Angeles"",1978,Den Haag,Netherlands"
+2859,Dan Gadzuric,211,108,"University of California, Los Angeles",1978,Den Haag,Netherlands
 2860,Manu Ginobili,198,92,,1977,Bahia Blanca,Argentina
 2861,Gordan Giricek,198,95,,1977,Zagreb,Croatia
 2862,Drew Gooden,208,113,University of Kansas,1981,Oakland,California
 2863,Marcus Haislip,208,104,University of Tennessee,1980,Lewisburg,Tennessee
 2864,Adam Harrington,196,90,Auburn University,1980,Bernardston,Massachusetts
 2865,Junior Harrington,193,81,Wingate University,1980,Wagram,North Carolina
-"2866,Juaquin Hawkins,201,99,""California State University, Long Beach"",1973,Gardena,California"
+2866,Juaquin Hawkins,201,99,"California State University, Long Beach",1973,Gardena,California
 2867,Nene Hilario,211,113,,1982,Sao Carlos,Brazil
 2868,Nate Huffman,216,111,Central Michigan University,1975,Battle Creek,Michigan
 2869,Ryan Humphrey,203,106,University of Notre Dame,1979,Tulsa,Oklahoma
 2870,Casey Jacobsen,198,97,Stanford University,1981,Glendora,California
 2871,Marko Jaric,201,89,,1978,Belgrade,Serbia
-"2872,Chris Jefferies,203,102,""California State University, Fresno"",1980,Fresno,California"
+2872,Chris Jefferies,203,102,"California State University, Fresno",1980,Fresno,California
 2873,Jared Jeffries,211,104,Indiana University,1981,Bloomington,Indiana
 2874,Fred Jones,193,95,University of Oregon,1979,Malvern,Arkansas
 2875,Sean Lampley,201,102,University of California,1979,Harvey,Illinois
-"2876,Tito Maddox,193,86,""California State University, Fresno"",1981,Compton,California"
+2876,Tito Maddox,193,86,"California State University, Fresno",1981,Compton,California
 2877,Roger Mason,196,90,University of Virginia,1980,Washington,District of Columbia
 2878,Yao Ming*,229,140,,1980,Shanghai,China
 2879,Ronald Murray,193,86,Shaw University,1979,Philadelphia,Pennsylvania
@@ -2907,7 +2907,7 @@
 2905,Qyntel Woods,203,100,Northeast Mississippi Community College,1981,Memphis,Tennessee
 2906,Vincent Yarbrough,201,95,University of Tennessee,1981,Cleveland,Tennessee
 2907,Carmelo Anthony,203,108,Syracuse University,1984,New York,New York
-"2908,Marcus Banks,188,90,""University of Nevada, Las Vegas"",1981,Las Vegas,Nevada"
+2908,Marcus Banks,188,90,"University of Nevada, Las Vegas",1981,Las Vegas,Nevada
 2909,Leandro Barbosa,190,87,,1982,San Paulo,Brazil
 2910,Matt Barnes,203,95,Providence College,1952,Providence,Rhode Island
 2911,Jerome Beasley,208,107,University of North Dakota,1980,Compton,California
@@ -2932,7 +2932,7 @@
 2930,Desmond Ferguson,201,92,University of Detroit Mercy,1977,Lansing,Michigan
 2931,T.J. Ford,201,92,,1977,,
 2932,Richie Frahm,196,95,Gonzaga University,1977,Battle Ground,Washington
-"2933,Hiram Fuller,206,108,""California State University, Fresno"",1981,East St. Louis,Missouri"
+2933,Hiram Fuller,206,108,"California State University, Fresno",1981,East St. Louis,Missouri
 2934,Reece Gaines,198,92,University of Louisville,1981,Madison,Wisconsin
 2935,Alex Garcia,190,99,,1980,Orlandia,Brazil
 2936,Willie Green,193,90,University of Detroit Mercy,1981,Detroit,Michigan
@@ -2949,7 +2949,7 @@
 2947,Dahntay Jones,190,83,University of Houston,1976,Galveston,Texas
 2948,James Jones,190,81,Assumption College,1949,,
 2949,Chris Kaman,213,120,Central Michigan University,1982,Wyoming,Michigan
-"2950,Jason Kapono,203,96,""University of California, Los Angeles"",1981,Long Beach,California"
+2950,Jason Kapono,203,96,"University of California, Los Angeles",1981,Long Beach,California
 2951,Kyle Korver,201,96,Creighton University,1981,Lakewood,California
 2952,Maciej Lampe,211,124,,1985,Lodz,Poland
 2953,Raul Lopez,185,77,,1980,Vic,Spain
@@ -2975,7 +2975,7 @@
 2973,Mo Williams,203,102,University of Notre Dame,1971,Fredericksburg,Virginia
 2974,Tony Allen,193,96,Oklahoma State University,1982,Chicago,Illinois
 2975,Rafael Araujo,211,127,Brigham Young University,1980,Curitiba,Brazil
-"2976,Trevor Ariza,203,97,""University of California, Los Angeles"",1985,Miami,Florida"
+2976,Trevor Ariza,203,97,"University of California, Los Angeles",1985,Miami,Florida
 2977,Maurice Baker,185,79,Oklahoma State University,1979,Granite City,Illinois
 2978,Andre Barrett,178,78,Seton Hall University,1982,Bronx,New York
 2979,Andris Biedrins,211,108,,1986,Riga,Latvia
@@ -3026,8 +3026,8 @@
 3024,Donta Smith,188,86,University of Minnesota,1920,Minnesota,
 3025,J.R. Smith,188,86,,1920,,
 3026,Josh Smith,213,106,University of Southern Colorado,1944,Columbus,Mississippi
-"3027,Kirk Snyder,198,102,""University of Nevada, Reno"",1983,Los Angeles,California"
-"3028,Pape Sow,208,113,""California State University, Fullerton"",1981,Dakar,Senegal"
+3027,Kirk Snyder,198,102,"University of Nevada, Reno",1983,Los Angeles,California
+3028,Pape Sow,208,113,"California State University, Fullerton",1981,Dakar,Senegal
 3029,Awvee Storey,198,100,Arizona State University,1977,Chicago,Illinois
 3030,Robert Swift,213,111,,1985,Bakersfield,California
 3031,Yuta Tabuse,175,74,Brigham Young University Hawaii,1980,Yokohama,Japan
@@ -3058,7 +3058,7 @@
 3056,Ike Diogu,203,113,Arizona State University,1983,Buffalo,New York
 3057,Monta Ellis,190,83,,1985,Jackson,Mississippi
 3058,Daniel Ewing,190,83,Duke University,1983,Milton,Florida
-"3059,Noel Felix,206,102,""California State University, Fresno"",1981,Los Angeles,California"
+3059,Noel Felix,206,102,"California State University, Fresno",1981,Los Angeles,California
 3060,Raymond Felton,185,92,University of North Carolina,1984,Marion,South Carolina
 3061,Gerald Fitch,190,85,University of Kentucky,1982,Columbus,Georgia
 3062,Sharrod Ford,201,95,University of Illinois at Chicago,1972,Baton Rouge,Louisiana
@@ -3111,7 +3111,7 @@
 3109,Salim Stoudamire,185,81,University of Arizona,1982,Portland,Oregon
 3110,Chris Taft,208,117,University of Pittsburgh,1985,Brooklyn,New York
 3111,Donell Taylor,198,81,University of Alabama at Birmingham,1982,Washington,District of Columbia
-"3112,Dijon Thompson,201,88,""University of California, Los Angeles"",1983,Los Angeles,California"
+3112,Dijon Thompson,201,88,"University of California, Los Angeles",1983,Los Angeles,California
 3113,Ronny Turiaf,208,112,Gonzaga University,1983,Le Robert,Martinique
 3114,Charlie Villanueva,211,105,University of Connecticut,1984,Queens,New York
 3115,Von Wafer,196,95,Florida State University,1985,Homer,Louisiana
@@ -3123,12 +3123,12 @@
 3121,Lou Williams,206,90,Stetson University,1969,Ocala,Florida
 3122,Marvin Williams,185,89,University of Alabama,1982,Jackson,Mississippi
 3123,Antoine Wright,201,95,Texas A&M University,1984,West Covina,California
-"3124,Bracey Wright,211,102,""University of California, Los Angeles"",1962,Hollywood,California"
+3124,Bracey Wright,211,102,"University of California, Los Angeles",1962,Hollywood,California
 3125,Derrick Zimmerman,190,88,Mississippi State University,1981,Monroe,Louisiana
 3126,Hassan Adams,193,99,University of Arizona,1984,Inglewood,California
 3127,Maurice Ager,196,91,Michigan State University,1984,Detroit,Michigan
 3128,LaMarcus Aldridge,211,117,University of Texas at Austin,1985,Dallas,Texas
-"3129,Lou Amundson,206,99,""University of Nevada, Las Vegas"",1982,Ventura,California"
+3129,Lou Amundson,206,99,"University of Nevada, Las Vegas",1982,Ventura,California
 3130,Hilton Armstrong,211,106,University of Connecticut,1984,Peekskill,New York
 3131,James Augustine,208,106,University of Illinois at Urbana-Champaign,1984,Midlothian,Illinois
 3132,Kelenna Azubuike,196,99,University of Kentucky,1983,London,United Kingdom
@@ -3137,7 +3137,7 @@
 3135,Andrea Bargnani,213,111,,1985,Rome,Italy
 3136,Will Blalock,183,92,Iowa State University,1983,Boston,Massachusetts
 3137,Josh Boone,208,107,University of Connecticut,1984,Mount Airy,Maryland
-"3138,Cedric Bozeman,198,93,""University of California, Los Angeles"",1983,Los Angeles,California"
+3138,Cedric Bozeman,198,93,"University of California, Los Angeles",1983,Los Angeles,California
 3139,Ronnie Brewer,193,81,University of Arkansas,1955,Fort Smith,Arkansas
 3140,Andre Brown,206,111,DePaul University,1981,Chicago,Illinois
 3141,Shannon Brown,193,92,Michigan State University,1985,Maywood,Illinois
@@ -3147,7 +3147,7 @@
 3145,Paul Davis,211,122,Michigan State University,1984,Detroit,Michigan
 3146,Yakhouba Diawara,201,102,Pepperdine University,1982,Paris,France
 3147,Quincy Douby,190,79,Rutgers University,1984,Brooklyn,New York
-"3148,Jordan Farmar,188,81,""University of California, Los Angeles"",1986,Los Angeles,California"
+3148,Jordan Farmar,188,81,"University of California, Los Angeles",1986,Los Angeles,California
 3149,Desmon Farmer,196,99,University of Southern California,1981,Flint,Michigan
 3150,Randy Foye,193,96,Villanova University,1983,Newark,New Jersey
 3151,Jorge Garbajosa,206,111,,1977,Madrid,Spain
@@ -3159,7 +3159,7 @@
 3157,Mike Hall,203,104,George Washington University,1984,Chicago,Illinois
 3158,Walter Herrmann,206,102,,1979,Venado Tuerto,Argentina
 3159,Robert Hite,188,83,University of Miami,1984,Cincinnati,Ohio
-"3160,Ryan Hollins,213,108,""University of California, Los Angeles"",1984,Pasadena,California"
+3160,Ryan Hollins,213,108,"University of California, Los Angeles",1984,Pasadena,California
 3161,Mile Ilic,216,104,,1984,Tuzla,Bosnia and Herzegovina
 3162,Ersan Ilyasova,208,106,,1987,Eskisehir,Turkey
 3163,Alexander Johnson,206,108,Florida State University,1983,Albany,Georgia
@@ -3167,7 +3167,7 @@
 3165,Tarence Kinsey,198,83,University of South Carolina,1984,Tampa,Florida
 3166,James Lang,208,129,,1983,Mobile,Alabama
 3167,Kyle Lowry,183,92,Villanova University,1986,Philadelphia,Pennsylvania
-"3168,Renaldo Major,201,90,""California State University, Fresno"",1982,Chicago,Illinois"
+3168,Renaldo Major,201,90,"California State University, Fresno",1982,Chicago,Illinois
 3169,Damir Markota,208,102,,1985,Sarajevo,Bosnia and Herzegovina
 3170,Chris McCray,196,87,University of Maryland,1984,Capitol Heights,Maryland
 3171,Ivan McFarlin,203,108,Oklahoma State University,1982,Missouri City,Texas
@@ -3178,7 +3178,7 @@
 3176,David Noel,198,104,University of North Carolina,1984,Durham,North Carolina
 3177,Steve Novak,208,102,Marquette University,1983,Libertyville,Illinois
 3178,Patrick O'Bryant,213,117,Bradley University,1986,Oskaloosa,Iowa
-"3179,Kevinn Pinkney,208,111,""University of Nevada, Reno"",1983,Colton,California"
+3179,Kevinn Pinkney,208,111,"University of Nevada, Reno",1983,Colton,California
 3180,Leon Powe,203,108,University of California,1984,Berkeley,California
 3181,Roger Powell,198,106,University of Illinois at Urbana-Champaign,1983,Joliet,Illinois
 3182,Chris Quinn,188,83,University of Notre Dame,1983,New Orleans,Louisiana
@@ -3203,11 +3203,11 @@
 3201,Marcus Williams,185,89,University of Alabama,1982,Jackson,Mississippi
 3202,Shawne Williams,185,91,University of North Carolina,1975,Bronx,New York
 3203,Shelden Williams,185,91,University of North Carolina,1975,Bronx,New York
-"3204,Arron Afflalo,196,95,""University of California, Los Angeles"",1985,Los Angeles,California"
+3204,Arron Afflalo,196,95,"University of California, Los Angeles",1985,Los Angeles,California
 3205,Blake Ahearn,188,86,Missouri State University,1984,St. Louis,Missouri
 3206,Lance Allred,211,113,Weber State University,1981,Salt Lake City,Utah
 3207,Morris Almond,198,102,Rice University,1985,Dalton,Georgia
-"3208,Joel Anthony,206,111,""University of Nevada, Las Vegas"",1982,Montreal,Canada"
+3208,Joel Anthony,206,111,"University of Nevada, Las Vegas",1982,Montreal,Canada
 3209,Marco Belinelli,196,95,,1986,Bologna,Italy
 3210,Corey Brewer,206,84,University of Florida,1986,Portland,Tennessee
 3211,Aaron Brooks,183,73,University of Oregon,1985,Seattle,Washington
@@ -3220,7 +3220,7 @@
 3218,Guillermo Diaz,188,87,University of Miami,1985,San Juan,Puerto Rico
 3219,Jared Dudley,201,102,Boston College,1985,San Diego,California
 3220,Kevin Durant,206,108,University of Texas at Austin,1988,Washington,District of Columbia
-"3221,Nick Fazekas,211,106,""University of Nevada, Reno"",1985,Denver,Colorado"
+3221,Nick Fazekas,211,106,"University of Nevada, Reno",1985,Denver,Colorado
 3222,Kyrylo Fesenko,216,130,,1986,Dnepropetrovsk,Ukraine
 3223,Thomas Gardner,196,102,University of Missouri,1985,Portland,Oregon
 3224,Marcin Gortat,211,108,,1984,Lodz,Poland
@@ -3237,7 +3237,7 @@
 3235,Stephane Lasme,203,97,University of Massachusetts Amherst,1982,Port-Gentil,Gabon
 3236,Acie Law,190,88,Texas A&M University,1985,Dallas,Texas
 3237,Ian Mahinmi,211,113,,1986,Rouen,France
-"3238,Dominic McGuire,206,99,""California State University, Fresno"",1985,San Diego,California"
+3238,Dominic McGuire,206,99,"California State University, Fresno",1985,San Diego,California
 3239,Josh McRoberts,208,108,Duke University,1987,Indianapolis,Indiana
 3240,Jamario Moon,203,92,Meridian Community College,1980,Goodwater,Alabama
 3241,Juan Carlos,203,92,,1980,,
@@ -3250,7 +3250,7 @@
 3248,Chris Richard,206,122,University of Florida,1984,Lakeland,Florida
 3249,Cheikh Samb,216,111,,1984,Senegal,
 3250,Luis Scola,206,108,,1980,Buenos Aires,Argentina
-"3251,Ramon Sessions,190,86,""University of Nevada, Reno"",1986,Myrtle Beach,South Carolina"
+3251,Ramon Sessions,190,86,"University of Nevada, Reno",1986,Myrtle Beach,South Carolina
 3252,Courtney Sims,208,111,University of Michigan,1983,Roslindale,Massachusetts
 3253,Jason Smith,211,113,Louisiana State University,1977,Atlanta,Georgia
 3254,D.J. Strawberry,211,113,,1977,,
@@ -3262,7 +3262,7 @@
 3260,C.J. Watson,211,117,,1984,,
 3261,Mario West,208,104,Old Dominion University,1960,Petersburg,Virginia
 3262,Sean Williams,208,106,Boston College,1986,Houston,Texas
-"3263,Brandan Wright,211,102,""University of California, Los Angeles"",1962,Hollywood,California"
+3263,Brandan Wright,211,102,"University of California, Los Angeles",1962,Hollywood,California
 3264,Julian Wright,203,102,University of Kansas,1987,Chicago,Illinois
 3265,Nick Young,201,95,University of Southern California,1985,Los Angeles,California
 3266,Thaddeus Young,203,100,Georgia Institute of Technology,1988,New Orleans,Louisiana
@@ -3303,11 +3303,11 @@
 3301,Courtney Lee,196,90,Western Kentucky University,1985,Indianapolis,Indiana
 3302,Brook Lopez,213,124,Stanford University,1988,North Hollywood,California
 3303,Robin Lopez,213,115,Stanford University,1988,North Hollywood,California
-"3304,Kevin Love,208,113,""University of California, Los Angeles"",1988,Santa Monica,California"
+3304,Kevin Love,208,113,"University of California, Los Angeles",1988,Santa Monica,California
 3305,Cartier Martin,201,99,Kansas State University,1984,Crockett,Texas
 3306,O.J. Mayo,201,99,,1984,,
 3307,Luc Mbah,201,99,,1984,,
-"3308,JaVale McGee,213,122,""University of Nevada, Reno"",1988,Flint,Michigan"
+3308,JaVale McGee,213,122,"University of Nevada, Reno",1988,Flint,Michigan
 3309,Anthony Morrow,196,95,Georgia Institute of Technology,1985,Charlotte,North Carolina
 3310,DeMarcus Nelson,193,90,Duke University,1985,Oakland,California
 3311,Greg Oden,213,113,Ohio State University,1988,Buffalo,New York
@@ -3324,7 +3324,7 @@
 3322,Henry Walker,196,83,,1984,,
 3323,Kyle Weaver,198,91,Washington State University,1986,Janesville,Wisconsin
 3324,Sonny Weems,198,92,University of Arkansas,1986,West Memphis,Arkansas
-"3325,Russell Westbrook,190,90,""University of California, Los Angeles"",1988,Long Beach,California"
+3325,Russell Westbrook,190,90,"University of California, Los Angeles",1988,Long Beach,California
 3326,D.J. White,190,90,,1988,,
 3327,Jawad Williams,206,108,St. John's University,1968,Ritter,South Carolina
 3328,Sun Yue,206,92,,1985,Hebei,China
@@ -3339,7 +3339,7 @@
 3337,DeMarre Carroll,203,97,University of Missouri,1986,Birmingham,Alabama
 3338,Omri Casspi,206,102,,1988,Holon,Israel
 3339,Earl Clark,208,102,University of Louisville,1988,Plainfield,New Jersey
-"3340,Darren Collison,183,79,""University of California, Los Angeles"",1987,Rancho Cucamonga,California"
+3340,Darren Collison,183,79,"University of California, Los Angeles",1987,Rancho Cucamonga,California
 3341,Dante Cunningham,203,104,Villanova University,1987,Clinton,Maryland
 3342,JamesOn Curry,190,86,Oklahoma State University,1986,Pleasant Grove,North Carolina
 3343,Stephen Curry,190,86,Davidson College,1988,Akron,Ohio
@@ -3353,12 +3353,12 @@
 3351,Alonzo Gee,198,102,University of Alabama,1987,Riviera Beach,Florida
 3352,Taj Gibson,206,102,University of Southern California,1985,Brooklyn,New York
 3353,Trey Gilder,206,83,Northwestern State University,1985,Dallas,Texas
-"3354,Danny Green,206,100,""University of California, Los Angeles"",1957,Lynwood,California"
+3354,Danny Green,206,100,"University of California, Los Angeles",1957,Lynwood,California
 3355,Taylor Griffin,201,107,University of Oklahoma,1986,Oklahoma City,Oklahoma
 3356,Tyler Hansbrough,206,113,University of North Carolina,1985,Poplar Bluff,Missouri
 3357,James Harden,196,99,Arizona State University,1989,Los Angeles,California
 3358,Jordan Hill,208,106,University of Arizona,1987,Atlanta,Georgia
-"3359,Jrue Holiday,193,92,""University of California, Los Angeles"",1990,Chatsworth,California"
+3359,Jrue Holiday,193,92,"University of California, Los Angeles",1990,Chatsworth,California
 3360,Lester Hudson,190,86,University of Tennessee at Martin,1984,Memphis,Tennessee
 3361,Chris Hunter,211,108,University of Michigan,1984,Gary,Indiana
 3362,Serge Ibaka,208,106,,1989,Brazzaville,Republic of the Congo
@@ -3390,7 +3390,7 @@
 3388,Al-Farouq Aminu,206,99,Wake Forest University,1990,Atlanta,Georgia
 3389,James Anderson,198,96,Oklahoma State University,1989,El Dorado,Arkansas
 3390,Omer Asik,213,115,,1986,Bursa,Turkey
-"3391,Luke Babbitt,206,102,""University of Nevada, Reno"",1989,Cincinnati,Ohio"
+3391,Luke Babbitt,206,102,"University of Nevada, Reno",1989,Cincinnati,Ohio
 3392,Eric Bledsoe,185,86,University of Kentucky,1989,Birmingham,Alabama
 3393,Trevor Booker,203,103,Clemson University,1987,Newberry,South Carolina
 3394,Craig Brackins,208,104,Iowa State University,1987,Los Angeles,California
@@ -3410,7 +3410,7 @@
 3408,Derrick Favors,208,120,Georgia Institute of Technology,1991,Atlanta,Georgia
 3409,Landry Fields,201,95,Stanford University,1988,Long Beach,California
 3410,Gary Forbes,201,99,University of Massachusetts Amherst,1985,Colon,Panama
-"3411,Paul George,206,99,""California State University, Fresno"",1990,Palmdale,California"
+3411,Paul George,206,99,"California State University, Fresno",1990,Palmdale,California
 3412,Blake Griffin,208,113,University of Oklahoma,1989,Oklahoma City,Oklahoma
 3413,Luke Harangody,203,111,University of Notre Dame,1988,Decatur,Illinois
 3414,Manny Harris,196,83,University of Michigan,1989,Detroit,Michigan
@@ -3476,7 +3476,7 @@
 3474,Tobias Harris,190,86,University of New Orleans,1967,Monroe,Louisiana
 3475,Cory Higgins,196,81,University of Colorado,1989,Danville,California
 3476,Darington Hobson,201,95,University of New Mexico,1987,Las Vegas,Nevada
-"3477,Tyler Honeycutt,203,85,""University of California, Los Angeles"",1990,Los Angeles,California"
+3477,Tyler Honeycutt,203,85,"University of California, Los Angeles",1990,Los Angeles,California
 3478,Dennis Horner,206,104,North Carolina State University,1988,Linwood,New Jersey
 3479,Kyrie Irving,190,87,Duke University,1992,Melbourne,Australia
 3480,Reggie Jackson,190,94,Boston College,1990,Pordenone,Italy
@@ -3489,7 +3489,7 @@
 3487,Enes Kanter,211,111,,1992,Zurich,Switzerland
 3488,D.J. Kennedy,211,111,,1992,,
 3489,Brandon Knight,178,78,Stanford University,1975,Livingston,New Jersey
-"3490,Malcolm Lee,196,90,""University of California, Los Angeles"",1990,Riverside,California"
+3490,Malcolm Lee,196,90,"University of California, Los Angeles",1990,Riverside,California
 3491,Kawhi Leonard,201,104,San Diego State University,1991,Los Angeles,California
 3492,Travis Leslie,193,92,University of Georgia,1990,Atlanta,Georgia
 3493,Jon Leuer,208,103,University of Wisconsin,1989,Long Lake,Minnesota
@@ -3531,7 +3531,7 @@
 3529,Jordan Williams,188,83,New Mexico State University,1951,New Haven,Connecticut
 3530,Chris Wright,203,102,University of Dayton,1988,Trotwood,Ohio
 3531,Quincy Acy,201,108,Baylor University,1990,Tyler,Texas
-"3532,Josh Akognon,180,83,""California State University, Fullerton"",1986,Greenbrae,California"
+3532,Josh Akognon,180,83,"California State University, Fullerton",1986,Greenbrae,California
 3533,Harrison Barnes,190,92,Northeastern University,1945,,
 3534,Will Barton,198,79,University of Memphis,1991,Baltimore,Maryland
 3535,Aron Baynes,208,117,Washington State University,1986,Gisborne,New Zealand
@@ -3557,7 +3557,7 @@
 3555,Justin Holiday,198,83,University of Washington,1989,Mission Hills,California
 3556,Bernard James,208,108,Florida State University,1985,Savannah,Georgia
 3557,John Jenkins,193,97,Vanderbilt University,1991,Nashville,Tennessee
-"3558,Orlando Johnson,196,99,""University of California, Santa Barbara"",1989,Monterey,California"
+3558,Orlando Johnson,196,99,"University of California, Santa Barbara",1989,Monterey,California
 3559,Darius Johnson-Odom,201,95,Syracuse University,1970,Morgan City,Louisiana
 3560,DeQuan Jones,203,100,University of Miami,1990,Stone Mountain,Georgia
 3561,Kevin Jones,203,113,West Virginia University,1989,Mount Vernon,New York
@@ -3610,7 +3610,7 @@
 3608,Giannis Antetokounmpo,211,100,,1994,Athens,Greece
 3609,Pero Antic,211,117,,1982,Skopje,FYR Macedonia
 3610,Chris Babb,196,102,Iowa State University,1990,Arlington,Texas
-"3611,Anthony Bennett,203,111,""University of Nevada, Las Vegas"",1993,Toronto,Canada"
+3611,Anthony Bennett,203,111,"University of Nevada, Las Vegas",1993,Toronto,Canada
 3612,Vander Blue,193,90,Marquette University,1992,Milwaukee,Wisconsin
 3613,Lorenzo Brown,196,85,North Carolina State University,1990,Roswell,Georgia
 3614,Reggie Bullock,201,92,University of North Carolina,1991,Baltimore,Maryland
@@ -3654,12 +3654,12 @@
 3652,Ben McLemore,196,88,University of Kansas,1993,St. Louis,Missouri
 3653,Gal Mekel,190,86,Wichita State University,1988,Petah Tikva,Israel
 3654,Tony Mitchell,201,92,Purdue University,1966,Toledo,Ohio
-"3655,Shabazz Muhammad,198,101,""University of California, Los Angeles"",1992,Los Angeles,California"
+3655,Shabazz Muhammad,198,101,"University of California, Los Angeles",1992,Los Angeles,California
 3656,Erik Murphy,208,104,University of Florida,1990,Lyon,France
 3657,Toure' Murry,196,88,Wichita State University,1989,Houston,Texas
 3658,Mike Muscala,211,108,Bucknell University,1991,St. Louis Park,Minnesota
 3659,Nemanja Nedovic,190,87,,1991,Nova Varos,Serbia
-"3660,James Nunnally,201,92,""University of California, Santa Barbara"",1990,San Jose,California"
+3660,James Nunnally,201,92,"University of California, Santa Barbara",1990,San Jose,California
 3661,Victor Oladipo,193,95,Indiana University,1992,Silver Spring,Maryland
 3662,Kelly Olynyk,213,107,Gonzaga University,1991,Toronto,Canada
 3663,Arinze Onuaku,206,115,Syracuse University,1987,Lanham,Maryland
@@ -3675,14 +3675,14 @@
 3673,D.J. Stephens,203,97,,1990,,
 3674,Adonis Thomas,201,90,University of Memphis,1993,Memphis,Tennessee
 3675,Hollis Thompson,203,93,Georgetown University,1991,Pasadena,California
-"3676,Casper Ware,178,79,""California State University, Long Beach"",1990,Cerritos,California"
+3676,Casper Ware,178,79,"California State University, Long Beach",1990,Cerritos,California
 3677,Royce White,203,95,University of South Alabama,1959,Tuskegee,Alabama
 3678,Jeff Withey,213,104,University of Kansas,1990,San Diego,California
 3679,Nate Wolters,193,86,South Dakota State University,1991,St. Cloud,Minnesota
 3680,Cody Zeller,213,108,Indiana University,1992,Washington,Indiana
-"3681,Jordan Adams,196,94,""University of California, Los Angeles"",1994,Atlanta,Georgia"
+3681,Jordan Adams,196,94,"University of California, Los Angeles",1994,Atlanta,Georgia
 3682,Furkan Aldemir,208,108,,1991,Konak,Turkey
-"3683,Kyle Anderson,206,104,""University of California, Los Angeles"",1993,New York,New York"
+3683,Kyle Anderson,206,104,"University of California, Los Angeles",1993,New York,New York
 3684,Cameron Bairstow,206,113,University of New Mexico,1990,Brisbane,Australia
 3685,Jerrelle Benimon,203,111,Towson University,1991,Warrenton,Virginia
 3686,Sim Bhullar,226,163,New Mexico State University,1992,Ontario,Canada
@@ -3701,7 +3701,7 @@
 3699,Spencer Dinwiddie,198,90,University of Colorado,1993,Los Angeles,California
 3700,Zoran Dragic,196,90,,1989,Ljubljana,Slovenia
 3701,Cleanthony Early,203,95,Wichita State University,1991,Middletown,New York
-"3702,James Ennis,201,95,""California State University, Long Beach"",1990,Ventura,California"
+3702,James Ennis,201,95,"California State University, Long Beach",1990,Ventura,California
 3703,Tyler Ennis,190,87,Syracuse University,1994,Brampton,Canada
 3704,Dante Exum,198,86,,1995,Melbourne,Australia
 3705,Tim Frazier,185,77,Pennsylvania State University,1990,Houston,Texas
@@ -3719,11 +3719,11 @@
 3717,Cory Jefferson,206,98,Baylor University,1990,Tacoma,Washington
 3718,Grant Jerrett,208,106,University of Arizona,1993,Costa Mesa,California
 3719,Nick Johnson,190,91,University of Arizona,1992,Tempe,Arizona
-"3720,Tyler Johnson,193,84,""California State University, Fresno"",1992,Grand Forks,North Dakota"
+3720,Tyler Johnson,193,84,"California State University, Fresno",1992,Grand Forks,North Dakota
 3721,Sean Kilpatrick,193,95,University of Cincinnati,1990,Yonkers,New York
 3722,Alex Kirk,213,111,University of New Mexico,1991,Los Alamos,New Mexico
 3723,Joffrey Lauvergne,211,99,,1991,Mulhouse,France
-"3724,Zach LaVine,196,85,""University of California, Los Angeles"",1995,Renton,Washington"
+3724,Zach LaVine,196,85,"University of California, Los Angeles",1995,Renton,Washington
 3725,Kalin Lucas,185,88,Michigan State University,1989,Sterling Heights,Michigan
 3726,Devyn Marble,198,90,University of Iowa,1992,Southfield,Michigan
 3727,James Michael,198,90,,1992,,
@@ -3754,8 +3754,8 @@
 3752,Jarnell Stokes,206,119,University of Tennessee,1994,Memphis,Tennessee
 3753,Noah Vonleh,208,108,Indiana University,1995,Haverhill,Massachusetts
 3754,T.J. Warren,208,108,,1995,,
-"3755,David Wear,208,104,""University of California, Los Angeles"",1990,Long Beach,California"
-"3756,Travis Wear,208,104,""University of California, Los Angeles"",1990,Long Beach,California"
+3755,David Wear,208,104,"University of California, Los Angeles",1990,Long Beach,California
+3756,Travis Wear,208,104,"University of California, Los Angeles",1990,Long Beach,California
 3757,Shayne Whittington,211,113,Western Michigan University,1991,Paw Paw,Michigan
 3758,Andrew Wiggins,203,90,University of Kansas,1995,Toronto,Canada
 3759,C.J. Wilcox,203,90,,1995,,
@@ -3793,7 +3793,7 @@
 3791,Tyus Jones,188,88,Duke University,1996,Burnsville,Minnesota
 3792,Frank Kaminsky,213,109,University of Wisconsin,1993,Winfield,Illinois
 3793,Sasha Kaun,211,117,University of Kansas,1985,Tomsk,Russia
-"3794,Kevon Looney,206,99,""University of California, Los Angeles"",1996,Milwaukee,Wisconsin"
+3794,Kevon Looney,206,99,"University of California, Los Angeles",1996,Milwaukee,Wisconsin
 3795,Trey Lyles,208,106,University of Kentucky,1995,Saskatoon,Canada
 3796,Boban Marjanovic,221,131,,1988,Zajecar,Serbia
 3797,Jarell Martin,208,108,Louisiana State University,1994,Baton Rouge,Louisiana
@@ -3814,7 +3814,7 @@
 3812,Tibor Pleiss,221,116,,1989,Bergisch Gladbach,Germany
 3813,Bobby Portis,211,104,University of Arkansas,1995,Little Rock,Arkansas
 3814,Kristaps Porzingis,221,108,,1995,Liepaja,Latvia
-"3815,Norman Powell,193,97,""University of California, Los Angeles"",1993,San Diego,California"
+3815,Norman Powell,193,97,"University of California, Los Angeles",1993,San Diego,California
 3816,Willie Reed,206,106,Grambling State University,1942,Hico,Louisiana
 3817,Josh Richardson,198,90,University of Tennessee,1993,Edmond,Oklahoma
 3818,Terry Rozier,188,86,University of Louisville,1994,Youngstown,Ohio
@@ -3825,11 +3825,11 @@
 3823,Axel Toupane,201,89,,1992,Mulhouse,France
 3824,Karl-Anthony Towns,213,110,University of Kentucky,1995,Edison,New Jersey
 3825,Myles Turner,211,110,University of Texas at Austin,1996,Bedford,Texas
-"3826,Rashad Vaughn,198,91,""University of Nevada, Las Vegas"",1996,Minneapolis,Minnesota"
+3826,Rashad Vaughn,198,91,"University of Nevada, Las Vegas",1996,Minneapolis,Minnesota
 3827,Briante Weber,188,74,Virginia Commonwealth University,1992,Chesapeake,Virginia
 3828,Alan Williams,198,90,Drake University,1948,,
 3829,Justise Winslow,201,102,Duke University,1996,Houston,Texas
-"3830,Christian Wood,211,99,""University of Nevada, Las Vegas"",1995,Long Beach,California"
+3830,Christian Wood,211,99,"University of Nevada, Las Vegas",1995,Long Beach,California
 3831,Delon Wright,196,83,University of Utah,1992,Los Angeles,California
 3832,Joe Young,188,81,University of Oregon,1992,Houston,Texas
 3833,Alex Abrines,198,86,,1993,Palma de Mallorca,Spain
@@ -3882,14 +3882,14 @@
 3880,Shawn Long,206,115,University of Louisiana at Lafayette,1993,Morgan City,Louisiana
 3881,Timothe Luwawu-Cabarrot,198,92,,1995,Cannes,France
 3882,Thon Maker,216,97,,1997,South Sudan,
-"3883,Patrick McCaw,201,83,""University of Nevada, Las Vegas"",1995,St. Louis,Missouri"
+3883,Patrick McCaw,201,83,"University of Nevada, Las Vegas",1995,St. Louis,Missouri
 3884,Sheldon McClellan,196,90,University of Miami,1992,Houston,Texas
 3885,Rodney McGruder,193,92,Kansas State University,1991,Landover,Maryland
 3886,Dejounte Murray,196,77,University of Washington,1996,Seattle,Washington
 3887,Jamal Murray,193,93,University of Kentucky,1997,Kitchener,Canada
 3888,Maurice Ndour,206,90,Ohio University,1992,Sindia,Senegal
 3889,Georges Niang,203,104,Iowa State University,1993,Lawrence,Massachusetts
-"3890,David Nwaba,193,94,""California Polytechnic State University, San Luis Obispo"",1993,Los Angeles,California"
+3890,David Nwaba,193,94,"California Polytechnic State University, San Luis Obispo",1993,Los Angeles,California
 3891,Daniel Ochefu,211,111,Villanova University,1993,Baltimore,Maryland
 3892,Chinanu Onuaku,208,111,University of Louisville,1996,Baltimore,Maryland
 3893,Georgios Papagiannis,216,108,,1997,Amarousio,Greece
@@ -3918,6 +3918,6 @@
 3916,Isaiah Whitehead,193,96,Seton Hall University,1995,Brooklyn,New York
 3917,Troy Williams,198,97,South Carolina State University,1969,Columbia,South Carolina
 3918,Kyle Wiltjer,208,108,Gonzaga University,1992,Portland,Oregon
-"3919,Stephen Zimmerman,213,108,""University of Nevada, Las Vegas"",1996,Hendersonville,Tennessee"
+3919,Stephen Zimmerman,213,108,"University of Nevada, Las Vegas",1996,Hendersonville,Tennessee
 3920,Paul Zipser,203,97,,1994,Heidelberg,Germany
 3921,Ivica Zubac,216,120,,1997,Mostar,Bosnia and Herzegovina

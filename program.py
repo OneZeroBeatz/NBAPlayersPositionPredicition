@@ -13,7 +13,7 @@ def preparing_dataset():
 
 	data = pd.merge(stats, players[['Player', 'height', 'weight']], left_on='Player', right_on='Player', how='left')
 	data = data.fillna(value=0)
-	data = data.drop(['Tm', 'Age', 'G', 'GS'], axis='columns')
+	data = data.drop(['blanl', 'blank2', 'Tm', 'Age', 'G', 'GS'], axis='columns')
 	#Removing all rows on year change in dataset (there was row with just ID)
 	filter = data['Player'] != 0
 	data = data[filter]
@@ -69,9 +69,40 @@ def test_by_seasion():
 	predicted = encoder.inverse_transform(model.predict(test_data))
 	test_result_data = pd.DataFrame(index=idx, data={'Real': real, 'Predicted': predicted})
 	count = len(test_result_data)
-	hit = len(test_result_data[test_result_data['Real'] == test_result_data['Predicted']])
-	print (test_result_data)
-	print ("Od ukupno ", count, " pogodjeno je", hit, ", sto je ", (hit/count)*100, "%")
+	hit_count = len(test_result_data[test_result_data['Real'] == test_result_data['Predicted']])
+	print ("Od ukupno ", count, " pogodjeno je", hit_count, ", sto je ", (hit_count/count)*100, "%")
+
+	
+	miss = test_result_data[test_result_data['Real'] != test_result_data['Predicted']]
+	miss.to_csv('miss.csv', sep='\t')
+	hit_neighbors = hit_count;
+	for idx in miss.index:
+		[pos1, pos2] = miss.loc[idx]
+		if(is_heighbors(pos1,pos2)):
+			hit_neighbors=hit_neighbors+1
+	
+	#print (miss)
+	print ("Od ukupno", count, ", ako se susedne pozicije uzmu u obzir, pogodjeno je", hit_neighbors, ", sto je", (hit_neighbors/count)*100, "%")
+	
+	
+def is_heighbors (pos1, pos2):
+	if pos1=='PG':
+		if pos2== 'SG':
+			return True
+	if pos1=='SG':
+		if (pos2=='PG') | (pos2 =='SF'):
+			return True
+	if pos1=='SF':
+		if (pos2=='SG') | (pos2 =='PF'):
+			return True
+	if pos1=='PF':
+		if (pos2=='SF') | (pos2 =='C'):
+			return True
+	if pos1=='C':
+		if pos2 == 'PF':
+			return True
+	return False
+	
 
 ####################################################################################
 
@@ -85,22 +116,18 @@ data = correct_FG_percentage(data)
 data = correct_FT_percentage(data)
 data = prepare_totals(data)
 data.reset_index(inplace=True, drop=True)
-#exit()
+
 
 X = data.drop(['Player', 'Pos', 'MP'], axis=1).as_matrix()
 y = data['Pos'].as_matrix()
 y_encoded = encoder.fit_transform(y)
 X_scaled = scaler.fit_transform(X)
 
-test_stats_filter = data['Year'] == 2017
+test_stats_filter = data['Year'] == 2013
 X_train = X_scaled[~test_stats_filter]
 y_train = y_encoded[~test_stats_filter]
-print (X_train)
-print (y_train)
+
 
 train(X_train, y_train)
 
 test_by_seasion()
-
-
-
