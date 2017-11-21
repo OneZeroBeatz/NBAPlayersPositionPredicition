@@ -1,11 +1,16 @@
 import pandas as pd
 import numpy as np
 
+#import autosklearn.classification
+
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer, StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
+
 from sklearn import svm
+
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import cross_val_score
 
@@ -123,17 +128,28 @@ def predict_RFC ():
 	RFC.fit(X_train,y_train)
 	pred = RFC.predict(X_test)
 	return pred
+	
+	
+	
+#####################################
+def predict_naive_bayes():
+	naive_bayes.priors = None
+	naive_bayes(X_train,y_train)
+	pred = naive_bayes.predict(X_test)
+	return pred
 
 def predict_SVC():
-	SVC.fit(X_train, y_train)
+	#SVC.fit(X_train, y_train)
 	SVC.score(X_train, y_train)
 	pred = model.predict(X_test)
 	return pred
-	
+######################################
 	
 ####################################################################################
 
 SVC = svm.SVC()
+
+naive_bayes = GaussianNB()
 KNN = KNeighborsClassifier()
 RFC = RandomForestClassifier()
 seq = Sequential()
@@ -160,19 +176,18 @@ y_train = y_encoded[~test_stats_filter]
 
 X_test = X_scaled[test_stats_filter]
 y_test = y_encoded[test_stats_filter]
-"""
 #################### NEURAL NETWORK ########################
-neural_network_results = predict_neural_network()
-print ('\n------- Neural network results --------')
-note_results(neural_network_results,'Neural_network_results.csv')
+#neural_network_results = predict_neural_network()
+#print ('\n------- Neural network results --------')
+#note_results(neural_network_results,'Neural_network_results.csv')
 ############################################################
 
 ######################### KNN ##############################
-KNN_results = predict_KNN()
+#KNN_results = predict_KNN()
 print('\n------------- KNN results ---------------')
-note_results(KNN_results, 'KNN_results.csv')
+#note_results(KNN_results, 'KNN_results.csv')
 ############################################################
-"""
+
 #################### Random Forest #########################
 RFC_results = predict_RFC()
 print('\n-------------- RFC results -------------')
@@ -183,4 +198,11 @@ note_results(RFC_results, 'RFC_results.csv')
 #SVC_results = predict_SVC()
 #print('\n-------------- SVC results -------------')
 #note_results(SVC_results, 'SVC_results.csv')
+############################################################
+
+
+#################### Naive Bayes ###########################
+#naive_bayes_results = predict_naive_bayes()
+#print('\n--------- Naive Bayes results ----------')
+#note_results(naive_bayes_results, 'naive_bayes_results.csv')
 ############################################################
