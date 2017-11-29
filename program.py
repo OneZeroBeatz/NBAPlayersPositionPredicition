@@ -1,21 +1,26 @@
 import pandas as pd
 import numpy as np
 
-#import autosklearn.classification
-
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer, StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import datasets, linear_model
 
+
+
+from sklearn.naive_bayes import GaussianNB
 from sklearn import svm
 
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import KFold
 
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
+
+import matplotlib.pyplot as plt
+
 
 def preparing_dataset():
 	players = pd.read_csv('Datasets/Players.csv', index_col=0)
@@ -24,9 +29,9 @@ def preparing_dataset():
 	data = pd.merge(stats, players[['Player', 'height', 'weight']], left_on='Player', right_on='Player', how='left')
 	data = data.fillna(value=0)
 	data = data.drop(['blanl', 'blank2', 'Tm', 'Age', 'G', 'GS'], axis='columns')
+
 	#Removing all rows on year change in dataset (there was row with just ID)
-	filter = data['Player'] != 0
-	data = data[filter]
+	data = data[data['Player'] != 0]
 	filter = (data['Pos']=="PG") | (data['Pos']=="SG") | (data['Pos']=="SF") | (data['Pos']=="PF") | (data['Pos']=="C")
 	data = data[filter]
 	
@@ -34,7 +39,8 @@ def preparing_dataset():
 	data['Player'] = data['Player'].str.replace('*','')
 	return data
 	
-def remove_by_minutes(data, minutes=500):
+#60-75 (71) za 1980
+def remove_by_minutes(data, minutes=71): 
 	filter = data['MP']>=minutes; 
 	data = data[filter]
 	return data;
@@ -44,7 +50,7 @@ def remove_by_year(data,year=1980):
 	data = data[filter]
 	return data;
 	
-def correct_FG_percentage (data, field_goals_attempts=100):
+def correct_FG_percentage (data, field_goals_attempts=30):
 	data.loc[data['FGA'] <= field_goals_attempts,'FG%'] = data['FG%'].mean()
 	return data
 	
@@ -71,6 +77,8 @@ def predict_neural_network():
 	return pred
 	
 def note_results(results, path):
+
+	test_stats_filter = data['Year'] == 2017
 	test_stats =  data[test_stats_filter]
 	idx = test_stats['Player'].values
 	real = test_stats['Pos'].values
@@ -88,6 +96,7 @@ def note_results(results, path):
 		if(is_heighbors(pos1,pos2)):
 			hit_neighbors=hit_neighbors+1
 	print ("Od ukupno", count, ", ako se susedne pozicije uzmu u obzir, pogodjeno je", hit_neighbors, ", sto je", (hit_neighbors/count)*100, "%")	
+	return 100*accuracy_score(real,results_str)
 	
 def is_heighbors (pos1, pos2):
 	if pos1=='PG':
@@ -129,12 +138,19 @@ def predict_RFC ():
 	pred = RFC.predict(X_test)
 	return pred
 	
+def predict_DTC():
+	DTC.fit(X_train,y_train)
+	pred = DTC.predict(X_test)
+	return pred
+	
+	
+
 	
 	
 #####################################
 def predict_naive_bayes():
 	naive_bayes.priors = None
-	naive_bayes(X_train,y_train)
+	naive_bayes.fit(X_train,y_train)
 	pred = naive_bayes.predict(X_test)
 	return pred
 
@@ -147,9 +163,11 @@ def predict_SVC():
 	
 ####################################################################################
 
-SVC = svm.SVC()
 
+SVC = svm.SVC()
 naive_bayes = GaussianNB()
+
+DTC = DecisionTreeClassifier()
 KNN = KNeighborsClassifier()
 RFC = RandomForestClassifier()
 seq = Sequential()
@@ -157,6 +175,8 @@ encoder = LabelBinarizer()
 scaler = StandardScaler()
 
 data = preparing_dataset();
+
+
 data = remove_by_minutes(data)
 data = remove_by_year(data)
 data = correct_FG_percentage(data)
@@ -164,11 +184,13 @@ data = correct_FT_percentage(data)
 data = prepare_totals(data)
 data.reset_index(inplace=True, drop=True)
 
+X = data.drop(['Player','Pos', 'MP'], axis=1).as_matrix()
 
-X = data.drop(['Player', 'Pos', 'MP'], axis=1).as_matrix()
 y = data['Pos'].as_matrix()
+
 y_encoded = encoder.fit_transform(y)
 X_scaled = scaler.fit_transform(X)
+
 
 test_stats_filter = data['Year'] == 2017
 X_train = X_scaled[~test_stats_filter]
@@ -176,6 +198,19 @@ y_train = y_encoded[~test_stats_filter]
 
 X_test = X_scaled[test_stats_filter]
 y_test = y_encoded[test_stats_filter]
+
+
+k_fold = KFold(n_splits = 3, random_state=None, shuffle=False)
+
+for train_index, test_index in k_fold.split(X_train):
+	print("TRAIN:", train_index, "TEST:", test_index)
+	X_train_val, X_test_val = X[train_index], X[test_index]
+	y_train_val, y_test_val = y[train_index], y[test_index]
+
+exit();
+#print (y_test)
+#print (encoder.inverse_transform(y_test))
+
 #################### NEURAL NETWORK ########################
 #neural_network_results = predict_neural_network()
 #print ('\n------- Neural network results --------')
@@ -184,15 +219,29 @@ y_test = y_encoded[test_stats_filter]
 
 ######################### KNN ##############################
 #KNN_results = predict_KNN()
-print('\n------------- KNN results ---------------')
+#print('\n------------- KNN results ---------------')
 #note_results(KNN_results, 'KNN_results.csv')
 ############################################################
 
 #################### Random Forest #########################
-RFC_results = predict_RFC()
-print('\n-------------- RFC results -------------')
-note_results(RFC_results, 'RFC_results.csv')
+#RFC_results = predict_RFC()
+#print('\n-------------- RFC results -------------')
+#note_results(RFC_results, 'RFC_results.csv')
 ############################################################
+
+#################### Decision Tree #########################
+#DTC_results = predict_DTC()
+#print('\n------------- DTC results ---------------')
+#note_results(DTC_results, 'DTC_results.csv')
+############################################################
+
+
+
+
+
+
+
+
 
 ####################### SVC ################################
 #SVC_results = predict_SVC()
