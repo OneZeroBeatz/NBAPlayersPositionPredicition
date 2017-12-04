@@ -1,23 +1,25 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelBinarizer, StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn import datasets, linear_model
-
-
-
-from sklearn.naive_bayes import GaussianNB
-from sklearn import svm
-
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import KFold
 
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
+
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
+
+from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
+from sklearn.svm import SVC
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelBinarizer, StandardScaler, LabelEncoder, OneHotEncoder
+
+from sklearn import datasets, linear_model
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import KFold
+
 
 import matplotlib.pyplot as plt
 
@@ -28,7 +30,7 @@ def preparing_dataset():
 
 	data = pd.merge(stats, players[['Player', 'height', 'weight']], left_on='Player', right_on='Player', how='left')
 	data = data.fillna(value=0)
-	data = data.drop(['blanl', 'blank2', 'Tm', 'Age', 'G', 'GS'], axis='columns')
+	data = data.drop(['blanl', 'blank2', 'Tm', 'Age'], axis='columns')
 
 	#Removing all rows on year change in dataset (there was row with just ID)
 	data = data[data['Player'] != 0]
@@ -38,7 +40,6 @@ def preparing_dataset():
 	#Removing a star sign at the end of the names of some players
 	data['Player'] = data['Player'].str.replace('*','')
 	return data
-	
 #60-75 (71) za 1980
 def remove_by_minutes(data, minutes=71): 
 	filter = data['MP']>=minutes; 
@@ -63,22 +64,10 @@ def prepare_totals(data,minutes_to_mull=36):
 	for col in totals:
 		data[col] = minutes_to_mull*data[col]/data['MP']
 	return data;
-	
-def predict_neural_network():	
-	columns_count = X_train.shape[1]
-	seq.add(Dense(40, activation='relu', input_dim=columns_count))
-	seq.add(Dropout(0.5))
-	seq.add(Dense(30, activation='relu'))
-	seq.add(Dropout(0.5))
-	seq.add(Dense(len(encoder.classes_), activation='softmax'))
-	seq.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
-	seq.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
-	pred = seq.predict(X_test)
-	return pred
-	
-def note_results(results, path):
 
-	test_stats_filter = data['Year'] == 2017
+def note_results(results, path, encoder):
+
+	test_stats_filter = data['Year'] == test_seasion
 	test_stats =  data[test_stats_filter]
 	idx = test_stats['Player'].values
 	real = test_stats['Pos'].values
@@ -87,7 +76,7 @@ def note_results(results, path):
 	test_result_data.to_csv(path, sep=',')
 	count = len(test_result_data)
 	hit_count = len(test_result_data[test_result_data['Real'] == test_result_data['Predicted']])
-	print ("Od ukupno", count, " pogodjeno je", hit_count, ", sto je ", accuracy_score(real,results_str)*100, "%")
+	print ("Redovni: \t", hit_count, "/", count, "(", round (accuracy_score(real,results_str)*100,3), "%)")
 
 	miss = test_result_data[test_result_data['Real'] != test_result_data['Predicted']]
 	hit_neighbors = hit_count;
@@ -95,7 +84,7 @@ def note_results(results, path):
 		[pos1, pos2] = miss.loc[idx]
 		if(is_heighbors(pos1,pos2)):
 			hit_neighbors=hit_neighbors+1
-	print ("Od ukupno", count, ", ako se susedne pozicije uzmu u obzir, pogodjeno je", hit_neighbors, ", sto je", (hit_neighbors/count)*100, "%")	
+	print ("Susedni:\t", hit_neighbors, "/",count , "(", round((hit_neighbors/count)*100,3), "%)")	
 	return 100*accuracy_score(real,results_str)
 	
 def is_heighbors (pos1, pos2):
@@ -115,14 +104,7 @@ def is_heighbors (pos1, pos2):
 		if pos2 == 'PF':
 			return True
 	return False
-	
-def predict_KNN ():
-	#k = get_best_k()
-	KNN.n_neighbors=3
-	KNN.fit(X_train,y_train)	
-	pred = KNN.predict(X_test)
-	return pred
-	
+		
 def get_best_k():
 	neighbors = range(1,2,50)
 	cv_scores = []
@@ -132,126 +114,142 @@ def get_best_k():
 		scores = cross_val_score (KNN, X_train, y_train, cv=10, scoring='accuracy')
 		cv_scores.append(scores.mean())
 	return optimal_k
-	
-def predict_RFC ():
-	RFC.fit(X_train,y_train)
-	pred = RFC.predict(X_test)
-	return pred
-	
-def predict_DTC():
-	DTC.fit(X_train,y_train)
-	pred = DTC.predict(X_test)
-	return pred
-	
-	
 
-	
-	
-#####################################
-def predict_naive_bayes():
-	naive_bayes.priors = None
-	naive_bayes.fit(X_train,y_train)
-	pred = naive_bayes.predict(X_test)
-	return pred
+def predict(model, X_train, y_train, X_test):
+	model.fit(X_train,y_train)
+	model_results = model.predict(X_test)
+	return model_results
 
-def predict_SVC():
-	#SVC.fit(X_train, y_train)
-	SVC.score(X_train, y_train)
-	pred = model.predict(X_test)
-	return pred
+def dimensionality_reduction(data):
+	data = data.drop(['MP','G'], axis=1)
+	return data
 ######################################
+	
+def split_sets(encoder):
+	X = data.drop(['Pos', 'Player'], axis=1).as_matrix()
+	y = data['Pos'].as_matrix()
+	y_encoded = encoder.fit_transform(y)
+	X_scaled = scaler.fit_transform(X)
+	
+	test_stats_filter = data['Year'] == test_seasion
+	X_train = X_scaled[~test_stats_filter]
+	y_train = y_encoded[~test_stats_filter]
+	
+	X_test = X_scaled[test_stats_filter]
+	y_test = y_encoded[test_stats_filter]
+	return [X_train, y_train, X_test, y_test]
+	
+def test (model, encoder, X_train, y_train, X_test, path):
+	model_results = predict(model, X_train, y_train, X_test)
+	note_results(model_results,path, encoder)
+
+def k_fold_cross_validation(model,encoder,X, Y, k = 10):
+	#print("ss")
+	k_fold = KFold(n_splits = k, random_state=None, shuffle=False)
+	for train_index, val_index in k_fold.split(X):
+		X_train, X_val = X[train_index], X[val_index]
+		y_train, y_val = Y[train_index], Y[val_index]
+		predict_results = predict(model,X_train,y_train, X_val)
+		print(round(accuracy_score(y_val,predict_results)*100,3))
+	
+def test_SVC(encoder):
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	print('\n------------------- SVC results -----------------------')
+	k_fold_cross_validation(SVC, encoder, X_train, y_train)
+	test(SVC, encoder, X_train, y_train, X_test, 'SVC_results.csv')	
+	
+def test_KNN(encoder):
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	print('\n------------------- KNN results -----------------------')
+	k_fold_cross_validation(KNN, encoder, X_train, y_train)
+	test(KNN, encoder, X_train, y_train, X_test, 'KNN_results.csv')
+	
+def test_naive_bayes(encoder):
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	print('\n---------------- Naive Bayes results ------------------')	
+	k_fold_cross_validation(naive_bayes, encoder, X_train, y_train)
+	test(naive_bayes, encoder, X_train, y_train, X_test, 'naive_bayes_results.csv')
+
+def test_LDA(encoder):
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	print('\n-------------------- LDA results ----------------------')
+	k_fold_cross_validation(LDA, encoder, X_train, y_train)
+	test(LDA, encoder, X_train, y_train, X_test, 'LDA_results.csv')
+	
+def test_DTC(encoder):
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	print('\n-------------------- DTC results ----------------------')
+	k_fold_cross_validation(DTC, encoder, X_train, y_train)
+	test(DTC, encoder, X_train, y_train, X_test, 'DTC_results.csv')
+
+def test_RFC(encoder):
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	print('\n-------------------- RFC results ----------------------')
+	k_fold_cross_validation(RFC, encoder, X_train, y_train)
+	test(RFC, encoder, X_train, y_train, X_test, 'RFC_results.csv')	
+def test_SEQ(encoder):	
+	X_train, y_train, X_test, y_test = split_sets(encoder)
+	columns_count = X_train.shape[1]
+	SEQ.add(Dense(40, activation='relu', input_dim=columns_count))
+	SEQ.add(Dropout(0.5))
+	SEQ.add(Dense(30, activation='relu'))
+	SEQ.add(Dropout(0.5))
+	SEQ.add(Dense(len(encoder.classes_), activation='softmax'))
+	SEQ.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
+	
+	#Validation
+	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0.2, verbose=1)
+	SEQ.test_on_batch(X_test, y_test, sample_weight=None)
+	
+	
+	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
+	SEQ_results = SEQ.predict(X_test)
+	print('\n-------------------- SEQ results ----------------------')
+	note_results(SEQ_results,'SEQ_results.csv', encoder)
+
+	
+
+	
+	
 	
 ####################################################################################
 
+test_seasion = 2017
 
-SVC = svm.SVC()
-naive_bayes = GaussianNB()
-
-DTC = DecisionTreeClassifier()
+SVC = SVC()
 KNN = KNeighborsClassifier()
+naive_bayes = GaussianNB()
+LDA = LinearDiscriminantAnalysis()
+DTC = DecisionTreeClassifier()
 RFC = RandomForestClassifier()
-seq = Sequential()
-encoder = LabelBinarizer()
+
+SEQ = Sequential()
+
+binarizer = LabelBinarizer()
+encoder = LabelEncoder()
 scaler = StandardScaler()
 
 data = preparing_dataset();
-
-
 data = remove_by_minutes(data)
 data = remove_by_year(data)
 data = correct_FG_percentage(data)
 data = correct_FT_percentage(data)
 data = prepare_totals(data)
+data = dimensionality_reduction(data)
 data.reset_index(inplace=True, drop=True)
 
-X = data.drop(['Player','Pos', 'MP'], axis=1).as_matrix()
-
-y = data['Pos'].as_matrix()
-
-y_encoded = encoder.fit_transform(y)
-X_scaled = scaler.fit_transform(X)
-
-
-test_stats_filter = data['Year'] == 2017
-X_train = X_scaled[~test_stats_filter]
-y_train = y_encoded[~test_stats_filter]
-
-X_test = X_scaled[test_stats_filter]
-y_test = y_encoded[test_stats_filter]
-
-
-k_fold = KFold(n_splits = 3, random_state=None, shuffle=False)
-
-for train_index, test_index in k_fold.split(X_train):
-	print("TRAIN:", train_index, "TEST:", test_index)
-	X_train_val, X_test_val = X[train_index], X[test_index]
-	y_train_val, y_test_val = y[train_index], y[test_index]
-
-exit();
-#print (y_test)
-#print (encoder.inverse_transform(y_test))
-
-#################### NEURAL NETWORK ########################
-#neural_network_results = predict_neural_network()
-#print ('\n------- Neural network results --------')
-#note_results(neural_network_results,'Neural_network_results.csv')
-############################################################
-
-######################### KNN ##############################
-#KNN_results = predict_KNN()
-#print('\n------------- KNN results ---------------')
-#note_results(KNN_results, 'KNN_results.csv')
-############################################################
-
-#################### Random Forest #########################
-#RFC_results = predict_RFC()
-#print('\n-------------- RFC results -------------')
-#note_results(RFC_results, 'RFC_results.csv')
-############################################################
-
-#################### Decision Tree #########################
-#DTC_results = predict_DTC()
-#print('\n------------- DTC results ---------------')
-#note_results(DTC_results, 'DTC_results.csv')
-############################################################
 
 
 
+#ENCODER
+test_SVC(encoder)
+test_KNN(encoder)
+test_naive_bayes(encoder)
+test_LDA(encoder)
+test_DTC(encoder)
+test_RFC(encoder)
+
+#BINARIZER
+test_SEQ(binarizer)
 
 
-
-
-
-
-####################### SVC ################################
-#SVC_results = predict_SVC()
-#print('\n-------------- SVC results -------------')
-#note_results(SVC_results, 'SVC_results.csv')
-############################################################
-
-
-#################### Naive Bayes ###########################
-#naive_bayes_results = predict_naive_bayes()
-#print('\n--------- Naive Bayes results ----------')
-#note_results(naive_bayes_results, 'naive_bayes_results.csv')
-############################################################
