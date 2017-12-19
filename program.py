@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
-
+#F measure - dodato
+#PCA 
+#SEQ kfold - DODATO
 
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
@@ -17,7 +19,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer, StandardScaler, LabelEncoder, OneHotEncoder
 
 from sklearn import datasets, linear_model
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 from sklearn.model_selection import KFold
 
 
@@ -118,6 +120,8 @@ def get_best_k():
 def predict(model, X_train, y_train, X_test):
 	model.fit(X_train,y_train)
 	model_results = model.predict(X_test)
+	print('Test data score', round(accuracy_score(y_train,model.predict(X_train))*100,3))
+		
 	return model_results
 
 def dimensionality_reduction(data):
@@ -143,15 +147,6 @@ def test (model, encoder, X_train, y_train, X_test, path):
 	model_results = predict(model, X_train, y_train, X_test)
 	note_results(model_results,path, encoder)
 
-def k_fold_cross_validation(model,encoder,X, Y, k = 10):
-	#print("ss")
-	k_fold = KFold(n_splits = k, random_state=None, shuffle=False)
-	for train_index, val_index in k_fold.split(X):
-		X_train, X_val = X[train_index], X[val_index]
-		y_train, y_val = Y[train_index], Y[val_index]
-		predict_results = predict(model,X_train,y_train, X_val)
-		print(round(accuracy_score(y_val,predict_results)*100,3))
-	
 def test_SVC(encoder):
 	X_train, y_train, X_test, y_test = split_sets(encoder)
 	print('\n------------------- SVC results -----------------------')
@@ -187,6 +182,7 @@ def test_RFC(encoder):
 	print('\n-------------------- RFC results ----------------------')
 	k_fold_cross_validation(RFC, encoder, X_train, y_train)
 	test(RFC, encoder, X_train, y_train, X_test, 'RFC_results.csv')	
+	
 def test_SEQ(encoder):	
 	X_train, y_train, X_test, y_test = split_sets(encoder)
 	columns_count = X_train.shape[1]
@@ -197,20 +193,34 @@ def test_SEQ(encoder):
 	SEQ.add(Dense(len(encoder.classes_), activation='softmax'))
 	SEQ.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
 	
-	#Validation
-	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0.2, verbose=1)
-	SEQ.test_on_batch(X_test, y_test, sample_weight=None)
-	
+	k_fold_cross_validation(SEQ, encoder, X_train, y_train)
 	
 	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
 	SEQ_results = SEQ.predict(X_test)
 	print('\n-------------------- SEQ results ----------------------')
+	print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(SEQ.predict(X_train)))))
 	note_results(SEQ_results,'SEQ_results.csv', encoder)
+	
+def k_fold_cross_validation(model,encoder,X, Y, k = 10):
+	k_fold = KFold(n_splits = k, random_state=None, shuffle=False)
+	#for train_index, val_index in k_fold.split(X):
+	#	X_train, X_val = X[train_index], X[val_index]
+	#	y_train, y_val = Y[train_index], Y[val_index]
+	#	if (model == SEQ):			
+	#		model.fit(X_train, y_train, epochs=200, batch_size=128, validation_split =0, verbose= 1)
+	#		predict_results = model.predict(X_val)
+	#		predict_results = encoder.inverse_transform(predict_results)
+	#		y_val = encoder.inverse_transform(y_val)
+	#		print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(model.predict(X_train)))))
+	#	if (model != SEQ):
+	#		predict_results = predict(model,X_train,y_train, X_val)
+	#	print('Accuracy score', round(accuracy_score(y_val,predict_results)*100,3))
+	#	print('F1 measure    ', round(f1_score(y_val,predict_results, average ='weighted')*100,3))
+	#	#print('Classif report', classification_report(y_val,predict_results)*100,3)
+	#	#print('Confusion matr\n', confusion_matrix(y_val,predict_results))
+	#	print('\n')
 
-	
-
-	
-	
+		
 	
 ####################################################################################
 
@@ -242,14 +252,14 @@ data.reset_index(inplace=True, drop=True)
 
 
 #ENCODER
-test_SVC(encoder)
-test_KNN(encoder)
-test_naive_bayes(encoder)
-test_LDA(encoder)
-test_DTC(encoder)
-test_RFC(encoder)
+#test_SVC(encoder)
+#test_KNN(encoder)
+#test_naive_bayes(encoder)
+#test_LDA(encoder)
+#test_DTC(encoder)
+#test_RFC(encoder)
 
 #BINARIZER
-test_SEQ(binarizer)
+#test_SEQ(binarizer)
 
 
