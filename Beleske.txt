@@ -1,0 +1,468 @@
+
+Kada sam koristio label binarizer
+
+SEQ - 71.93/71.93/69.88/70.63/72.49
+KNN - 65.98
+RFC - 60.22/57.24/58.73/59.10/57.24
+DTC - 62.82/64.31/63.94/64.49/63.75
+LDA - *
+NAI - *
+SVC - *
+
+
+Kada sam koristio label encoder
+
+SEQ - *
+KNN - 67.10
+RFC - 70.26/69.51/68.21/67.84/71.74
+DTC - 64.31/63.01/64.86/63.75/65.79
+LDA - 66.72
+NAI - 61.89
+SVC - 71.00
+
+
+Binarizer	SEQ
+Encoder		KNN, RFC, LDA, NAI, SVC, DTC
+
+Kada sam pokusao one hot encoder za enkodovanje podataka u ciljnoj labeli
+nije moglo, jer ne moze da konvertuje iz stringa u float
+
+
+Pokusao sam bernoulliNB ali je dao oko 58.92, sto je manje od 61.89
+koje je davao GaussianNB,
+MultinomialNB puca jer X_train mora imati sve pozitivne
+
+Pokusao sam DTC sa binarizerom, ali je za oko 1 posoto bolji sa encoderom
+
+
+Pokusao sam da brisem godine iz testiranja, medjutim imaju veoma bitan udeo
+s obzirom da je kosarka evoluirala
+
+
+dodao sam f measure, tj f1 score, u cross validaciju, pokusavao sam sa razlicitim trecim parametrom
+
+stampao confusion matricu za test podatke 19.12.2017 koriscenjem KNN
+  C  PF PG SF SG
+[[74 21  0  0  0]
+ [25 62  0 15  3]
+ [ 0  0 85  2 14]
+ [ 2 20  3 73 26]
+ [ 0  3 21 22 67]]
+
+na glavnoj dijagonali trebaju biti najveci brojevi
+
+manji stepen overfitinga KNN
+	kad i treniram i testiram sa test podacima, imam rezultate od oko 81,5 posto za KNN
+	kad treniram sa train a testiram sa test, imam rezultate za minimum 15 posto manje
+SVC  79-71
+KNN  81-67
+NB   65-61
+LDA  70-66
+DTC 100-63
+RFC  99-71
+SEQ 100-68
+Kad imam previse kod treniranja i testiranja sa istim podacima moguc je overfiting
+
+
+
+classification report matrica za knn u jednom od validacionih skupova izgleda ovako
+ 
+            precision    recall  f1-score   support
+
+          0       0.67      0.71      0.69       310
+          1       0.60      0.62      0.61       359
+          2       0.82      0.91      0.86       345
+          3       0.60      0.53      0.56       311
+          4       0.65      0.58      0.61       304
+
+
+recall govori da se najbolje pogadjaju pozicije C-0 i PG-2
+sto je i logicno jer nemaju po dve susedne
+
+
+
+Od sada pokusavam da smanjim dimenzijalnost manualno
+Prvo merenje
+------------------- SVC results -----------------------
+Test data score 79.645
+Redovni:         385 / 538 ( 71.561 %)
+Susedni:         497 / 538 ( 92.379 %)
+
+------------------- KNN results -----------------------
+Test data score 81.53
+Redovni:         361 / 538 ( 67.1 %)
+Susedni:         494 / 538 ( 91.822 %)
+
+---------------- Naive Bayes results ------------------
+Test data score 65.283
+Redovni:         333 / 538 ( 61.896 %)
+Susedni:         488 / 538 ( 90.706 %)
+
+-------------------- LDA results ----------------------
+Test data score 70.257
+Redovni:         358 / 538 ( 66.543 %)
+Susedni:         497 / 538 ( 92.379 %)
+
+-------------------- DTC results ----------------------
+Test data score 100.0
+Redovni:         336 / 538 ( 62.454 %)
+Susedni:         478 / 538 ( 88.848 %)
+
+-------------------- RFC results ----------------------
+Test data score 99.024
+Redovni:         377 / 538 ( 70.074 %)
+Susedni:         494 / 538 ( 91.822 %)
+
+
+Pokusao sam da izbacim FGA medjutim primetno racunao sam broj suteva igraca sa svih pozicija
+Primetno je da SG vise sutaju od ostalih, a najmanje sutaju centri
+
+Prosecan broj FGA za igrace po pozicijama
+PGPointCount 11.654602630638959
+SGPointCount 13.00770307350775
+SFPointCount 12.402341473427924
+PFPointCount 11.315954283606597
+CCPointCount 10.187653653623343
+
+isto a FG (postignuti br koseva) ako resim da obrisem
+PGPointCount 4.9218277194554485
+SGPointCount 5.585529737763195
+SFPointCount 5.495564589023935
+PFPointCount 5.26117403593222
+CCPointCount 4.904020005929247
+
+
+Nakon sto sam izbacio FG
+
+------------------- KNN results -----------------------
+Acc score  AVG 65.209
+F1 measure AVG 65.015
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 64.7
+F1 measure AVG 63.566
+
+-------------------- LDA results ---------------------
+Acc score  AVG 69.734
+F1 measure AVG 69.893
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.326
+F1 measure AVG 65.355
+
+-------------------- RFC results ----------------------
+Acc score  AVG 71.546
+F1 measure AVG 71.372
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.013
+F1 measure AVG 73.027
+
+Slicni rezultati, neki algoritmi daju cak i bolje => izbacujem FG
+
+
+FG%
+PGPointCount 42.339847177348126
+SGPointCount 42.92306988495318
+SFPointCount 44.284711587502265
+PFPointCount 46.56609678187395
+CCPointCount 48.23701817844637
+
+eFG%
+PGPointCount 46.063009680258126
+SGPointCount 46.8648770245951
+SFPointCount 47.58219602977668
+PFPointCount 47.94880546075087
+CCPointCount 48.39524094582467
+
+pokusao sam da izbacim skokove ofanzivne i defanzivne, jer su bili prikazani dovoljno dobro po total skokovima
+pokusao sam i suprotno, medjutim uvek naisao na slicne ili losije rezultate
+
+
+Pokusao sam da izbacim PTS => Dalo je losije rezultate
+PTS
+PGPointCount 13.207258898222106
+SGPointCount 14.880422316765456
+SFPointCount 14.441167094597144
+PFPointCount 13.529854255860961
+CCPointCount 12.439266585909351
+
+
+3PAr - procenat upucenih trojki od ukupnog broja suteva
+FTr - odnos sutnutih bacanja i suteva iz igre
+Izbacio bih ih, 3PAr nam govori koliko kosarkas sutira trojke
+Medjutim taj podatak vec imam iz 3PA
+Takodje FTr podatak imam vec u tabeli => FT
+
+------------------- KNN results -----------------------
+Acc score  AVG 65.842
+F1 measure AVG 65.628
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 65.792
+F1 measure AVG 65.157
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.79
+F1 measure AVG 69.938
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.35
+F1 measure AVG 65.363
+
+-------------------- RFC results ----------------------
+Acc score  AVG 71.484
+F1 measure AVG 71.31
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.032
+F1 measure AVG 73.037
+
+
+neki algoritmi su dali slicne rezultate, neki bolje => izbacujem 3PAr, FTr
+
+
+TRB% DRB% ORB% su podaci koji nisu potrebni s obzirom da sam ih imao u totals
+PRONACI I NAPISATI FORMULE KAKO SE DOBIJAJU
+
+------------------- KNN results -----------------------
+Acc score  AVG 64.945
+F1 measure AVG 64.729
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 66.364
+F1 measure AVG 65.839
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.698
+F1 measure AVG 69.854
+
+-------------------- DTC results ----------------------
+Acc score  AVG 66.013
+F1 measure AVG 66.049
+
+-------------------- RFC results ----------------------
+Acc score  AVG 71.945
+F1 measure AVG 71.782
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.105
+F1 measure AVG 73.115
+
+Rezultati se nisu pogorsali, u nekim algoritmima su se i poboljsali
+=> brisem TRB% DRB% ORB%
+
+
+
+PREBACIO SAM sada da mi racuna preko validacije, pa sam sve skupove podelio sa k
+
+HTEO SAM da izbacim jednu od AST ili AST% jer su slicne medjusobno, medjutim
+koju god da sam izbacio dobio sam losije rezultate za vecinu algoritama
+
+
+Ostavljeni i AST i AST% POSLEDNJI
+
+------------------- KNN results -----------------------
+Acc score  AVG 64.945
+F1 measure AVG 64.729
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 66.364
+F1 measure AVG 65.839
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.698
+F1 measure AVG 69.854
+
+-------------------- DTC results ----------------------
+Acc score  AVG 66.167
+F1 measure AVG 66.188
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.08
+F1 measure AVG 71.923
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.105
+F1 measure AVG 73.115
+
+
+Sklonjen AST%  dobio losije rezultate za odredjeni br algoritama
+
+SKLONJEN AST VRACEN AST% NE VALJA ISPOD
+
+Pokusan BLK% medjutim losiji rezultati
+
+Pokusao da sklonim STL%, 
+
+------------------- KNN results -----------------------
+Acc score  AVG 64.988
+F1 measure AVG 64.77
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 66.007
+F1 measure AVG 65.465
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.679
+F1 measure AVG 69.833
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.78
+F1 measure AVG 65.806
+
+-------------------- RFC results ----------------------
+Acc score  AVG 71.546
+F1 measure AVG 71.337
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.173
+F1 measure AVG 73.193
+
+Za algoritme koji su do sada davali bolje rezultate uklanjanje STL% je poboljsalo rez
+
+
+Pokusao sam da obrisem win shares WS, OWS, DWS
+
+
+------------------- KNN results -----------------------
+Acc score  AVG 66.087
+F1 measure AVG 65.859
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 65.958
+F1 measure AVG 65.364
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.667
+F1 measure AVG 69.83
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.547
+F1 measure AVG 65.594
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.246
+F1 measure AVG 72.091
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.615
+F1 measure AVG 73.627
+
+ispostavilo se da je dobar rezultat
+Za bitnije algoritme je povecan rezultat
+
+
+
+
+posebno cu da probam sad za SEQ za winshares
+
+Sa dropovanim OWS i WS
+
+Acc score  AVG 74.297
+F1 measure AVG 74.312
+K fold = 10
+
+a za K fold = 2
+Acc score  AVG 69.612
+F1 measure AVG 69.056
+
+x2
+Acc score  AVG 68.789
+F1 measure AVG 68.224
+
+nisam dropovao nijedan winshare
+Acc score  AVG 68.304
+F1 measure AVG 67.687
+
+nisam dropovao nijedan winshare 2x
+Acc score  AVG 68.9
+F1 measure AVG 68.395
+
+dropovao sva tri winshare-a
+Acc score  AVG 68.494
+F1 measure AVG 67.892
+
+=> BRISEM sve WINSHARES i OWS i DWS i WS
+
+
+pokusao da obrisem i WS/48
+
+
+------------------- KNN results ----------------------- 
+Acc score  AVG 66.229                                                                                                      Acc score  AVG 66.229
+F1 measure AVG 66.011
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 65.989
+F1 measure AVG 65.396
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.421
+F1 measure AVG 69.586
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.676
+F1 measure AVG 65.701
+
+-------------------- RFC results ----------------------
+Acc score  AVG 71.386
+F1 measure AVG 71.179
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.664
+F1 measure AVG 73.669
+
+Za vecinu algoritama slican rezultat, za vodece algoritme poboljsan
+=> izbacujem WS/48
+
+
+OBPM je odnos ofanzivnog broja poena na 100 poseda u odnosu na prosecnog igraca
+Ocekujem da direktno zavisi od broja poena kosarkasa i pokusavam da ga dropujem
+
+------------------- KNN results -----------------------
+Acc score  AVG 66.259
+F1 measure AVG 66.042
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 66.118
+F1 measure AVG 65.469
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.409
+F1 measure AVG 69.573
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.995
+F1 measure AVG 66.046
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.16
+F1 measure AVG 72.002
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.732
+F1 measure AVG 73.741
+
+BOlji rezultati generalno, jedino sto je u poslednjih par pokusaja LDA bio losiji
+=> obrisao sam ga
+
+pokusao da obrisem dbpm medjutim losiji rezultati
+
+pokusao sam da obrisem bpm losiji rezultati
+
+sad sam pokusao sva 3 da budu dropovana da vim sta kaze
+losi rezultati
+
+Pokusavam da obrisem VORP - value over replacement player
+
+VORP
+PG 0.0010827575509521088
+SG 0.002674052390227801
+SF 0.006942977292345525
+PF 0.0048111455563796144
+CC 0.003513022857351228
+
+losiji rezultati, odustao
+
+

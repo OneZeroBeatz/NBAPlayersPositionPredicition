@@ -14,6 +14,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
 from sklearn.svm import SVC
+#from sklearn.decomposition import PCA,IncrementalPCA
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer, StandardScaler, LabelEncoder, OneHotEncoder
@@ -24,6 +25,7 @@ from sklearn.model_selection import KFold
 
 
 import matplotlib.pyplot as plt
+from matplotlib.mlab import PCA
 
 
 def preparing_dataset():
@@ -42,6 +44,7 @@ def preparing_dataset():
 	#Removing a star sign at the end of the names of some players
 	data['Player'] = data['Player'].str.replace('*','')
 	return data
+	
 #60-75 (71) za 1980
 def remove_by_minutes(data, minutes=71): 
 	filter = data['MP']>=minutes; 
@@ -79,14 +82,17 @@ def note_results(results, path, encoder):
 	count = len(test_result_data)
 	hit_count = len(test_result_data[test_result_data['Real'] == test_result_data['Predicted']])
 	print ("Redovni: \t", hit_count, "/", count, "(", round (accuracy_score(real,results_str)*100,3), "%)")
-
-	miss = test_result_data[test_result_data['Real'] != test_result_data['Predicted']]
-	hit_neighbors = hit_count;
-	for idx in miss.index:
-		[pos1, pos2] = miss.loc[idx]
-		if(is_heighbors(pos1,pos2)):
-			hit_neighbors=hit_neighbors+1
-	print ("Susedni:\t", hit_neighbors, "/",count , "(", round((hit_neighbors/count)*100,3), "%)")	
+	print ('F1 measure    ', round(f1_score(real,results_str, average ='weighted')*100,3))
+	
+	
+	#	#TODO za susedne
+	#miss = test_result_data[test_result_data['Real'] != test_result_data['Predicted']]
+	#hit_neighbors = hit_count;
+	#for idx in miss.index:
+	#	[pos1, pos2] = miss.loc[idx]
+	#	if(is_heighbors(pos1,pos2)):
+	#		hit_neighbors=hit_neighbors+1
+	#print ("Susedni:\t", hit_neighbors, "/",count , "(", round((hit_neighbors/count)*100,3), "%)")	
 	return 100*accuracy_score(real,results_str)
 	
 def is_heighbors (pos1, pos2):
@@ -120,18 +126,27 @@ def get_best_k():
 def predict(model, X_train, y_train, X_test):
 	model.fit(X_train,y_train)
 	model_results = model.predict(X_test)
-	print('Test data score', round(accuracy_score(y_train,model.predict(X_train))*100,3))
+	#print('Test data score', round(accuracy_score(y_train,model.predict(X_train))*100,3))
 		
 	return model_results
 
-def dimensionality_reduction(data):
-	data = data.drop(['MP','G'], axis=1)
-	return data
 ######################################
-	
+
 def split_sets(encoder):
 	X = data.drop(['Pos', 'Player'], axis=1).as_matrix()
 	y = data['Pos'].as_matrix()
+	
+	#results = PCA(X)
+	#print (results)
+	#
+	#
+	#print(X)
+	#pca = IncrementalPCA(n_components = 2, batch_size=3)
+	#pca.fit(X)
+	#pca.transform(X)
+	#
+	#print(X)
+	
 	y_encoded = encoder.fit_transform(y)
 	X_scaled = scaler.fit_transform(X)
 	
@@ -143,10 +158,8 @@ def split_sets(encoder):
 	y_test = y_encoded[test_stats_filter]
 	return [X_train, y_train, X_test, y_test]
 	
-def test (model, encoder, X_train, y_train, X_test, path):
-	model_results = predict(model, X_train, y_train, X_test)
-	note_results(model_results,path, encoder)
 
+	
 def test_SVC(encoder):
 	X_train, y_train, X_test, y_test = split_sets(encoder)
 	print('\n------------------- SVC results -----------------------')
@@ -195,34 +208,78 @@ def test_SEQ(encoder):
 	
 	k_fold_cross_validation(SEQ, encoder, X_train, y_train)
 	
-	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
-	SEQ_results = SEQ.predict(X_test)
-	print('\n-------------------- SEQ results ----------------------')
-	print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(SEQ.predict(X_train)))))
-	note_results(SEQ_results,'SEQ_results.csv', encoder)
+	
+	#test(SEQ, encoder, X_train, y_train, X_test, 'SEQ_results.csv')	
+	
+	#SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
+	#SEQ_results = SEQ.predict(X_test)
+	#print('\n-------------------- SEQ results ----------------------')
+	#print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(SEQ.predict(X_train)))))
+	#note_results(SEQ_results,'SEQ_results.csv', encoder)
 	
 def k_fold_cross_validation(model,encoder,X, Y, k = 10):
 	k_fold = KFold(n_splits = k, random_state=None, shuffle=False)
-	#for train_index, val_index in k_fold.split(X):
-	#	X_train, X_val = X[train_index], X[val_index]
-	#	y_train, y_val = Y[train_index], Y[val_index]
-	#	if (model == SEQ):			
-	#		model.fit(X_train, y_train, epochs=200, batch_size=128, validation_split =0, verbose= 1)
-	#		predict_results = model.predict(X_val)
-	#		predict_results = encoder.inverse_transform(predict_results)
-	#		y_val = encoder.inverse_transform(y_val)
-	#		print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(model.predict(X_train)))))
-	#	if (model != SEQ):
-	#		predict_results = predict(model,X_train,y_train, X_val)
-	#	print('Accuracy score', round(accuracy_score(y_val,predict_results)*100,3))
-	#	print('F1 measure    ', round(f1_score(y_val,predict_results, average ='weighted')*100,3))
-	#	#print('Classif report', classification_report(y_val,predict_results)*100,3)
-	#	#print('Confusion matr\n', confusion_matrix(y_val,predict_results))
-	#	print('\n')
-
+	acc_sum = 0;
+	f1_sum = 0;
+	for train_index, val_index in k_fold.split(X):
+		X_train, X_val = X[train_index], X[val_index]
+		y_train, y_val = Y[train_index], Y[val_index]
+		if (model == SEQ):			
+			model.fit(X_train, y_train, epochs=200, batch_size=128, validation_split =0, verbose= 1)
+			predict_results = model.predict(X_val)
+			predict_results = encoder.inverse_transform(predict_results)
+			y_val = encoder.inverse_transform(y_val)
+			print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(model.predict(X_train)))))
+		if (model != SEQ):
+			predict_results = predict(model,X_train,y_train, X_val)
+		#print('Accuracy score', round(accuracy_score(y_val,predict_results)*100,3))
+		#print('F1 measure    ', round(f1_score(y_val,predict_results, average ='weighted')*100,3))
+		#print('Classif report', classification_report(y_val,predict_results)*100,3)
+		#print('Confusion matr\n', confusion_matrix(y_val,predict_results))
+		#print('\n')
+		acc_sum = acc_sum + accuracy_score(y_val,predict_results)
+		f1_sum = f1_sum + f1_score(y_val,predict_results, average ='weighted')
 		
+	print('Acc score  AVG', round((acc_sum/k)*100,3))
+	print('F1 measure AVG', round((f1_sum/k)*100,3))
 	
+
+def test (model, encoder, X_train, y_train, X_test, path):
+	print ()
+	#if (model != SEQ):
+	#	model_results = predict(model, X_train, y_train, X_test)
+	#if (model == SEQ):
+	#	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
+	#	model_results = SEQ.predict(X_test)
+	#	print('\n-------------------- SEQ results ----------------------')
+	#	print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(SEQ.predict(X_train)))))
+	#note_results(model_results,path, encoder)
+
 ####################################################################################
+def is_good_to_remove(cat):
+	PGs = data[data["Pos"] == "PG"]
+	SGs = data[data["Pos"] == "SG"]
+	SFs = data[data["Pos"] == "SF"]
+	PFs = data[data["Pos"] == "PF"]
+	CCs = data[data["Pos"] == "C"]
+	
+	print (cat)
+	PGPointSum = sum(PGs[cat])
+	SGPointSum = sum(SGs[cat])
+	SFPointSum = sum(SFs[cat])
+	PFPointSum = sum(PFs[cat])
+	CCPointSum = sum(CCs[cat])
+	print ("PG",PGPointSum /len(PGs))
+	print ("SG",SGPointSum /len(SGs))
+	print ("SF",SFPointSum /len(SFs))
+	print ("PF",PFPointSum /len(PFs))
+	print ("CC",CCPointSum /len(CCs))
+
+	#exit()
+
+def dimensionality_reduction(data):
+	data = data.drop(['MP', 'G', 'FG', 'FTr', '3PAr', 'ORB%', 'DRB%', 'TRB%', 'STL%', 'WS', 'OWS', 'DWS','WS/48', 'OBPM', 'VORP'], axis=1)
+	return data
 
 test_seasion = 2017
 
@@ -239,7 +296,9 @@ binarizer = LabelBinarizer()
 encoder = LabelEncoder()
 scaler = StandardScaler()
 
+
 data = preparing_dataset();
+print (data.shape)
 data = remove_by_minutes(data)
 data = remove_by_year(data)
 data = correct_FG_percentage(data)
@@ -248,18 +307,100 @@ data = prepare_totals(data)
 data = dimensionality_reduction(data)
 data.reset_index(inplace=True, drop=True)
 
+print(data.shape)
 
+#is_good_to_remove('VORP')
+#exit();
 
 
 #ENCODER
-#test_SVC(encoder)
-#test_KNN(encoder)
-#test_naive_bayes(encoder)
-#test_LDA(encoder)
-#test_DTC(encoder)
-#test_RFC(encoder)
+test_KNN(encoder)
+test_naive_bayes(encoder)
+test_LDA(encoder)
+test_DTC(encoder)
+test_RFC(encoder)
+test_SVC(encoder)
 
 #BINARIZER
 #test_SEQ(binarizer)
+
+
+
+
+
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+#import matplotlib.pyplot as plt
+#from mpl_toolkits.mplot3d import Axes3D
+#neki_plot()
+
+
+def neki_plot ():
+	X = data.drop(['Pos', 'Player'], axis=1).as_matrix()
+	
+	result = PCA(X)
+	x = []
+	y = []
+	z = []
+	for item in result.Y:
+		x.append(item[0])
+		y.append(item[1])
+		z.append(item[2])
+	
+	plt.close('all') # close all latent plotting windows
+	fig1 = plt.figure() # Make a plotting figure
+	ax = Axes3D(fig1) # use the plotting figure to create a Axis3D object.
+	pltData = [x,y,z] 
+	ax.scatter(pltData[0], pltData[1], pltData[2], 'bo') # make a scatter plot of blue dots from the data
+	
+	# make simple, bare axis lines through space:
+	xAxisLine = ((min(pltData[0]), max(pltData[0])), (0, 0), (0,0)) # 2 points make the x-axis line at the data extrema along x-axis 
+	ax.plot(xAxisLine[0], xAxisLine[1], xAxisLine[2], 'r') # make a red line for the x-axis.
+	yAxisLine = ((0, 0), (min(pltData[1]), max(pltData[1])), (0,0)) # 2 points make the y-axis line at the data extrema along y-axis
+	ax.plot(yAxisLine[0], yAxisLine[1], yAxisLine[2], 'r') # make a red line for the y-axis.
+	zAxisLine = ((0, 0), (0,0), (min(pltData[2]), max(pltData[2]))) # 2 points make the z-axis line at the data extrema along z-axis
+	ax.plot(zAxisLine[0], zAxisLine[1], zAxisLine[2], 'r') # make a red line for the z-axis.
+	
+	# label the axes 
+	ax.set_xlabel("x-axis label") 
+	ax.set_ylabel("y-axis label")
+	ax.set_zlabel("y-axis label")
+	ax.set_title("The title of the plot")
+	plt.show() # show the plot
+	
+
+
+
+
+
+
+
+
+
+
+
+
 
 
