@@ -44,7 +44,7 @@ Malik Beasley,SG,SG
 Michael Beasley,PF,PF
 Marco Belinelli,SG,SG
 DeAndre' Bembry,SF,SF
-Dragan Bender,SF,PF
+Dragan Bender,PF,PF
 Anthony Bennett,PF,PF
 Davis Bertans,SF,PF
 Patrick Beverley,SG,SG
@@ -94,13 +94,13 @@ Rakeem Christmas,C,PF
 Semaj Christon,PG,PG
 Ian Clark,SG,SG
 Jordan Clarkson,SG,SG
-Norris Cole,SG,PG
+Norris Cole,PG,PG
 Darren Collison,PG,PG
 Nick Collison,C,PF
 Mike Conley,PG,PG
 Pat Connaughton,SF,SG
 Quinn Cook,PG,PG
-Quinn Cook,SG,PG
+Quinn Cook,PG,PG
 Quinn Cook,SG,PG
 DeMarcus Cousins,PF,C
 DeMarcus Cousins,PF,C
@@ -134,12 +134,12 @@ Jared Dudley,SF,PF
 Mike Dunleavy,SG,SF
 Mike Dunleavy,SG,SF
 Mike Dunleavy,SG,SF
-Kris Dunn,SF,PG
+Kris Dunn,SG,PG
 Kevin Durant,PF,SF
 Henry Ellenson,PF,PF
 Wayne Ellington,SG,SG
 Monta Ellis,PG,SG
-Joel Embiid,PF,C
+Joel Embiid,C,C
 James Ennis,SF,SF
 Tyler Ennis,PG,PG
 Tyler Ennis,PG,PG
@@ -149,7 +149,7 @@ Tyreke Evans,SG,SF
 Tyreke Evans,SF,SF
 Dante Exum,SG,PG
 Kenneth Faried,PF,PF
-Derrick Favors,C,PF
+Derrick Favors,PF,PF
 Kay Felder,PG,PG
 Cristiano Felicio,C,C
 Raymond Felton,SG,PG
@@ -169,7 +169,7 @@ Langston Galloway,PG,PG
 Marc Gasol,SF,C
 Pau Gasol,PF,C
 Rudy Gay,SF,SF
-Alonzo Gee,C,SF
+Alonzo Gee,SF,SF
 Paul George,SF,SF
 Jonathan Gibson,PG,PG
 Taj Gibson,PF,PF
@@ -182,7 +182,7 @@ Archie Goodwin,SG,SG
 Aaron Gordon,SF,SF
 Eric Gordon,SG,SG
 Marcin Gortat,C,C
-Treveon Graham,SF,SG
+Treveon Graham,SG,SG
 Jerami Grant,PF,SF
 Jerami Grant,PF,SF
 Jerian Grant,SG,PG
@@ -200,7 +200,7 @@ Maurice Harkless,SF,SF
 Montrezl Harrell,C,C
 Devin Harris,PG,PG
 Gary Harris,SG,SG
-Joe Harris,SG,SG
+Joe Harris,SF,SG
 Tobias Harris,SF,PF
 Andrew Harrison,SG,PG
 Udonis Haslem,C,C
@@ -249,7 +249,7 @@ Richard Jefferson,SF,SF
 Brandon Jennings,PG,PG
 Brandon Jennings,PG,PG
 Brandon Jennings,PG,PG
-Jonas Jerebko,SF,PF
+Jonas Jerebko,PF,PF
 Amir Johnson,PF,PF
 James Johnson,SF,PF
 Joe Johnson,SG,SF
@@ -259,7 +259,7 @@ Wesley Johnson,PF,SF
 Nikola Jokic,PF,C
 Damian Jones,C,C
 Derrick Jones,SF,SF
-James Jones,SG,SF
+James Jones,SF,SF
 Terrence Jones,PF,PF
 Terrence Jones,PF,PF
 Tyus Jones,PG,PG
@@ -285,7 +285,7 @@ Zach LaVine,SG,SG
 Ty Lawson,PG,PG
 Jake Layman,SG,SF
 Courtney Lee,SG,SG
-David Lee,C,PF
+David Lee,PF,PF
 Alex Len,C,C
 Kawhi Leonard,SF,SF
 Meyers Leonard,SF,PF
@@ -297,7 +297,7 @@ Damian Lillard,SG,PG
 Jeremy Lin,SG,PG
 Shaun Livingston,SF,PG
 Shawn Long,PF,C
-Kevon Looney,C,C
+Kevon Looney,PF,C
 Brook Lopez,PF,C
 Robin Lopez,C,C
 Kevin Love,PF,PF
@@ -359,11 +359,11 @@ Jameer Nelson,PG,PG
 Raul Neto,PG,PG
 Georges Niang,SG,PF
 Andrew Nicholson,PF,PF
-Andrew Nicholson,PF,PF
+Andrew Nicholson,SF,PF
 Andrew Nicholson,PF,PF
 Joakim Noah,C,C
 Nerlens Noel,C,C
-Nerlens Noel,C,C
+Nerlens Noel,PF,C
 Nerlens Noel,C,C
 Lucas Nogueira,C,C
 Dirk Nowitzki,PF,PF
@@ -421,7 +421,7 @@ Austin Rivers,SG,SG
 Andre Roberson,SF,SF
 Brian Roberts,PG,PG
 Glenn Robinson,SF,SF
-Thomas Robinson,C,PF
+Thomas Robinson,PF,PF
 Sergio Rodriguez,PG,PG
 Rajon Rondo,PG,PG
 Derrick Rose,SG,PG
@@ -487,7 +487,7 @@ Jonas Valanciunas,C,C
 Denzel Valentine,SF,SG
 Fred VanVleet,PG,PG
 Anderson Varejao,C,C
-Rashad Vaughn,SG,SG
+Rashad Vaughn,SF,SG
 Noah Vonleh,C,PF
 Nikola Vucevic,PF,C
 Sasha Vujacic,SG,SG

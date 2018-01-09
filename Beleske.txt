@@ -83,10 +83,6 @@ sto je i logicno jer nemaju po dve susedne
 
 Od sada pokusavam da smanjim dimenzijalnost manualno
 Prvo merenje
-------------------- SVC results -----------------------
-Test data score 79.645
-Redovni:         385 / 538 ( 71.561 %)
-Susedni:         497 / 538 ( 92.379 %)
 
 ------------------- KNN results -----------------------
 Test data score 81.53
@@ -112,6 +108,11 @@ Susedni:         478 / 538 ( 88.848 %)
 Test data score 99.024
 Redovni:         377 / 538 ( 70.074 %)
 Susedni:         494 / 538 ( 91.822 %)
+
+------------------- SVC results -----------------------
+Test data score 79.645
+Redovni:         385 / 538 ( 71.561 %)
+Susedni:         497 / 538 ( 92.379 %)
 
 
 Pokusao sam da izbacim FGA medjutim primetno racunao sam broj suteva igraca sa svih pozicija
@@ -464,5 +465,771 @@ PF 0.0048111455563796144
 CC 0.003513022857351228
 
 losiji rezultati, odustao
+
+---
+
+zavrsio sa redukcijom 35 obelezja, poslao mejl da vidim da li treba jos
+
+
+pokusavam da nadjem najbolje K za KNN
+Pronasao sam 22 i sacuvao u elaborat sliku
+k = 22
+------------------- KNN results -----------------------
+Acc score  AVG 68.813
+F1 measure AVG 68.723
+
+
+
+pokusao sam da vratim FG
+
+------------------- KNN results -----------------------
+Acc score  AVG 68.285
+F1 measure AVG 68.191
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 65.946
+F1 measure AVG 65.31
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.299
+F1 measure AVG 69.408
+
+-------------------- DTC results ----------------------
+Acc score  AVG 65.964
+F1 measure AVG 66.043
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.172
+F1 measure AVG 72.003
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.701
+F1 measure AVG 73.708
+
+nije dobro da se vrati FG pa sam ga opet dropovao
+
+
+s obzirom da je dropovanje FG-a urodilo plodom
+Analogno tome hocu da pokusam da obrisem 3P
+
+------------------- KNN results -----------------------
+Acc score  AVG 68.721
+F1 measure AVG 68.637
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 66.72
+F1 measure AVG 66.465
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.409
+F1 measure AVG 69.573
+
+-------------------- DTC results ----------------------
+Acc score  AVG 66.425
+F1 measure AVG 66.461
+
+-------------------- RFC results ----------------------
+Acc score  AVG 71.62
+F1 measure AVG 71.45
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.904
+F1 measure AVG 73.913
+
+poboljsani rezultati uglavnom osim za KNN
+=> brisem 3P
+
+
+Proveravao sam da li je i dalje na 22 najbolje k i jeste za KNN
+sacuvao sam novi grafik, ispostavilo se da je i dalje 22 najbolji
+
+
+
+Za RFC sam pokusavao max_features od 1 do 10 u kombinaciji sa n_estimators od 1 do 10
+najbolja kombinacija max_features 7, n_eestimators 9.
+
+
+0.733636251996
+{'max_features': 11, 'n_estimators': 11}
+Izasao
+
+-------------------- RFC results ----------------------
+Acc score  AVG 73.781
+F1 measure AVG 73.704
+
+
+0.753469237382
+{'max_features': 21, 'n_estimators': 31}
+31 sasa
+Izasao
+
+-------------------- RFC results ----------------------
+Acc score  AVG 75.218
+F1 measure AVG 75.183
+
+
+
+merim ko lud rfc  ovde merim po onoj mojoj validaciji koju sam napravio
+od 6 do 14 obe
+(est, max)
+6, 14 najbolje sa 6
+7, 13 najbolje sa 7
+8, 13 najbolje sa 8
+9, 13 najbolje za 9, 73.038
+10,13 najbolje za 10,73.897
+11,12 najbolje za 11,73.934, kod 13 i 14 samo opada
+12,11 najbolje za 12,74.137, 12 i 13 opadaju, 14 raste
+13,10 najbolje za 13,74.241, pa opadne, pa je 13, 14 opet 74.131
+14,14 najbolje za 14,74.542
+
+9-16
+(est, max)
+9, 11 najbolje za 9, 73.388
+10,14 najbolje za 10,73.744
+11,16 najbolje za 11,74.094
+12,15 najbolje za 12,74.137
+13,16 najbolje za 13,74.469
+14,14 najbolje za 14,74.579
+15,14 najbolje za 15,74.530, prvi put da nije oboreno
+16,15 najbolje za 15,74.616
+
+
+14-18
+(est, max)
+14,15 najbolje za 14,74.438
+15,16, 74,714
+16,16, 74,782
+17,15, 74.966
+18,17, 74.862
+
+
+pojedinacno da vidim do kada ce se povecavati
+19,19, 75.046
+29,29, 75.107
+
+posle toga sam video da je vrag odno salu pa sam rekao sebi sledece
+pokusacu sa 200 i 700 est, a auto, log2 i sqrt max
+
+-------------------- RFC results ----------------------
+Acc score  AVG 76.004
+F1 measure AVG 75.989
+
+200 sqrt
+
+-------------------- RFC results ----------------------
+Acc score  AVG 75.875
+F1 measure AVG 75.862
+
+200 log2
+
+-------------------- RFC results ----------------------
+Acc score  AVG 76.04
+F1 measure AVG 76.019
+
+700 auto
+
+-------------------- RFC results ----------------------
+Acc score  AVG 76.274
+F1 measure AVG 76.263
+
+700 sqrt
+
+-------------------- RFC results ----------------------
+Acc score  AVG 76.096
+F1 measure AVG 76.089
+
+700 log2
+
+-------------------- RFC results ----------------------
+Acc score  AVG 76.145
+F1 measure AVG 76.144
+
+
+najbolje rezultate dali su 700 i auto parametri 76.274
+Imajuci u vidu da su rezultati svaki put razliciti ne mogu za male pomeraje
+da skontam koji su najbolji parametri, te cu da napravim vece pomeraje
+
+
+
+poslednji rezultati za svc
+------------------- SVC results -----------------------
+Acc score  AVG 73.904
+F1 measure AVG 73.913
+
+pokusavam mojom kros validacijom sa parametrima label i C da poboljsam rezultate
+prvi pokusaji
+C = (0.2, 3.1, 0.2)
+Label = sve vrednosti koje sam nasao na scikit sajtu (linear, poly, rbf, sigmoid, precomputed)
+
+	linear	poly	rbf	sigmoid
+0.2	72.197	69.157	71.927	58.394
+0.4	72.203	70.447	72.688	57.012
+0.6	72.178	71.208	73.394	56.368
+0.8	72.221	71.675	73.597	56.091
+1.0	72.221	71.945	73.904	55.606
+1.2	72.215	72.006	74.020	55.545
+1.4	72.215	72.092	74.100	55.440
+1.6	72.240	72.105	74.027	55.183
+1.8	72.227	72.172	74.033	55.029
+2.0	72.215	72.141	74.033	55.023
+2.2	72.233	-	-	-
+povecavam podeoke jer je trend nepromenljiv uglavnom, a jako se malo menja preciznost
+takodje sam izbacio sigmoid koji se konstantno smanjuje
+2.5	72.227	72.148	74.131	
+3.0	72.209	72.203	74.063	
+3.5	72.240	72.227	74.069	
+4.0	72.276	72.233	74.045	
+4.5	72.246	72.172	73.990
+Povecao opet podeok na 1
+5.0	72.258	72.197	73.947
+6.0	72.233	72.111	73.848
+7.0	72.197	71.117	73.615
+
+definitivno je rbf poceo da opada, ova ostala 2 su sumnjiva
+ostavljam jos veci podeok da vidim kako se ponasaju ova 2
+a i da vidim da li ce nastaviti da opada rbf
+8.0	72.197	72.092	73.480
+
+10.0	72.227	72.000	73.228
+15.0	72.184	71.804	72.688
+20.0	72.215	71.540	72.282
+
+Definitivno su poceli da opadaju poly i rbf, linear se dvoumi, nastavicu samo linear
+da vidim kako se ponasa, povecacu podeoke da vidim da li postoji sansa da predje max koji je
+napravio rbf 74.131 za 2.5
+
+30	72.203	-	71.828 - definitivno ne daje rezultate, i nece prestici rekord
+
+ostaje samo jos da proverim da li sigmoid za male vrednosti moze da prebaci 74.131
+
+0.002				59.431
+0.004				65.633
+0.008				67.856
+0.01				68.341
+0.02				68.764
+0.03				68.623
+0.04				67.315
+0.05				65.774
+
+S obzirom da je sigmoid dostigao maksimum na 0.01 koji je oko 69, nije konkurentan rbf-u
+
+posto od 2.2 do 2.5 za SVC nisam merio za kernel=rbf, 
+sad cu da vidim da li je tu mozda maximum
+
+			rbf
+2.2			74.131
+2.3			74.211
+2.4			74.141
+
+SVC kernel = rbf, c = 2.3 najbolji parametri
+
+PRELAZIM ZA POGADJANJE DTC PARAMETARA
+
+GINI BEST - 71.005 max_depth = 9
+     Accuracy  F1 measure
+1   38.523947   22.014459
+2   59.455711   54.066828
+3   65.129042   65.287237
+4   67.044678   67.032981
+5   69.292349   69.053448
+6   70.360670   70.374371
+7   70.870426   70.873463
+8   70.974720   71.024667
+9   71.005486   71.019049
+10  70.587878   70.637975
+11  69.851049   69.906959
+12  69.721992   69.749980
+13  68.874643   68.911170
+14  68.328134   68.342853
+15  68.027264   68.078151
+16  67.535984   67.570386
+17  67.173742   67.213664
+18  67.272030   67.305608
+19  66.793133   66.808773
+20  66.891266   66.946707
+21  66.688646   66.733273
+22  66.694958   66.758469
+23  66.541460   66.583767
+24  66.541362   66.588166
+25  66.357215   66.398839
+26  66.449251   66.476833
+27  66.314330   66.332921
+28  65.958095   66.001375
+29  66.357185   66.381930
+30  66.209734   66.261671
+31  66.492180   66.517920
+32  66.074697   66.104859
+33  66.424726   66.475635
+34  66.240481   66.266350
+35  66.430823   66.447333
+36  66.351118   66.406583
+37  66.553620   66.614299
+38  66.301891   66.341235
+39  66.437064   66.464948
+40  66.308063   66.341467
+41  66.301797   66.343970
+42  65.822998   65.864913
+43  66.357166   66.387315
+44  66.406200   66.435059
+45  66.694872   66.715681
+46  66.314161   66.362177
+47  66.479903   66.497754
+48  66.492177   66.516630
+49  66.615023   66.665439
+
+Radi ustede vremena skratio sam sledeci brutfors na 1-40, jer se svakako kasnije smiri
+rezultati su sledeci
+
+ENTROPY BEST - 71.134, max_depth = 8
+     Accuracy  F1 measure
+1   38.419487   21.897022
+2   59.412906   53.403442
+3   66.001074   66.187820
+4   68.322078   68.199213
+5   68.880865   68.787918
+6   69.961640   69.783656
+7   70.268668   70.131292
+8   71.134361   71.067339
+9   70.391491   70.311934
+10  70.004570   69.955670
+11  68.985246   68.971463
+12  68.420384   68.395119
+13  67.714192   67.673645
+14  67.130993   67.116209
+15  66.885353   66.882394
+16  66.105485   66.108562
+17  66.234489   66.225454
+18  65.976598   65.975998
+19  65.872236   65.850857
+20  66.216088   66.227362
+21  65.755513   65.754919
+22  65.976651   65.972356
+23  66.124052   66.111708
+24  66.056432   66.036791
+25  65.982778   66.000813
+26  65.749408   65.768922
+27  66.265213   66.281325
+28  66.222163   66.230716
+29  65.798492   65.791094
+30  66.105451   66.105124
+31  66.044177   66.042834
+32  65.982839   65.972687
+33  66.252981   66.250650
+34  65.835479   65.837355
+35  65.933635   65.927502
+36  66.050237   66.076001
+37  65.909034   65.920073
+38  66.124022   66.141561
+39  65.915196   65.899323
+
+NISAM SKRATIO
+
+GINI RANDOM - 69.243, max_depth = 10
+     Accuracy  F1 measure
+1   35.268943   21.501875
+2   49.410433   41.560838
+3   52.873124   50.601195
+4   59.658433   59.170026
+5   61.758284   61.419775
+6   66.068773   65.900257
+7   67.468620   67.480407
+8   68.101245   68.100230
+9   69.206312   69.159991
+10  69.243341   69.250398
+11  69.040800   69.007289
+12  68.942294   68.913903
+13  68.064062   68.070249
+14  68.248469   68.272847
+15  66.891191   66.946613
+16  66.707428   66.646477
+17  66.326431   66.312395
+18  65.270410   65.318873
+19  64.613505   64.655422
+20  64.736302   64.762387
+21  65.362359   65.415822
+22  64.392182   64.403271
+23  65.473177   65.444516
+24  64.662483   64.729420
+25  64.969631   65.002608
+26  65.160165   65.160751
+27  65.331884   65.335405
+28  65.264113   65.354196
+29  65.295051   65.279917
+30  64.760910   64.805913
+31  64.429297   64.409632
+32  65.264320   65.281576
+33  64.797697   64.873062
+34  65.331752   65.398843
+35  64.054525   64.117798
+36  65.424135   65.470044
+37  65.516163   65.553408
+38  65.344354   65.327080
+39  64.595145   64.623065
+
+nisam smanjivao
+
+
+ENTROPY BEST - 69.568, max_depth = 8
+
+     Accuracy  F1 measure
+1   37.528880   22.587661
+2   47.194047   38.471058
+3   54.501024   50.482284
+4   57.932705   56.181462
+5   61.777213   61.545020
+6   65.565288   65.346207
+7   68.217470   68.144235
+8   68.537047   68.404585
+9   69.568494   69.498736
+10  69.390746   69.304658
+11  69.175626   69.150322
+12  68.549513   68.486328
+13  68.125763   68.082749
+14  67.996585   67.926704
+15  66.719438   66.640761
+16  66.031907   65.989910
+17  65.933861   65.945218
+18  65.479353   65.466926
+19  65.774088   65.795797
+20  65.098389   65.058794
+21  65.847628   65.861385
+22  65.307374   65.348351
+23  65.258159   65.256002
+24  64.638109   64.639043
+25  64.718255   64.767929
+26  65.718734   65.710389
+27  65.896866   65.852342
+28  66.074837   66.045605
+29  65.227544   65.240637
+30  65.368754   65.402241
+31  65.509888   65.511606
+32  65.246051   65.233699
+33  65.203102   65.232198
+34  64.908141   64.949909
+35  65.466827   65.481678
+36  64.576710   64.645171
+37  64.785242   64.799763
+38  66.210021   66.266664
+39  65.651151   65.641124
+
+
+Gini best i entropy best daju slicne najbolje rezultate, medjutim najbolji je
+entropy best max_depth = 8, sa 71.134
+
+ima grafik, sacuvao sam uporedjuje ove dve
+
+nakon toga sam pokusao da  vidim sa parametrom min_samples_split koji je difoltno 2
+video da ne utice mnogo na rezultat, cak sam sa vrednoscu 2 dobio najbolje rezultate
+
+brut fors pokazao da je najbolje da min_samples_leaf bude 2
+
+
+poslednje meren DTC
+-------------------- DTC results ----------------------
+Acc score  AVG 66.425
+F1 measure AVG 66.461
+
+nakon izmena
+-------------------- DTC results ----------------------
+Acc score  AVG 71.183
+F1 measure AVG 71.112
+
+
+
+KRECEM LDA DA PRAVIM
+
+poslednje mereni LDA
+-------------------- LDA results ----------------------
+Acc score  AVG 69.409
+F1 measure AVG 69.573
+
+
+
+merenje za solver = svd shrinkage nije bitan je isto
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.409
+F1 measure AVG 69.573
+
+sad cu da merim za lsqr rezultate
+0.1, 0.2.... 1 stalno opada i nikad nije bolja od svd
+sad cu od 0.01 do 0.1
+
+za 0.01 je 69.495 i do 0.1 opada
+
+        Accuracy  F1 measure
+0.001  69.439784   69.604585
+0.002  69.439791   69.602491
+0.003  69.464376   69.625839
+0.004  69.464373   69.626636
+0.005  69.544210   69.708451
+0.006  69.568769   69.732209 *** najbolji
+0.007  69.501228   69.664855
+0.008  69.488962   69.650038
+0.009  69.464407   69.626351
+
+sa auto i lsqr je 69.49
+
+najbolje je za 0.006 i lsqr, bolje od svd
+--------------------
+
+sad merim za eigen
+
+       Accuracy  F1 measure
+0.01  69.396700   69.477293
+0.02  69.347609   69.427623
+0.03  69.715955   69.788562
+0.04  69.826502   69.897670 *** najbolji 
+0.05  69.556363   69.614853
+0.06  69.660805   69.717653
+0.07  69.654677   69.710555
+0.08  69.562577   69.609189
+0.09  69.495010   69.532339
+
+
+        Accuracy  F1 measure
+0.030  69.715955   69.788562
+0.035  69.851075   69.931752 ** najbolji za ceo LDA
+0.040  69.826502   69.897670
+0.045  69.630032   69.694622
+0.050  69.556363   69.614853
+
+ali zakljucak je da se malo menja i da se treba staviti 0.035 i eigen
+
+sad cu da probam da vidim da li n_components utice, medjutim nista 
+
+
+---------- POKUSAVAM KNN
+68.813 je bilo sa knn = 22
+sad pokusavam sa weights = distance
+k = 23 weights = distance
+68.942
+
+pokusao sam da menjam p
+ispostavilo se da dobijem bolje rezultate sa p = 1 n_neighbours = 23, weights = 'distance', 70.177
+
++------------- SEQ
+
+epochs = 100 batch_size = 40
+Acc score  AVG 74.659
+F1 measure AVG 74.588
+
+epochs = 140 batch_size = 40
+Acc score  AVG 75.384
+F1 measure AVG 75.172
+
+epochs = 180 batch_size = 40
+Acc score  AVG 74.855
+F1 measure AVG 74.668
+
+epochs = 220 batch_size = 40
+Acc score  AVG 74.806
+F1 measure AVG 74.617
+
+najvise 75.384 epochs = 140, batch_size = 40
+
+
+
+
+epochs	b_size	acc
+1	1	70.926
+1	2	72.706
+1	3	72.197
+1	4	68.291
+1	5	55.722
+1	6	44.713
+1	7	39.074
+
+video sam da opada pa sam povecao podeok, ako pada skacem dalje
+
+epochs	b_size	acc
+2	1	70.017
+2	6	73.726
+2	11	74.284*
+2	16	71.860
+2	21	67.832
+2	26	60.746
+2	31	55.667
+
+video sam, pocelo je da pada
+
+epochs	b_size	acc
+3	1	70.429
+3	6	74.174
+3	11	74.806*
+3	16	74.751
+3	21	74.217
+3	26	70.748
+3	31	64.607
+3	36	58.124
+
+opalo, imam max
+
+epochs	b_size	acc
+4	2	72.258
+4	7	74.131
+4	12	75.347
+4	17	75.500*
+4	22	71.465
+4	27	65.664
+4	32	62.525
+
+oboren rekord.. nastavljam sa 5
+
+epochs	b_size	acc
+5	5	72.725
+5	10	73.781
+5	15	74.229
+5	20	72.644
+
+nisam imao max, pa sam pokusao sa 5 da nastavim ali da bude oko 17
+
+epochs	b_size	acc
+5	7	72.792
+5	12	74.555
+5	17	74.284
+5	22	71.282
+5	27	65.975
+5	32	27.268
+5	37	24.241
+
+epochs	b_size	acc
+6	12	72.713
+6	17	73.627
+6	22	74.112
+6	27	73.578
+6	32	73.302
+6	37	63.672
+
+epochs	b_size	acc
+16	12	73.935
+16	17	75.205
+16	22	75.089
+16	27	74.621
+16	32	67.718
+
+
+epochs	b_size	acc
+20	10	74.156
+20	20	75.175
+20	30	74.966
+20	40	75.089
+20	50	64.025
+
+
+epochs	b_size	acc
+30	10	74.480
+30	30	75.764
+30	50	75.832
+30	70	76.016*
+30	90	75.819
+30	110	72.928
+30	130	65.903
+30	150	32.743
+
+epochs	b_size	acc
+40	10	74.327
+40	30	75.457
+40	50	75.807
+40	70	75.715
+40	90	74.419
+40	110	71.079
+40	130	50.017
+
+epochs	b_size	acc
+60	20	74.665
+60	50	75.733
+60	80	75.592
+60	110	72.768
+60	140	74.960
+60	170	75.543
+
+jako nepredvidjeno ponasanje
+
+uzeo defaultne tj one iz rada [1]
+74.72
+
+sad cu da probam sa dosadasnjim maksom 30, 70
+72.32... tako da mislim da odustajem
+ponovio
+72.921 -> definitivno odustajem
+
+
+nakon ovoga overio jedno globalno merenje
+koje ce mi reci koje algoritme ostavljam a koje uklanjam
+
+
+------------------- KNN results -----------------------
+Acc score  AVG 70.177
+F1 measure AVG 70.13
+
+---------------- Naive Bayes results ------------------
+Acc score  AVG 66.72
+F1 measure AVG 66.465
+
+-------------------- LDA results ----------------------
+Acc score  AVG 69.851
+F1 measure AVG 69.932
+
+-------------------- DTC results ----------------------
+Acc score  AVG 71.098
+F1 measure AVG 71.024
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.904
+F1 measure AVG 73.913
+
+-------------------- RFC results ----------------------
+Acc score  AVG 76.139
+F1 measure AVG 76.129
+
+-------------------- SEQ results ----------------------
+Acc score  AVG 74.555
+F1 measure AVG 74.600
+
+KNN, Naive Bayes, LDA daju najlosije rezultate
+
+naive bayes i LDA otpadaju
+
+           DTC        KNN        SVC
+10   70.294835  69.519010  72.903813
+20   70.330991  69.791569  72.998957
+30   70.732367  69.834200  73.112417
+40   70.954916  70.006350  73.338291
+50   71.202255  69.941852  73.519016
+60   71.087458  69.995023  73.624839
+70   71.071641  70.151806  73.813111
+80   71.160646  70.305059  73.827616
+90   71.060741  70.290194  73.974122
+100  70.942441  70.120177  73.940544
+110  70.911990  70.140306  73.896684
+120  70.530376  70.066969  73.896316
+130  70.509190  69.892231  73.977203
+140  70.657613  69.950738  73.950612
+150  71.085216  70.068182  74.096904
+160  70.805593  70.146471  74.147803
+170  71.059430  70.314739  74.206222
+180  70.674372  70.316711  74.319614
+190  70.898107  70.299865  74.386331
+
+imam i plot, kako se povecava min tako raste SVC ali videcemo, bice jos analiza
+
+
+
+Sada sam nesto citao za RFC algoritam pa sam resio da pokusam da ga optimizujem, sa entropy i gini
+
+pokusavam n_estimators 10, 40, 80 ... za auto sqrt i log 2 i entropy i gini
+
+		entropy				gini
+    	auto	sqrt	log2		auto	sqrt	log2
+40  	75.187 	74.935	75.212		74.954	75.138	74.567
+80  	76.034	75.783	75.795		75.285	75.585	75.525
+100 	76.114	75.850	75.703		75.838	75.518	75.506
+120 	75.795	75.789	75.850		75.678	76.151	75.887
+140 	76.059	75.838	75.789		75.884	75.850	75.813
+160 	75.862	76.108	76.040		75.801	75.856	75.911
+200 	75.936	75.574	76.102		76.090	76.004	75.991
+300 	76.157	76.096	76.083		75.948	76.175	75.924
+
 
 
