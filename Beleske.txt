@@ -1231,5 +1231,160 @@ pokusavam n_estimators 10, 40, 80 ... za auto sqrt i log 2 i entropy i gini
 200 	75.936	75.574	76.102		76.090	76.004	75.991
 300 	76.157	76.096	76.083		75.948	76.175	75.924
 
+Accuracy	F1 measure MaxF gini
+76.200085	76.185371  auto
+76.083426   	76.072547  auto
+76.200081  	76.185062  auto
+76.150953   	76.136251  auto
+76.009747   	75.994448  auto
+76.157152   	76.149249  auto
+76.304511   	76.291939  auto
+76.132499   	76.119180  auto
+
+kako se povecava n_estimators tako se i trend tacnosti povecava
+ali msm da bi bilo dobro zaustaviti se na 100, auto, gini, preko 76, zadovoljavajuce
 
 
+Napravio sam presek, bio sam na konsultacije, tj odbranu 2. kontrolne tacke i dobio neke dodatne stvari koje treba uraditi
+
+1. neku autoselekciju upotrebiti
+
+
+
+********* KNN ***********
+
+sa trenutnim dimensionality reductionom
+------------------- KNN results -----------------------
+Acc score  AVG 70.177
+F1 measure AVG 70.13
+
+f_classif, features_number = 15   **
+------------------- KNN results -----------------------
+Acc score  AVG 72.215
+F1 measure AVG 72.223
+
+mutual_info_classif, 
+------------------- KNN results -----------------------
+14
+Acc score  AVG 72.154
+F1 measure AVG 72.155
+
+
+
+******* naive bayes *******
+
+ daje bolje rezultate mojim izbacivanjima, ali ga izbacujem generalno jer imam lose rezultate
+
+
+
+
+*********** LDA ***********
+prethodno najbolji sa dimreduce
+-------------------- LDA results ----------------------
+Acc score  AVG 69.851
+F1 measure AVG 69.932
+
+priblizni rezultati, medjutim lose je to i onda cu ja da sklonim
+
+
+
+********* DTC *************
+
+
+prethodni najbolji
+-------------------- DTC results ----------------------
+Acc score  AVG 71.098
+F1 measure AVG 71.024
+
+
+f_classif 34
+
+-------------------- DTC results ----------------------
+Acc score  AVG 71.577
+F1 measure AVG 71.516
+
+mutual_info_classif 16****
+
+-------------------- DTC results ----------------------
+Acc score  AVG 71.632
+F1 measure AVG 71.621
+
+
+
+********** RFC ************
+spustio sam na 10 gini, jer se dugo ceka na 100
+dobio rezultate:
+
+f_classif 17
+gini 10 auto
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.338
+F1 measure AVG 72.167
+
+
+mutual_info_classif 32
+gini 10 auto
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.043
+F1 measure AVG 71.853
+
+
+dok sam sa mojom redukcijom imao rezultate
+gini 10 auto
+
+-------------------- RFC results ----------------------
+Acc score  AVG 72.215
+F1 measure AVG 72.009
+
+
+sad cu da uporedim rfc sa 100, najbolji feature selection i moj dimensionality
+
+NAJBOLJI FEATURE AUTOSELECTION
+gini 100 auto
+-------------------- RFC results ----------------------
+Acc score  AVG 74.444
+F1 measure AVG 74.414
+-------------------- RFC results ----------------------
+Acc score  AVG 74.573
+F1 measure AVG 74.543
+
+
+NAJBOLJI SA MOJOM SELEKCIJOM
+gini 100 auto
+-------------------- RFC results ----------------------
+Acc score  AVG 75.574
+F1 measure AVG 75.547
+-------------------- RFC results ----------------------
+Acc score  AVG 75.623
+F1 measure AVG 75.617
+
+ZA OVAJ ALGORITAM JE BOLJA OVA MOJA
+
+*********** SVC *************
+
+f_classif 28 ****
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.572
+F1 measure AVG 73.599
+
+mutual_info_classif 26
+
+------------------- SVC results -----------------------
+Acc score  AVG 73.566
+F1 measure AVG 73.593
+
+*** MOJE JE NAJBOLJE ISPALO
+------------------- SVC results -----------------------
+Acc score  AVG 73.904
+F1 measure AVG 73.913
+
+
+*********** SEQ ***********
+ne mogu ni da izvedem
+sa mojim 
+
+Acc score  AVG 74.524
+F1 measure AVG 74.463

@@ -11,7 +11,6 @@ from sklearn.tree import DecisionTreeClassifier
 
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
 from sklearn.svm import SVC
-#from sklearn.decomposition import PCA,IncrementalPCA
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelBinarizer, StandardScaler, LabelEncoder, OneHotEncoder
@@ -20,27 +19,54 @@ from sklearn import datasets, linear_model
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 from sklearn.model_selection import KFold
 from sklearn.model_selection import GridSearchCV
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import ExtraTreesClassifier
+
+from sklearn.feature_selection import SelectKBest,SelectFromModel
+from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
+
 
 
 import matplotlib.pyplot as plt
 from matplotlib.mlab import PCA
 
+def preparing_rookes():
+	players = pd.read_csv('Datasets/Players.csv', index_col=0)
+	rookies = pd.read_csv('Datasets/Results.csv', index_col=0)
+	
+	
+	
+	rookies = pd.merge(rookies, players[['Player', 'height', 'weight']], left_on='Player', right_on='Player', how='left')
+	rookies = rookies.fillna(value=0)
+	rookies = rookies.drop(['blanl', 'blank2', 'Tm', 'Age'], axis='columns')
+	
+	
+	rookies = rookies[rookies['Player'] != 0]
+	filter = (rookies['Pos']=="PG") | (rookies['Pos']=="SG") | (rookies['Pos']=="SF") | (rookies['Pos']=="PF") | (rookies['Pos']=="C")
+	rookies = rookies[filter]	
+	return rookies
 
 def preparing_dataset():
 	players = pd.read_csv('Datasets/Players.csv', index_col=0)
 	stats = pd.read_csv('Datasets/Seasons_Stats.csv', index_col=0)
-
+	
+	
 	data = pd.merge(stats, players[['Player', 'height', 'weight']], left_on='Player', right_on='Player', how='left')
 	data = data.fillna(value=0)
 	data = data.drop(['blanl', 'blank2', 'Tm', 'Age'], axis='columns')
 
 	#Removing all rows on year change in dataset (there was row with just ID)
 	data = data[data['Player'] != 0]
+	
+	data = data.drop_duplicates(subset=['Player', 'Year'], keep='first', inplace=False)
 	filter = (data['Pos']=="PG") | (data['Pos']=="SG") | (data['Pos']=="SF") | (data['Pos']=="PF") | (data['Pos']=="C")
+	
 	data = data[filter]
 	
 	#Removing a star sign at the end of the names of some players
 	data['Player'] = data['Player'].str.replace('*','')
+	
+	data.reset_index(inplace=True, drop=True)
 	return data	
 #60-75 (71) za 1980
 def remove_by_minutes(data, minutes=71): 
@@ -71,6 +97,9 @@ def prepare_totals(data,minutes_to_mull=36):
 def note_results(results, path, encoder):
 	test_stats_filter = data['Year'] == test_seasion
 	test_stats =  data[test_stats_filter]
+	test_stats = rookies_data
+	print('Data stats')
+	#print (test_stats)
 	idx = test_stats['Player'].values
 	real = test_stats['Pos'].values
 	results_str = encoder.inverse_transform(results)
@@ -112,45 +141,65 @@ def is_heighbors (pos1, pos2):
 		
 def predict(model, X_train, y_train, X_test):
 	model.fit(X_train,y_train)
+	
+	#print (X_train.shape)
+	#model.feature_importances_
+	#X_train = SelectFromModel(model, prefit=True).transform(X_train)
 	model_results = model.predict(X_test)
+	
+	#print (X_train.shape)
 	#print('Test data score', round(accuracy_score(y_train,model.predict(X_train))*100,3))
 	#print ('jednu')	
 	return model_results
 
 ######################################
 
-def split_sets(encoder):
+def split_sets(encoder, auto_select = False, features_number=10, algorithm = f_classif):
 	X = data.drop(['Pos', 'Player'], axis=1).as_matrix()
 	y = data['Pos'].as_matrix()
 	
+	X_rookies = rookies_data.drop(['Pos', 'Player'], axis=1).as_matrix()
+	y_rookies = rookies_data['Pos'].as_matrix()
+	
+	print ('Rookies')
+	#print (X_rookies)
 	y_encoded = encoder.fit_transform(y)
 	X_scaled = scaler.fit_transform(X)
 	
+	y_encoded_r = encoder.fit_transform(y_rookies)
+	X_scaled_r = scaler.fit_transform(X_rookies)
+
+	if auto_select:
+		print ()
+		#X_scaled = SelectKBest(algorithm, k=features_number).fit_transform(X_scaled,y_encoded)
+
 	test_stats_filter = data['Year'] == test_seasion
 	X_train = X_scaled[~test_stats_filter]
 	y_train = y_encoded[~test_stats_filter]
 	
-	X_test = X_scaled[test_stats_filter]
-	y_test = y_encoded[test_stats_filter]
+	#X_test = X_scaled[test_stats_filter]
+	#y_test = y_encoded[test_stats_filter]
+	
+	X_test = X_scaled_r
+	y_test = y_encoded_r
 	return [X_train, y_train, X_test, y_test]
 	
 def test_KNN(encoder):
 	KNN.n_neighbors = 23;
 	KNN.p = 1
 	KNN.weights = 'distance'
-	X_train, y_train, X_test, y_test = split_sets(encoder)
+	X_train, y_train, X_test, y_test = split_sets(encoder, True, 15, f_classif)
 	print('\n------------------- KNN results -----------------------')
 	k_fold_cross_validation(KNN, encoder, X_train, y_train)
 	test(KNN, encoder, X_train, y_train, X_test, 'KNN_results.csv')
 	
 def test_naive_bayes(encoder):
-	X_train, y_train, X_test, y_test = split_sets(encoder)
+	X_train, y_train, X_test, y_test = split_sets(encoder,False)
 	print('\n---------------- Naive Bayes results ------------------')	
-	k_fold_cross_validation(naive_bayes, encoder, X_train, y_train)
+	#k_fold_cross_validation(naive_bayes, encoder, X_train, y_train)
 	test(naive_bayes, encoder, X_train, y_train, X_test, 'naive_bayes_results.csv')
 
 def test_LDA(encoder):
-	X_train, y_train, X_test, y_test = split_sets(encoder)
 	LDA.solver = 'eigen'
 	LDA.shrinkage = 0.035
 	print('\n-------------------- LDA results ----------------------')
@@ -158,34 +207,35 @@ def test_LDA(encoder):
 	test(LDA, encoder, X_train, y_train, X_test, 'LDA_results.csv')
 	
 def test_DTC(encoder):
-	X_train, y_train, X_test, y_test = split_sets(encoder)
-	DTC.max_depth = 8
 	DTC.min_samples_leaf = 2
 	DTC.criterion = 'entropy'
+	DTC.max_depth = 8
+	X_train, y_train, X_test, y_test = split_sets(encoder, True, 16, mutual_info_classif)
 	print('\n-------------------- DTC results ----------------------')
 	k_fold_cross_validation(DTC, encoder, X_train, y_train)
 	test(DTC, encoder, X_train, y_train, X_test, 'DTC_results.csv')
 
 def test_RFC(encoder):
-	X_train, y_train, X_test, y_test = split_sets(encoder)
-	RFC.n_estimators = 700
-	#RFC.max_features = 'auto'
+	RFC.n_estimators = 100
+	RFC.max_features = 'auto'
 	RFC.criterion = 'gini'
+	X_train, y_train, X_test, y_test = split_sets(encoder, False)
 	print(RFC.criterion, RFC.n_estimators, RFC.max_features)
 	print('\n-------------------- RFC results ----------------------')
 	k_fold_cross_validation(RFC, encoder, X_train, y_train)
-	test(RFC, encoder, X_train, y_train, X_test, 'RFC_results.csv')	
+	test(RFC, encoder, X_train, y_train, X_test, 'RFC_results.csv')
+	
 		
 def test_SVC(encoder):
-	X_train, y_train, X_test, y_test = split_sets(encoder)
 	SVC.c = 2.3;
 	SVC.kernel = 'rbf'
+	X_train, y_train, X_test, y_test = split_sets(encoder, False)
 	print('\n------------------- SVC results -----------------------')
 	k_fold_cross_validation(SVC, encoder, X_train, y_train)
 	test(SVC, encoder, X_train, y_train, X_test, 'SVC_results.csv')	
 	
 def test_SEQ(encoder, epochs = 200, batch_size = 128):	
-	X_train, y_train, X_test, y_test = split_sets(encoder)
+	X_train, y_train, X_test, y_test = split_sets(encoder, False)
 	columns_count = X_train.shape[1]
 	SEQ.add(Dense(40, activation='relu', input_dim=columns_count))
 	SEQ.add(Dropout(0.5))
@@ -193,7 +243,7 @@ def test_SEQ(encoder, epochs = 200, batch_size = 128):
 	SEQ.add(Dropout(0.5))
 	SEQ.add(Dense(len(encoder.classes_), activation='softmax'))
 	SEQ.compile(loss='categorical_crossentropy', optimizer='sgd', metrics=['accuracy'])
-	
+
 	k_fold_cross_validation(SEQ, encoder, X_train, y_train, epochs, batch_size)
 	
 	
@@ -209,7 +259,7 @@ def k_fold_cross_validation(model,encoder,X, Y, epochs = 200, batch_size = 128):
 		X_train, X_val = X[train_index], X[val_index]
 		y_train, y_val = Y[train_index], Y[val_index]
 		if (model == SEQ):		
-			model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split =0, verbose= 1)
+			model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split =0, verbose= 0)
 			predict_results = model.predict(X_val)
 			predict_results = encoder.inverse_transform(predict_results)
 			y_val = encoder.inverse_transform(y_val)
@@ -235,21 +285,20 @@ def k_fold_cross_validation(model,encoder,X, Y, epochs = 200, batch_size = 128):
 	if (model == DTC):
 		accDTC.append((acc_sum/k)*100)
 		
-		
 	acc.append((acc_sum/k)*100)
 	f1s.append((f1_sum/k)*100)
 	
 
 def test (model, encoder, X_train, y_train, X_test, path):
 	print ()
-	#if (model != SEQ):
-	#	model_results = predict(model, X_train, y_train, X_test)
-	#if (model == SEQ):
-	#	SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
-	#	model_results = SEQ.predict(X_test)
-	#	print('\n-------------------- SEQ results ----------------------')
-	#	print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(SEQ.predict(X_train)))))
-	#note_results(model_results,path, encoder)
+	if (model != SEQ):
+		model_results = predict(model, X_train, y_train, X_test)
+	if (model == SEQ):
+		SEQ.fit(X_train, y_train, epochs=200, batch_size=128, validation_split=0, verbose=1)
+		model_results = SEQ.predict(X_test)
+		print('\n-------------------- SEQ results ----------------------')
+		print('Test data score', round(accuracy_score(encoder.inverse_transform(y_train),encoder.inverse_transform(SEQ.predict(X_train)))))
+	note_results(model_results,path, encoder)
 
 ####################################################################################
 def is_good_to_remove(cat):
@@ -401,6 +450,13 @@ def LDA_best_params():
 	plt.show(); 
 	print (rez)
 	exit();
+	
+#autoselekcija
+
+#analiza gresak
+#autosklearn
+#fmeasure ..
+#max za seq
 
 def SEQ_best_params():
 	print ()
@@ -446,6 +502,7 @@ test_seasion = 2017
 #plot()
 KNN = KNeighborsClassifier()
 naive_bayes = GaussianNB()
+#naive_bayes = ExtraTreesClassifier()
 LDA = LinearDiscriminantAnalysis()
 DTC = DecisionTreeClassifier()
 RFC = RandomForestClassifier()
@@ -478,8 +535,11 @@ data = correct_FG_percentage(data)
 data = correct_FT_percentage(data)
 data = prepare_totals(data)
 data = set_squares(data)
-data = dimensionality_reduction(data)
 data.reset_index(inplace=True, drop=True)
+
+rookies_data = preparing_rookes()
+rookies_data = dimensionality_reduction(rookies_data)
+
 
 
 #is_good_to_remove('3PA')
@@ -489,7 +549,7 @@ data.reset_index(inplace=True, drop=True)
 #LDA_best_params()
 #DTC_best_params()
 #DTC_plot()
-RFC_best_params()
+#RFC_best_params()
 #RFC_plot()
 #KNN_best_K()
 #SVC_best_params()
@@ -498,9 +558,14 @@ RFC_best_params()
 
 #ENCODER
 #test_KNN(encoder)
-#test_naive_bayes(encoder)
 #test_LDA(encoder)
 #test_DTC(encoder)
+
+
+
+
+data = dimensionality_reduction(data)
+test_naive_bayes(encoder)
 #test_SVC(encoder)
 #test_RFC(encoder)
 
@@ -519,82 +584,5 @@ RFC_best_params()
 #
 #plt.show(); 
 #print (rez)
-
-
-
-
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-#import matplotlib.pyplot as plt
-#from mpl_toolkits.mplot3d import Axes3D
-#neki_plot()
-
-
-def neki_plot ():
-	X = data.drop(['Pos', 'Player'], axis=1).as_matrix()
-	
-	result = PCA(X)
-	x = []
-	y = []
-	z = []
-	for item in result.Y:
-		x.append(item[0])
-		y.append(item[1])
-		z.append(item[2])
-	
-	plt.close('all') # close all latent plotting windows
-	fig1 = plt.figure() # Make a plotting figure
-	ax = Axes3D(fig1) # use the plotting figure to create a Axis3D object.
-	pltData = [x,y,z] 
-	ax.scatter(pltData[0], pltData[1], pltData[2], 'bo') # make a scatter plot of blue dots from the data
-	
-	# make simple, bare axis lines through space:
-	xAxisLine = ((min(pltData[0]), max(pltData[0])), (0, 0), (0,0)) # 2 points make the x-axis line at the data extrema along x-axis 
-	ax.plot(xAxisLine[0], xAxisLine[1], xAxisLine[2], 'r') # make a red line for the x-axis.
-	yAxisLine = ((0, 0), (min(pltData[1]), max(pltData[1])), (0,0)) # 2 points make the y-axis line at the data extrema along y-axis
-	ax.plot(yAxisLine[0], yAxisLine[1], yAxisLine[2], 'r') # make a red line for the y-axis.
-	zAxisLine = ((0, 0), (0,0), (min(pltData[2]), max(pltData[2]))) # 2 points make the z-axis line at the data extrema along z-axis
-	ax.plot(zAxisLine[0], zAxisLine[1], zAxisLine[2], 'r') # make a red line for the z-axis.
-	
-	# label the axes 
-	ax.set_xlabel("x-axis label") 
-	ax.set_ylabel("y-axis label")
-	ax.set_zlabel("y-axis label")
-	ax.set_title("The title of the plot")
-	plt.show() # show the plot
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
+#print (rez)
 
